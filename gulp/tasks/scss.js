@@ -18,12 +18,12 @@ export const scss = () => {
             outputStyle: 'expanded'
         }))
         // .pipe(app.gulp.dest(app.path.build.css))   если не нужно сжимать css
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                cleanCss()
-            )
-        )
+        // .pipe(       сжимает css
+        //     app.plugins.if(
+        //         app.isBuild,
+        //         cleanCss()
+        //     )
+        // )
 
         // .pipe(rename({
         //     extname: ".min.css"
