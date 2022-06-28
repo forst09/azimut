@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*НАЧАЛО ОБЩИХ СТИЛЕЙ*/
+.tab-content {
+  display: none;
+  animation: fadeEffect 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
