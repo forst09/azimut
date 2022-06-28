@@ -7,6 +7,8 @@
 
 <body>
     @@include('html/header.html',{})
+
+    <!-- НАЧАЛО ГЛАВНОГО ЭКРАНА -->
     <main class="main">
         <div class="main__container">
             <h1>Инвестируй в собственный номер <span>высоким ежемесячным доходом</span> в центре сочи</h1>
@@ -31,7 +33,9 @@
             </div>
         </div>
     </main>
+    <!-- КОНЕЦ ГЛАВНОГО ЭКРАНА -->
 
+    <!-- НАЧАЛО СЕКЦИИ AZIMUT Парк Отель Плас Резиденс Сочи 4*-->
     <section class="description">
         <div class="description__container">
             <div class="description__image">
@@ -56,7 +60,9 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4*-->
 
+    <!-- НАЧАЛО СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА-->
     <section class="guarantees">
         <div class="guarantees__container">
             <div class="guarantees__info">
@@ -75,7 +81,9 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА-->
 
+    <!-- НАЧАЛО СЕКЦИИ О КОМПАНИИ -->
     <section class="about">
         <div class="about__container">
             <div class="about__item">
@@ -111,7 +119,9 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ О КОМПАНИИ -->
 
+    <!-- НАЧАЛО СЕКЦИИ ПОДЛИННОСТЬ ДОКУМЕНТОВ -->
     <section class="authenticity">
         <div class="authenticity__container">
             <div class="authenticity__image">
@@ -139,7 +149,9 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ПОДЛИННОСТЬ ДОКУМЕНТОВ -->
 
+    <!-- НАЧАЛО СЕКЦИИ ПРЕИМУЩЕСТВА -->
     <section class="benefits">
         <div class="benefits__container">
             <div class="benefits__info">
@@ -194,7 +206,9 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ПРЕИМУЩЕСТВА -->
 
+    <!-- НАЧАЛО СЕКЦИИ ИНТЕРЬЕРЫ -->
     <section class="interiors">
         <div class="tabs__container">
             <h2 class="title">ИНТЕРЬЕРЫ</h2>
@@ -605,7 +619,9 @@
         </div>
         <!--КОНЕЦ СЛАЙДЕРА ДВУХУРОВНЕВЫЙ НОМЕР -->
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ИНТЕРЬЕРЫ -->
 
+    <!-- НАЧАЛО СЕКЦИИ ПЛАНИРОВКИ -->
     <section class="layouts">
         <div class="tabs__container">
             <h2 class="title">планировки</h2>
@@ -774,7 +790,7 @@
                 <!--КОНЕЦ СЛАЙДЕРА ПЛАНЫ КВАРТИР НА НЕЧЕТНЫХ ЭТАЖАХ С 3 ПО 17 -->
 
                 <!-- СЛАЙДЕР ПЛАНЫ КВАРТИР НА 19 ЭТАЖЕ -->
-                <div id="layouts19Floor" class="tab-content">
+                <div id="layouts19Floor" class="tab-content active">
                     <div class="swiper swiper-layouts-floor">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -830,7 +846,9 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ПЛАНИРОВКИ -->
 
+    <!-- НАЧАЛО СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
     <section class="profitability">
         <div class="profitability__container">
             <div class="profitability__reporting">
@@ -914,18 +932,63 @@
         <div class="profitability__chart-percent profitability__chart-percent-fullwidth">+ 77 %</div>
         <div class="profitability__note">*средняя удельная стоимость</div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
 
+    <!-- НАЧАЛО СЕКЦИИ С ПЕРЕКЛЮЧЕНИЕМ КАРТИНКИ -->
     <section class="image">
         <img src="img/image/image-1.jpg" alt="">
+        <div class="switch">
+            <div class="switch__item">
+                <input type="radio" id="dark" name="p"> <label for="dark"></label>
+            </div>
+            <div class="switch__item">
+                <input type="radio" id="light" name="p" checked> <label for="light"></label>
+            </div>
+        </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ С ПЕРЕКЛЮЧЕНИЕМ КАРТИНКИ -->
 
+    <!-- НАЧАЛО СЕКЦИИ ВОПРОС - ОТВЕТ -->
     <section class="faq">
         <h2 class="title">вопрос - ответ</h2>
         <div class="faq__spoilers">
-            <div class="faq__spoilers-item"></div>
+            <div class="faq__spoilers-item">
+                <a class="faq__spoilers-item-title" href="javascript:void(0)">Когда закончится строительство отеля?</a>
+                <div class="text__desc">
+                    <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
+                        доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
+                        Импульс эксплуатирующая организация, Эком-ВБ генподрядчик до настоящего времени.</p>
+                </div>
+            </div>
+            <div class="faq__spoilers-item">
+                <a class="faq__spoilers-item-title" href="javascript:void(0)">Кто является собственником?</a>
+                <div class="text__desc">
+                    <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
+                        доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
+                        Импульс эксплуатирующая организация, Эком-ВБ генподрядчик до настоящего времени.</p>
+                </div>
+            </div>
+            <div class="faq__spoilers-item">
+                <a class="faq__spoilers-item-title" href="javascript:void(0)">Когда закончится строительство отеля?</a>
+                <div class="text__desc">
+                    <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
+                        доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
+                        Импульс эксплуатирующая организация, Эком-ВБ генподрядчик до настоящего времени.</p>
+                </div>
+            </div>
+            <div class="faq__spoilers-item">
+                <a class="faq__spoilers-item-title" href="javascript:void(0)">Когда закончится строительство отеля?</a>
+                <div class="text__desc">
+                    <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
+                        доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
+                        Импульс эксплуатирующая организация, Эком-ВБ генподрядчик до настоящего времени.</p>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ ВОПРОС - ОТВЕТ -->
 
+    <!-- НАЧАЛО СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ -->
     <section class="consultation">
         <h2 class="title">СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ</h2>
         <div class="consultation__desc">Мы готовы ответить на все ваши вопросы</div>
@@ -959,6 +1022,7 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ -->
 
     @@include('html/footer.html',{})
 

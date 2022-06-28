@@ -30,11 +30,14 @@ export const images = () => {
         .pipe(
             app.plugins.if(
                 app.isBuild,
+                // imagemin({
+                //     progressive: true,
+                //     svgoPlugins: [{ removeViewBox: false }],
+                //     interlaced: true,
+                //     optimizationLevel: 3,
+                // })
                 imagemin({
-                    progressive: true,
-                    svgoPlugins: [{ removeViewBox: false }],
-                    interlaced: true,
-                    optimizationLevel: 3,
+                    verbose: true
                 })
             )
         )

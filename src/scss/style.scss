@@ -1,15 +1,94 @@
+@import "variables.scss";
+
 /*НАЧАЛО ОБЩИХ СТИЛЕЙ*/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: $bgcolor;
+}
 
 .tab-content {
     display: none;
-    animation: fadeEffect 0.3s ease;
+    animation: fadeEffect 0.5s ease;
 }
 
 .tab-content.active {
     display: block;
 }
 
-/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
+.switch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.switch__item {
+    margin-bottom: 0.8rem;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    label {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        width: 0.5rem;
+        height: 0.5rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 0.5rem;
+            height: 0.5rem;
+            opacity: 0.2;
+            border: 1px solid #947D66;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 1px;
+            bottom: 1px;
+            left: 1px;
+            right: 1px;
+            // top: calc(50% - 0.45rem);
+            margin: auto;
+            // left: calc(50% - 0.45rem);
+            background: #947D66;
+            border-radius: 50%;
+            opacity: 0;
+            transition: .2s;
+        }
+    }
+
+    input[type="radio"]:checked+label {
+        width: 1.3rem;
+        height: 1.3rem;
+
+        &::before {
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+
+        &::after {
+            width: 0.9rem;
+            height: 0.9rem;
+            opacity: 1;
+        }
+    }
+
+}
+
 
 @keyframes fadeEffect {
     from {
@@ -20,3 +99,5 @@
         opacity: 1;
     }
 }
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/

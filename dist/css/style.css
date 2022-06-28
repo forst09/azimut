@@ -1,15 +1,82 @@
 @charset "UTF-8";
 /*НАЧАЛО ОБЩИХ СТИЛЕЙ*/
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #FCF8F7;
+}
+
 .tab-content {
   display: none;
-  animation: fadeEffect 0.3s ease;
+  animation: fadeEffect 0.5s ease;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
+.switch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.switch__item {
+  margin-bottom: 0.8rem;
+}
+.switch__item input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+.switch__item label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.switch__item label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  opacity: 0.2;
+  border: 1px solid #947D66;
+  border-radius: 50%;
+}
+.switch__item label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  margin: auto;
+  background: #947D66;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s;
+}
+.switch__item input[type=radio]:checked + label {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.switch__item input[type=radio]:checked + label::before {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.switch__item input[type=radio]:checked + label::after {
+  width: 0.9rem;
+  height: 0.9rem;
+  opacity: 1;
+}
+
 @keyframes fadeEffect {
   from {
     opacity: 0;
@@ -18,3 +85,4 @@
     opacity: 1;
   }
 }
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
