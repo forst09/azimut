@@ -1,5 +1,37 @@
 @import "variables.scss";
 
+@font-face {
+    font-weight: 300;
+    font-family: "TT Hoves";
+    src: url("../fonts/TTHOVES-LIGHT.TTF");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: "TT Hoves";
+    src: url("../fonts/TTHOVES-REGULAR.TTF");
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: "TT Hoves";
+    src: url("../fonts/TTHOVES-MEDIUM.TTF");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: "TT Hoves";
+    src: url("../fonts/TTHOVES-BOLD.TTF");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: "TT Hoves";
+    src: url("../fonts/TTHOVES-BLACK.TTF");
+}
+
+
+
 /*НАЧАЛО ОБЩИХ СТИЛЕЙ*/
 
 html {
@@ -8,8 +40,55 @@ html {
 
 body {
     background-color: $bgcolor;
+    font-family: "TT Hoves";
+    color: $brown;
 }
 
+section {
+    padding: 4.8rem 0;
+}
+
+h2 {
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.6rem;
+    position: relative;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+    color: $brown;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $border;
+    }
+}
+
+.text {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+
+    p {
+        margin-bottom: 0.8rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.wrapper {
+    padding: 0 1.6rem;
+    width: 100%;
+}
+
+/*СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
 .tab-content {
     display: none;
     animation: fadeEffect 0.5s ease;
@@ -20,74 +99,65 @@ body {
 }
 
 .switch {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: none;
 }
 
 .switch__item {
-    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-    }
-
-    label {
-        display: block;
+    input[type="checkbox"]+label {
+        margin: 0.9rem 0;
         position: relative;
-        cursor: pointer;
-        width: 0.5rem;
-        height: 0.5rem;
-
-        &:before {
-            content: '';
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-            width: 0.5rem;
-            height: 0.5rem;
-            opacity: 0.2;
-            border: 1px solid #947D66;
-            border-radius: 50%;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            top: 1px;
-            bottom: 1px;
-            left: 1px;
-            right: 1px;
-            // top: calc(50% - 0.45rem);
-            margin: auto;
-            // left: calc(50% - 0.45rem);
-            background: #947D66;
-            border-radius: 50%;
-            opacity: 0;
-            transition: .2s;
-        }
-    }
-
-    input[type="radio"]:checked+label {
+        display: block;
         width: 1.3rem;
-        height: 1.3rem;
-
-        &::before {
-            width: 1.3rem;
-            height: 1.3rem;
-        }
-
-        &::after {
-            width: 0.9rem;
-            height: 0.9rem;
-            opacity: 1;
-        }
+        height: 2.3rem;
+        cursor: pointer;
     }
 
+    input[type="checkbox"]+label::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.3rem;
+        height: 2.3rem;
+        border-radius: 0.8rem;
+        background: $light-brown;
+        opacity: 0.2;
+    }
+
+    input[type="checkbox"]+label::after {
+        content: '';
+        position: absolute;
+        top: calc(100% - 1.1rem);
+        left: calc(50% - 0.45rem);
+        width: 0.9rem;
+        height: 0.9rem;
+        border-radius: 50%;
+        background: $light-brown;
+        opacity: 0.5;
+        transition: .2s;
+    }
+
+    input[type="checkbox"]:checked+label::after {
+        top: 0.2rem;
+    }
 }
+
+.switch__item-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch__item-sun,
+.switch__item-moon {
+    opacity: 0.5;
+}
+
+
+/*КОНЕЦ СТИЛЕЙ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
 
 
 @keyframes fadeEffect {
@@ -101,3 +171,88 @@ body {
 }
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
+
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* */
+
+.description__container {
+    padding: 0 1.7rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.description__image {
+    margin-top: 4.8rem;
+    width: 28.9rem;
+    height: 38.1rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* */
+
+
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
+.faq {}
+
+.title {}
+
+.faq__spoilers {}
+
+.faq__spoilers-item {
+    margin-bottom: 0.8rem;
+    padding: 1.6rem;
+    background-color: $white;
+}
+
+.faq__spoilers-item-title {
+    padding-left: 3.8rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.4rem;
+        height: 1.4rem;
+        left: 0;
+        top: calc(50% - 0.7rem);
+        background-image: url('@img/faq/list.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 1.4rem 1.4rem;
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: $brown;
+        // border-top: 1px solid $brown;
+        // border: 1px solid transparent;
+        right: 0;
+        top: calc(50% - 0.65rem);
+        // border: 1.25rem solid transparent;
+        // border-top: 1.25rem solid green;
+    }
+
+    span {
+        display: inline-block;
+        max-width: 21.4rem;
+    }
+}
+
+.text__desc {}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/

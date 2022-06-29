@@ -1,4 +1,4 @@
-import imagemin from "gulp-imagemin";
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 
 export const images = () => {
     return app.gulp.src(app.path.src.images)
@@ -36,9 +36,26 @@ export const images = () => {
                 //     interlaced: true,
                 //     optimizationLevel: 3,
                 // })
-                imagemin({
-                    verbose: true
-                })
+                imagemin([
+                    gifsicle({ interlaced: true }),
+                    mozjpeg({ quality: 75, progressive: true }),
+                    optipng({ optimizationLevel: 5 }),
+                    svgo({
+                        plugins: [
+                            {
+                                name: 'removeViewBox',
+                                active: true
+                            },
+                            {
+                                name: 'cleanupIDs',
+                                active: false
+                            }
+                        ]
+                    })
+                ],
+                    {
+                        verbose: true
+                    })
             )
         )
 

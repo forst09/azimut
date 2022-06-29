@@ -2,6 +2,31 @@
     html {
         font-size: 1.497005988023952vw;
     }
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* 668*/
+
+    .description__container {
+        padding: 0 1.7rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .description__image {
+        margin-top: 4.8rem;
+        width: 28.9rem;
+        height: 38.1rem;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .description__info {}
+
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* 668*/
 }
 
 @media(min-width: 1024px) {

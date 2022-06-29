@@ -38,8 +38,40 @@
     <!-- НАЧАЛО СЕКЦИИ AZIMUT Парк Отель Плас Резиденс Сочи 4*-->
     <section class="description">
         <div class="description__container">
+
+            <div class="switch">
+                <div class="switch__item">
+                    <svg class="switch__item-sun" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.93333 1.73275V0H6.06667V1.73275H6.93333Z" fill="#947D66" />
+                        <path d="M2.77949 2.1653L1.29979 0.686592L0.687174 1.29962L2.16687 2.77833L2.77949 2.1653Z"
+                            fill="#947D66" />
+                        <path d="M10.8331 2.77833L12.3128 1.29962L11.7002 0.686592L10.2205 2.1653L10.8331 2.77833Z"
+                            fill="#947D66" />
+                        <path
+                            d="M6.5 3.46439C4.82488 3.46439 3.46667 4.82131 3.46667 6.49603C3.46667 8.17075 4.82488 9.52767 6.5 9.52767C8.17512 9.52767 9.53333 8.17075 9.53333 6.49603C9.53333 4.82131 8.17512 3.46439 6.5 3.46439Z"
+                            fill="#947D66" />
+                        <path d="M1.73333 6.0627H0V6.92937H1.73333V6.0627Z" fill="#947D66" />
+                        <path d="M13 6.0627H11.2667V6.92937H13V6.0627Z" fill="#947D66" />
+                        <path d="M1.29981 12.3055L2.77949 10.8267L2.16685 10.2137L0.687174 11.6925L1.29981 12.3055Z"
+                            fill="#947D66" />
+                        <path d="M12.3128 11.6925L10.8331 10.2137L10.2205 10.8267L11.7002 12.3055L12.3128 11.6925Z"
+                            fill="#947D66" />
+                        <path d="M6.93333 12.9921V11.2593H6.06667V12.9921H6.93333Z" fill="#947D66" />
+                    </svg>
+
+                    <input id="oh" class="switch__item-checkbox" type='checkbox'><label for="oh"
+                        class="switch__item-label"></label>
+                    <svg class="switch__item-moon" width="13" height="14" viewBox="0 0 13 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6.67881 0.113487C6.50314 0.108732 6.342 0.210544 6.27085 0.371233C6.19971 0.531922 6.23266 0.719667 6.35427 0.846528C7.25009 1.78105 7.79988 3.04807 7.79988 4.4444C7.79988 7.31628 5.47176 9.6444 2.59988 9.6444C2.23203 9.6444 1.87355 9.60627 1.52803 9.5339C1.356 9.49787 1.17924 9.56932 1.08057 9.71478C0.981909 9.86024 0.980883 10.0509 1.07798 10.1974C2.24098 11.9523 4.235 13.1111 6.49986 13.1111C10.0897 13.1111 12.9999 10.2009 12.9999 6.61107C12.9999 3.08107 10.1861 0.208406 6.67881 0.113487Z"
+                            fill="#947D66" />
+                    </svg>
+                </div>
+            </div>
             <div class="description__image">
-                <img src="img/about/about-1.jpg" alt="">
+                <img src="img/description/description-1.png" alt="">
             </div>
             <div class="description__info">
                 <h2 class="title">AZIMUT Парк Отель Плас Резиденс Сочи 4*</h2>
@@ -950,10 +982,13 @@
 
     <!-- НАЧАЛО СЕКЦИИ ВОПРОС - ОТВЕТ -->
     <section class="faq">
-        <h2 class="title">вопрос - ответ</h2>
-        <div class="faq__spoilers">
+        <div class="wrapper">
+            <h2 class="title">вопрос - ответ</h2>
+        </div>
+        <div data-spoilers data-one-spoiler class="faq__spoilers">
             <div class="faq__spoilers-item">
-                <a class="faq__spoilers-item-title" href="javascript:void(0)">Когда закончится строительство отеля?</a>
+                <a class="faq__spoilers-item-title" href="javascript:void(0)" data-spoiler><span>Какой срок сдачи
+                        объекта в эксплуатацию?</span></a>
                 <div class="text__desc">
                     <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
                         доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
@@ -961,7 +996,8 @@
                 </div>
             </div>
             <div class="faq__spoilers-item">
-                <a class="faq__spoilers-item-title" href="javascript:void(0)">Кто является собственником?</a>
+                <a class="faq__spoilers-item-title" href="javascript:void(0)" data-spoiler>?Какие документы я получаю
+                    при оформлении сделки?</a>
                 <div class="text__desc">
                     <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
                         доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
@@ -969,7 +1005,8 @@
                 </div>
             </div>
             <div class="faq__spoilers-item">
-                <a class="faq__spoilers-item-title" href="javascript:void(0)">Когда закончится строительство отеля?</a>
+                <a class="faq__spoilers-item-title" href="javascript:void(0)" data-spoiler>Какая стоимость указывается в
+                    договоре?</a>
                 <div class="text__desc">
                     <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
                         доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
@@ -977,7 +1014,8 @@
                 </div>
             </div>
             <div class="faq__spoilers-item">
-                <a class="faq__spoilers-item-title" href="javascript:void(0)">Когда закончится строительство отеля?</a>
+                <a class="faq__spoilers-item-title" href="javascript:void(0)" data-spoiler>Оснащение номеров входит в
+                    стоимость покупки?</a>
                 <div class="text__desc">
                     <p>ЗПИФ - создан пайщиками, которые являются собственниками здания, УК Мегаполис Инвест является
                         доверительным управляющим. Самолёт управляющая компания по взаимодействию с отельером Азимут,
