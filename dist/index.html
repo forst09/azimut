@@ -42,28 +42,48 @@
 
     <!-- НАЧАЛО ГЛАВНОГО ЭКРАНА -->
     <main class="main">
-        <div class="main__container">
-            <h1>Инвестируй в собственный номер <span>высоким ежемесячным доходом</span> в центре сочи</h1>
-            <div class="main__desc">
-                <p>При покупке возможна индивидуальная рассрочка</p>
-            </div>
-            <div class="main__numbers">
-                <div class="main__numbers-item">
-                    <span class="main__numbers-item-count">212</span>
-                    <span class="main__numbers-item-dash"></span>
-                    <span class="main__numbers-item-text">Уже продано</span>
+        <div class="main__background">
+            <picture>
+                <source srcset="img/main/320-night.jpg" type="image/jpg" media="(max-width:667px)">
+                <source srcset="img/main/668-night.jpg" type="image/jpg"
+                    media="(min-width:668px) and (max-width:1023px)">
+                <source srcset="img/main/1024-night.jpg" type="image/jpg"
+                    media="(min-width:1024px) and (max-width:1500px)">
+                <source srcset="img/main/1500-night.jpg" type="image/jpg" media="(min-width:1500px)">
+                <img src="img/main/320-night.jpg" alt="">
+            </picture>
+        </div>
+        <div class="wrapper">
+            <!-- <div class="main__container"> -->
+            <div class="main__container">
+                <h1>Инвестируй в собственный номер <span>высоким ежемесячным доходом</span> в центре сочи</h1>
+                <div class="main__desc">
+                    <p>При покупке возможна индивидуальная рассрочка</p>
                 </div>
-                <div class="main__numbers-item">
-                    <span class="main__numbers-item-count">171</span>
-                    <span class="main__numbers-item-dash"></span>
-                    <span class="main__numbers-item-text">В продаже</span>
+                <div class="main__numbers">
+                    <div class="main__numbers-item">
+                        <span class="main__numbers-item-count">212</span>
+                        <span class="main__numbers-item-dash"></span>
+                        <span class="main__numbers-item-text">Уже продано</span>
+                    </div>
+                    <div class="main__numbers-item">
+                        <span class="main__numbers-item-count">171</span>
+                        <span class="main__numbers-item-dash"></span>
+                        <span class="main__numbers-item-text">В продаже</span>
+                    </div>
                 </div>
             </div>
             <div class="main__buttons">
-                <a href="" class="btn-main">Оформить заявку</a>
-                <a href="" class="btn-watch">Посмотреть номера</a>
+                <div class="main__buttons-action">
+                    <a href="" class="btn-main">Получить консультацию</a>
+                    <a href="" class="main__buttons-watch">Посмотреть номера</a>
+                </div>
+                <div class="main__buttons-logo">
+                    <img src="img/main/azimut.svg" alt="">
+                </div>
             </div>
         </div>
+        <!-- </div> -->
     </main>
     <!-- КОНЕЦ ГЛАВНОГО ЭКРАНА -->
 
@@ -107,7 +127,7 @@
             </div>
             <div class="description__info">
                 <h2 class="title">AZIMUT Парк Отель Плас Резиденс Сочи 4*</h2>
-                <div class="text">
+                <div class="text__desc">
                     <p>Идеальное место для тех, кто выбирает высокое качество жизни и разбирается в грамотных
                         инвестициях.</p>
                     <p>Уникальное местоположение с особенным микроклиматом, приватная территория с развитой
@@ -125,6 +145,173 @@
         </div>
     </section>
     <!-- КОНЕЦ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4*-->
+
+    <!-- НАЧАЛО СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР -->
+    <section class="operator">
+        <div class="wrapper">
+            <div class="operator__container">
+                <div class="operator__item">
+                    <div class="operator__item-info">
+                        <h2 class="title">международный отельный оператор</h2>
+                        <div class="operator__item-award">
+                            <div class="operator__item-award-image">
+                                <img src="img/operator/operator-gold.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>AZIMUT Hotels — лучшая гостиничная управляющая компания в России по версии World
+                                    Travel
+                                    Awards в
+                                    2021 году</p>
+                            </div>
+                        </div>
+                        <div class="text__desc">
+                            <p>Выбирая Plus Residence для жизни или для инвестиций, можно не сомневаться в высоком
+                                уровне сервиса. Парк-отель находится под надёжным управлением международного отельного
+                                оператора AZIMUT Hotels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="operator__item">
+                    <div class="operator__item-image">
+                        <img src="img/operator/operator-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="operator__item">
+                    <div class="operator__item-about">
+                        <div class="operator__company-logo">
+                            <picture>
+                                <source srcset="img/operator/operator-logo-horiz.svg" type="image/jpg"
+                                    media="(max-width:667px)">
+                                <source srcset="img/operator/operator-logo.svg" type="image/jpg"
+                                    media="(min-width:668px)">
+                                <img src="img/operator/operator-logo.svg" alt="">
+                            </picture>
+                        </div>
+                        <div class="text__desc">
+                            <p>Вкладывая деньги в многомиллионный объект, инвестору очень важны гарантии доходности.
+                                Наличие
+                                конгресс холла и бассейна с подогревом позволит обеспечить заполняемость парк-отеля вне
+                                сезона,
+                                что гарантирует вам стабильный доход от владения данной недвижимостью.</p>
+                            <p> Вам нет необходимости задумываться над тем, как обеспечить загрузку номера в течение
+                                всего
+                                года.
+                                Где разместить рекламу, какой выделить на это бюджет, как сформулировать стратегию и
+                                привлечь
+                                хороших специалистов из области маркетинга, изучить рынок на конкуренцию и многое
+                                другое.
+                                Все
+                                эти вопросы решает AZIMUT Hotels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР -->
+
+    <!-- НАЧАЛО СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
+    <section class="profitability">
+        <!-- <div class="profitability__container"> -->
+        <div class="wrapper">
+            <div class="profitability__container">
+                <h2 class="title">Доходность для инвестора</h2>
+                <div class="text__desc">
+                    <p>Показатель доходности на вложенные инвестиции, в зависимости от времени приобретения (чем ранее
+                        куплен апартамент, тем выше доходность), может достичь 300% за период владения. На текущий
+                        момент доходность на вложенные
+                        инвестиции (для купивших недвижимость на старте продаж) составила порядка 126%.</p>
+                    <p> Была проведена оценка доходной части проекта капитального ремонта пансионата “Нева” в г-к. Сочи.
+                        Для более подробного ознакомления вы можете скачать отчет ниже.</p>
+                </div>
+                <div class="profitability__reporting">
+                    <div class="profitability__reporting-image">
+                        <img src="img/reporting.png" alt="">
+                    </div>
+                    <div class="profitability__reporting-text">
+                        <div class="profitability__reporting-name">Скачать отчет MACON о доходности инвестирования в
+                            Plus residence sochi</div>
+                        <div class="profitability__reporting-weight">7,72 МБ</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="profitability__chart">
+            <div class="scroll">
+                <div class="profitability__chart-image">
+                    <img src="img/profitability/profitability-chart.svg" alt="">
+                </div>
+            </div>
+            <div class="profitability__chart-info-wrapper">
+                <div class="profitability__chart-info">
+                    <div class="profitability__chart-info-title">СТАБИЛЬНАЯ ЕЖЕГОДНАЯ ДОХОДНОСТЬ ОТ УПРАВЛЕНИЯ</div>
+                    <div class="text__desc">
+                        <p>После реновации и начала эксплуатации парк-отеля инвестор получит стабильный ежемесячный
+                            доход
+                            (без учета роста стоимости инвестиционного актива). Уровень доходности зависит от времени
+                            приобретения и
+                            среднего дохода с номера.</p>
+                        <p>Гостиничное использование апартаментов инвесторов предполагает фокус на краткосрочное
+                            размещение
+                            гостей, учет
+                            доходов и расходов по принципу Open Books, возможность инвестора проживать в собственном
+                            номере
+                            до 30 дней в
+                            году.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="profitability__chart">
+            <div class="profitability__chart-item">
+                <div class="profitability__chart-item-numeric">
+                    <div class="profitability__chart-item-number">384</div>
+                    <div class="profitability__chart-item-text">
+                        <div class="profitability__chart-item-text-item">тыс. руб.</div>
+                        <div class="profitability__chart-item-text-item">кв. м*</div>
+                    </div>
+                </div>
+                <div class="profitability__chart-item-stage">
+                    <div class="profitability__chart-item-stage-name">Начало реализации проекта</div>
+                    <div class="profitability__chart-item-stage-date">3 кв. 2020 г.</div>
+                </div>
+            </div>
+            <div class="profitability__chart-percent">+ 126 %</div>
+            <div class="profitability__chart-item">
+                <div class="profitability__chart-item-numeric">
+                    <div class="profitability__chart-item-number">868</div>
+                    <div class="profitability__chart-item-text">
+                        <div class="profitability__chart-item-text-item">тыс. руб.</div>
+                        <div class="profitability__chart-item-text-item">кв. м*</div>
+                    </div>
+                </div>
+                <div class="profitability__chart-item-stage">
+                    <div class="profitability__chart-item-stage-name">Текущий этап</div>
+                    <div class="profitability__chart-item-stage-date">лето 2022 г.</div>
+                </div>
+            </div>
+            <div class="profitability__chart-percent">+ 77 %</div>
+            <div class="profitability__chart-item">
+                <div class="profitability__chart-item-numeric">
+                    <div class="profitability__chart-item-number">1 535</div>
+                    <div class="profitability__chart-item-text">
+                        <div class="profitability__chart-item-text-item">тыс. руб.</div>
+                        <div class="profitability__chart-item-text-item">кв. м*</div>
+                    </div>
+                </div>
+                <div class="profitability__chart-item-sale">Доходность от продажи</div>
+                <div class="profitability__chart-item-stage">
+                    <div class="profitability__chart-item-stage-name">Начало эксплуатации</div>
+                    <div class="profitability__chart-item-stage-date">4 кв. 2023 г.</div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="profitability__chart-percent profitability__chart-percent-fullwidth">+ 77 %</div>
+        <div class="profitability__note">*средняя удельная стоимость</div> -->
+    </section>
+    <!-- КОНЕЦ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
 
     <!-- НАЧАЛО СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА-->
     <section class="guarantees">
@@ -146,44 +333,6 @@
         </div>
     </section>
     <!-- КОНЕЦ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА-->
-
-    <!-- НАЧАЛО СЕКЦИИ О КОМПАНИИ -->
-    <section class="about">
-        <div class="about__container">
-            <div class="about__item">
-                <h2 class="title">о компании</h2>
-                <div class="text">
-                    <p>AZIMUT Hotels — лучшая гостиничная управляющая компания в России по версии World Travel Awards в
-                        2021 году</p>
-                </div>
-                <div class="text__desc">
-                    <p>Осталось только завершить капитальный ремонт по современным трендам. На момент покупки вы
-                        становитесь совладельцем части уже реального здания, то есть конкретной площади в нем, а не
-                        красивой картинки на экране.</p>
-                </div>
-            </div>
-            <div class="about__item">
-                <div class="about__image">
-                    <img src="img/about/about-1.jpg" alt="">
-                </div>
-            </div>
-            <div class="about__item">
-                <div class="about__company-logo">
-                    <img src="img/about/company-logo.png" alt="">
-                </div>
-                <div class="text__desc">
-                    <p>Вкладывая деньги в многомиллионный объект, инвестору очень важны гарантии доходности. Наличие
-                        конгресс холла и бассейна с подогревом позволит обеспечить заполняемость парк-отеля вне сезона,
-                        что гарантирует вам стабильный доход от владения данной недвижимостью.</p>
-                    <p> Вам нет необходимости задумываться над тем, как обеспечить загрузку номера в течение всего года.
-                        Где разместить рекламу, какой выделить на это бюджет, как сформулировать стратегию и привлечь
-                        хороших специалистов из области маркетинга, изучить рынок на конкуренцию и многое другое. Все
-                        эти вопросы решает AZIMUT Hotels.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- КОНЕЦ СЕКЦИИ О КОМПАНИИ -->
 
     <!-- НАЧАЛО СЕКЦИИ ПОДЛИННОСТЬ ДОКУМЕНТОВ -->
     <section class="authenticity">
@@ -911,92 +1060,6 @@
         </div>
     </section>
     <!-- КОНЕЦ СЕКЦИИ ПЛАНИРОВКИ -->
-
-    <!-- НАЧАЛО СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
-    <section class="profitability">
-        <div class="profitability__container">
-            <div class="profitability__reporting">
-                <h2 class="title">Доходность для инвестора</h2>
-                <div class="text__desc">
-                    <p>Показатель доходности на вложенные инвестиции, в зависимости от времени приобретения (чем ранее
-                        куплен апартамент, тем выше доходность), может достичь 300% за период владения. На текущий
-                        момент доходность на вложенные
-                        инвестиции (для купивших недвижимость на старте продаж) составила порядка 126%.</p>
-                    <p>Для более подробного ознакомления, вы можете скачать отчет ниже.</p>
-                </div>
-                <div class="profitability__reporting">
-                    <div class="profitability__reporting-image">
-                        <img src="img/reporting.png" alt="">
-                    </div>
-                    <div class="profitability__reporting-text">
-                        <div class="profitability__reporting-name">Финансовая отчетность</div>
-                        <div class="profitability__reporting-weight">14 КБ</div>
-                    </div>
-                </div>
-            </div>
-            <div class="profitability__stability">
-                <div class="profitability__stability-title">СТАБИЛЬНАЯ ЕЖЕГОДНАЯ ДОХОДНОСТЬ ОТ УПРАВЛЕНИЯ</div>
-                <div class="text__desc">
-                    <p>После реновации и начала эксплуатации парк-отеля инвестор получит стабильный ежемесячный доход
-                        (без учета роста стоимости инвестиционного актива). Уровень доходности зависит от времени
-                        приобретения и
-                        среднего дохода с номера.</p>
-                    <p>Гостиничное использование апартаментов инвесторов предполагает фокус на краткосрочное размещение
-                        гостей, учет
-                        доходов и расходов по принципу Open Books, возможность инвестора проживать в собственном номере
-                        до 30 дней в
-                        году.</p>
-                </div>
-            </div>
-        </div>
-        <div class="profitability__chart">
-            <div class="profitability__chart-item">
-                <div class="profitability__chart-item-numeric">
-                    <div class="profitability__chart-item-number">384</div>
-                    <div class="profitability__chart-item-text">
-                        <div class="profitability__chart-item-text-item">тыс. руб.</div>
-                        <div class="profitability__chart-item-text-item">кв. м*</div>
-                    </div>
-                </div>
-                <div class="profitability__chart-item-stage">
-                    <div class="profitability__chart-item-stage-name">Начало реализации проекта</div>
-                    <div class="profitability__chart-item-stage-date">3 кв. 2020 г.</div>
-                </div>
-            </div>
-            <div class="profitability__chart-percent">+ 126 %</div>
-            <div class="profitability__chart-item">
-                <div class="profitability__chart-item-numeric">
-                    <div class="profitability__chart-item-number">868</div>
-                    <div class="profitability__chart-item-text">
-                        <div class="profitability__chart-item-text-item">тыс. руб.</div>
-                        <div class="profitability__chart-item-text-item">кв. м*</div>
-                    </div>
-                </div>
-                <div class="profitability__chart-item-stage">
-                    <div class="profitability__chart-item-stage-name">Текущий этап</div>
-                    <div class="profitability__chart-item-stage-date">лето 2022 г.</div>
-                </div>
-            </div>
-            <div class="profitability__chart-percent">+ 77 %</div>
-            <div class="profitability__chart-item">
-                <div class="profitability__chart-item-numeric">
-                    <div class="profitability__chart-item-number">1 535</div>
-                    <div class="profitability__chart-item-text">
-                        <div class="profitability__chart-item-text-item">тыс. руб.</div>
-                        <div class="profitability__chart-item-text-item">кв. м*</div>
-                    </div>
-                </div>
-                <div class="profitability__chart-item-sale">Доходность от продажи</div>
-                <div class="profitability__chart-item-stage">
-                    <div class="profitability__chart-item-stage-name">Начало эксплуатации</div>
-                    <div class="profitability__chart-item-stage-date">4 кв. 2023 г.</div>
-                </div>
-            </div>
-        </div>
-        <div class="profitability__chart-percent profitability__chart-percent-fullwidth">+ 77 %</div>
-        <div class="profitability__note">*средняя удельная стоимость</div>
-    </section>
-    <!-- КОНЕЦ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
 
     <!-- НАЧАЛО СЕКЦИИ С ПЕРЕКЛЮЧЕНИЕМ КАРТИНКИ -->
     <section class="image">
