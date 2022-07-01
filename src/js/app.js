@@ -11,11 +11,11 @@ $(document).on('click', ".dropdown", function () {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
         $(this).find('.dropdown__link').removeClass('active');
-        $(this).find('.dropdown__content').removeClass('active');
+        $(this).find('.dropdown__content').slideUp();
     }
     else {
         $(this).addClass('active');
         $(this).find('.dropdown__link').addClass('active');
-        $(this).find('.dropdown__content').addClass('active');
+        $(this).find('.dropdown__content').slideDown();
     }
 });

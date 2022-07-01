@@ -22,6 +22,10 @@
         padding-top: 2.4rem;
     }
 
+    .text__desc-list {
+        margin-top: 1.6rem;
+    }
+
     .title {
         margin-bottom: 2.4rem;
         font-size: 2.2rem;
@@ -38,6 +42,27 @@
 
     .scroll {
         padding: 0 3.2rem;
+    }
+
+    .dropdown {
+        padding: 1.6rem 2.4rem;
+    }
+
+    .dropdown__link {
+        padding-left: 5.9rem;
+
+        &::before {
+            top: calc(50% - 0.95rem);
+            width: 1.9rem;
+            height: 1.9rem;
+            background-size: 1.9rem 1.9rem;
+        }
+
+        span {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            max-width: 44.9rem;
+        }
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
@@ -172,6 +197,17 @@
         padding: 2.4rem;
     }
 
+    .profitability__dropdown-wrapper {
+        padding: 0 3.2rem;
+    }
+
+    .profitability__table-wrapper {
+        .scroll {
+            padding: 0 0 3.3rem;
+            margin-bottom: 1.7rem;
+        }
+    }
+
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 668*/
 }
 
@@ -225,6 +261,20 @@
         padding: 1.6rem 4rem;
         font-size: 1.4rem;
         line-height: 2.2rem;
+    }
+
+    .dropdown {
+        padding: 3.2rem;
+    }
+
+    .dropdown__link {
+        span {
+            max-width: 76rem;
+        }
+    }
+
+    .dropdown__content {
+        padding-top: 3.2rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
@@ -390,6 +440,14 @@
         margin-bottom: 3.2rem;
     }
 
+    .profitability__table-wrapper {
+        margin-top: 3.2rem;
+
+        .scroll {
+            margin-bottom: 0;
+        }
+    }
+
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1024*/
 }
 
@@ -431,6 +489,18 @@
         left: 8rem;
         top: 0;
         z-index: 10;
+    }
+
+    .dropdown__link {
+        span {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            max-width: none;
+        }
+    }
+
+    .dropdown__content {
+        padding-top: 4rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
@@ -592,6 +662,22 @@
         line-height: 2.6rem;
         margin-bottom: 4rem;
     }
+
+    .profitability__dropdown-wrapper {}
+
+    .profitability__table-wrapper {
+        margin-top: 4rem;
+    }
+
+    .profitability__table-text-big,
+    .profitability__table-text-medium,
+    .profitability__table div,
+    .profitability__table b,
+    .profitability__table p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1500*/
 }

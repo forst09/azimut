@@ -80,6 +80,10 @@ h1 span {
   margin-bottom: 0;
 }
 
+.text__desc-list {
+  margin-top: 0.8rem;
+}
+
 .text__line {
   position: relative;
   padding-top: 1.6rem;
@@ -111,6 +115,62 @@ h1 span {
   overflow-x: auto;
   padding: 0 1.7rem;
   overflow-y: hidden;
+}
+
+.dropdown {
+  display: inline-block;
+  width: 100%;
+  padding: 1.6rem;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.dropdown__link {
+  position: relative;
+  padding-left: 3.8rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.dropdown__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: calc(50% - 0.7rem);
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url("../img/list.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem 1.4rem;
+}
+.dropdown__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: calc(50% - 0.45rem);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.9rem solid #381611;
+  transition: 0.3s ease;
+}
+.dropdown__link span {
+  display: inline-block;
+  max-width: 21.4rem;
+}
+
+.dropdown__link.active::after {
+  transform: rotate(180deg);
+}
+
+.dropdown__content {
+  display: none;
+  padding-top: 2.4rem;
+}
+
+.left {
+  text-align: left !important;
 }
 
 /*СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
@@ -419,64 +479,75 @@ h1 span {
   margin-bottom: 2.4rem;
 }
 
-.dropdown {
-  display: inline-block;
-  padding: 1.6rem;
-  height: auto;
-  background-color: #ffffff;
+.text__desc-list-item {
+  padding-left: 0.8rem;
+  position: relative;
+}
+.text__desc-list-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.4rem;
+  height: 1px;
+  background-color: #381611;
+  top: 1.05rem;
+  left: 0;
 }
 
-.dropdown__link {
-  position: relative;
-  padding-left: 3.8rem;
+.profitability__table,
+.profitability__table td {
+  border: 1px solid #D5C9BB;
+}
+
+.profitability__table-wrapper {
+  margin-top: 2.4rem;
+}
+.profitability__table-wrapper .scroll {
+  padding: 0 0 1.3rem;
+}
+
+.profitability__table {
+  margin: auto;
+}
+.profitability__table td {
+  padding: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+}
+.profitability__table p {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  line-height: 2.1rem;
+}
+.profitability__table p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.profitability__table div {
+  font-size: 1.1rem;
+  line-height: 2.1rem;
+}
+.profitability__table b {
   font-size: 1.2rem;
   line-height: 2rem;
 }
-.dropdown__link::before {
-  content: "";
-  position: absolute;
+
+.profitability__table-stage {
+  margin-bottom: 0.8rem;
   display: block;
-  left: 0;
-  top: calc(50% - 0.7rem);
-  width: 1.4rem;
-  height: 1.4rem;
-  background-image: url("../img/list.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 1.4rem 1.4rem;
-}
-.dropdown__link::after {
-  content: "";
-  position: absolute;
-  display: block;
-  right: 0;
-  top: calc(50% - 0.45rem);
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
-  border-bottom: 0.9rem solid #381611;
-  transition: 0.3s ease;
-}
-.dropdown__link span {
-  display: inline-block;
-  max-width: 21.4rem;
 }
 
-.dropdown__link.active::after {
-  transform: rotate(180deg);
+.profitability__table-text-big {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
 }
 
-.dropdown__content {
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
+.profitability__table-text-medium {
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
-.dropdown__content.active {
-  padding-top: 2.4rem;
-  height: auto;
-  visibility: visible;
-  opacity: 1;
+.profitability__dropdown-wrapper .dropdown__link span {
+  text-transform: uppercase;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА*/
