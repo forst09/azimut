@@ -16,9 +16,12 @@
     line-height: 2.2rem;
   }
 
+  .text__line {
+    padding-top: 2.4rem;
+  }
+
   .title {
     margin-bottom: 2.4rem;
-    padding-bottom: 2.4rem;
     font-size: 2.2rem;
     line-height: 3.4rem;
   }
@@ -134,9 +137,6 @@
   .profitability__container .text__desc {
     max-width: 44.8rem;
   }
-  .profitability__container .title::after {
-    width: 44.8rem;
-  }
 
   .profitability__reporting {
     margin-top: 2.1rem;
@@ -181,7 +181,6 @@
 
   .title {
     margin-bottom: 3.2rem;
-    padding-bottom: 3.2rem;
     font-size: 2.4rem;
     line-height: 4rem;
   }
@@ -196,6 +195,10 @@
   }
   .text__desc p {
     margin-bottom: 1.6rem;
+  }
+
+  .text__line {
+    padding-top: 3.2rem;
   }
 
   .switch {
@@ -376,11 +379,14 @@
     line-height: 2.6rem;
   }
 
+  .text__line {
+    padding-top: 4rem;
+  }
+
   .title {
     font-size: 3.2rem;
     line-height: 4.8rem;
     margin-bottom: 4rem;
-    padding-bottom: 4rem;
   }
 
   .wrapper {

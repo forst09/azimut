@@ -56,22 +56,11 @@ h1 span {
 
 .title {
   margin-bottom: 1.6rem;
-  padding-bottom: 1.6rem;
-  position: relative;
   font-size: 1.8rem;
   line-height: 2.6rem;
   font-weight: 300;
   color: #381611;
   text-transform: uppercase;
-}
-.title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #D5C9BB;
 }
 
 .text {
@@ -89,6 +78,20 @@ h1 span {
 }
 .text__desc p:nth-last-of-type(1) {
   margin-bottom: 0;
+}
+
+.text__line {
+  position: relative;
+  padding-top: 1.6rem;
+}
+.text__line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #D5C9BB;
 }
 
 .wrapper {
@@ -354,6 +357,10 @@ h1 span {
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА*/
+.profitability .dropdown {
+  margin-top: 3.2rem;
+}
+
 .profitability__reporting {
   margin-top: 1.3rem;
   display: flex;
@@ -410,6 +417,66 @@ h1 span {
   font-size: 1.4rem;
   line-height: 2.2rem;
   margin-bottom: 2.4rem;
+}
+
+.dropdown {
+  display: inline-block;
+  padding: 1.6rem;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.dropdown__link {
+  position: relative;
+  padding-left: 3.8rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.dropdown__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: calc(50% - 0.7rem);
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url("../img/list.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1.4rem 1.4rem;
+}
+.dropdown__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: calc(50% - 0.45rem);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.9rem solid #381611;
+  transition: 0.3s ease;
+}
+.dropdown__link span {
+  display: inline-block;
+  max-width: 21.4rem;
+}
+
+.dropdown__link.active::after {
+  transform: rotate(180deg);
+}
+
+.dropdown__content {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown__content.active {
+  padding-top: 2.4rem;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА*/
