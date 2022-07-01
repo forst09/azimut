@@ -62,6 +62,9 @@ h1 span {
   color: #381611;
   text-transform: uppercase;
 }
+.title span {
+  font-weight: 400;
+}
 
 .text {
   font-size: 1.2rem;
@@ -118,11 +121,15 @@ h1 span {
 }
 
 .dropdown {
+  margin-bottom: 0.8rem;
   display: inline-block;
   width: 100%;
   padding: 1.6rem;
   height: auto;
   background-color: #ffffff;
+}
+.dropdown:nth-last-of-type(1) {
+  margin-bottom: 0;
 }
 
 .dropdown__link {
@@ -173,6 +180,15 @@ h1 span {
   text-align: left !important;
 }
 
+.btn {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  border: none;
+  padding: 1.1rem 2.6rem;
+  color: #fff;
+  background: #BD8A66;
+}
+
 /*СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
 .tab-content {
   display: none;
@@ -208,8 +224,7 @@ h1 span {
   width: 1.3rem;
   height: 2.3rem;
   border-radius: 0.8rem;
-  background: #947D66;
-  opacity: 0.2;
+  background: #F2EBE8;
 }
 .switch__item input[type=checkbox] + label::after {
   content: "";
@@ -237,6 +252,17 @@ h1 span {
   width: 1.3rem;
   height: 1.3rem;
   opacity: 0.5;
+}
+
+.switch-light .switch__item-sun path,
+.switch-light .switch__item-moon path {
+  fill: #ffffff;
+}
+.switch-light input[type=checkbox] + label::before {
+  background: rgba(255, 255, 255, 0.2);
+}
+.switch-light input[type=checkbox] + label::after {
+  background: #ffffff;
 }
 
 /*КОНЕЦ СТИЛЕЙ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
@@ -420,6 +446,9 @@ h1 span {
 .profitability .dropdown {
   margin-top: 3.2rem;
 }
+.profitability .dropdown__link span {
+  text-transform: uppercase;
+}
 
 .profitability__reporting {
   margin-top: 1.3rem;
@@ -546,53 +575,139 @@ h1 span {
   line-height: 2rem;
 }
 
-.profitability__dropdown-wrapper .dropdown__link span {
-  text-transform: uppercase;
-}
-
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА*/
-/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
-.faq__spoilers-item {
-  margin-bottom: 0.8rem;
-  padding: 1.6rem;
-  background-color: #ffffff;
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА*/
+.guarantees .wrapper {
+  padding: 0;
 }
 
-.faq__spoilers-item-title {
-  padding-left: 3.8rem;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  font-weight: 300;
-  font-size: 1.2rem;
-  line-height: 2rem;
+.guarantees__info {
+  padding: 0 1.6rem;
 }
-.faq__spoilers-item-title::before {
+
+.guarantees__image {
+  margin: 4rem auto 0;
+  width: 32rem;
+  height: 35.7rem;
+}
+.guarantees__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ*/
+.authenticity .text__desc {
+  margin-top: 1.6rem;
+}
+
+.authenticity__image {
+  margin: 0 auto 1.5rem;
+  position: relative;
+  width: 28.8rem;
+  height: 14.8rem;
+}
+.authenticity__image::after {
   content: "";
   position: absolute;
-  display: block;
-  width: 1.4rem;
-  height: 1.4rem;
+  top: 0;
   left: 0;
-  top: calc(50% - 0.7rem);
-  background-image: url("../img/faq/list.svg");
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(252, 248, 247, 0) 25.66%, #FCF8F7 97.22%);
+}
+.authenticity__image img {
+  width: 100%;
+  height: auto;
+}
+
+.authenticity__list-item {
+  margin-bottom: 0.8rem;
+  padding-left: 4.3rem;
+  position: relative;
+}
+.authenticity__list-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.authenticity__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 0.95rem);
+  width: 1.9rem;
+  height: 1.9rem;
+  background-image: url("../img/list.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 1.4rem 1.4rem;
+  background-size: 1.9rem 1.9rem;
 }
-.faq__spoilers-item-title::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 1.3rem;
-  height: 1.3rem;
-  background-color: #381611;
-  right: 0;
-  top: calc(50% - 0.65rem);
-}
-.faq__spoilers-item-title span {
-  display: inline-block;
-  max-width: 21.4rem;
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
+.faq .title {
+  margin-bottom: 3.2rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ*/
+.consultation__form-input {
+  margin-bottom: 1.8rem;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  height: 5.6rem;
+}
+.consultation__form-input:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.consultation__form-input::placeholder {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: #947D66;
+}
+
+.consultation__button-text {
+  font-style: italic;
+  font-weight: 300;
+  color: #947D66;
+  line-height: 2rem;
+  line-height: 1.1rem;
+}
+
+.consultation__map-info {
+  padding: 1.6rem 2.4rem 1.5rem;
+  background: #ffffff;
+}
+
+.consultation__map-info-title {
+  margin-bottom: 1.8rem;
+}
+
+.consultation__map-info-item {
+  margin-bottom: 0.8rem;
+}
+.consultation__map-info-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.consultation__map-info-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.consultation__map-info-phone {
+  font-weight: 500;
+}
+
+.consultation__map-info-email {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.consultation__map-info-email span {
+  margin-left: 1.2rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ*/

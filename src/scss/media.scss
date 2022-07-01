@@ -197,7 +197,7 @@
         padding: 2.4rem;
     }
 
-    .profitability__dropdown-wrapper {
+    .dropdown__wrapper {
         padding: 0 3.2rem;
     }
 
@@ -209,6 +209,92 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 668*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 668*/
+    .guarantees {
+        .wrapper {
+            padding: 0 3.2rem;
+            overflow: hidden;
+        }
+    }
+
+    .guarantees__container {
+        display: flex;
+        align-items: center;
+    }
+
+    .guarantees__info {
+        position: relative;
+        padding: 0;
+        max-width: 33.2rem;
+        flex-shrink: 0;
+
+        &::before {
+            content: '';
+            margin-bottom: 2.4rem;
+            display: block;
+            width: 5.6rem;
+            height: 5.6rem;
+            background-image: url('@img/list.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 5.6rem 5.6rem;
+            opacity: 0.2;
+        }
+    }
+
+    .guarantees__image {
+        margin-top: 0;
+        margin-left: 5.5rem;
+        flex-shrink: 0;
+        width: 35.2rem;
+        height: 47.9rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 668*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 668*/
+    .authenticity {
+        .text__desc {
+            margin-top: 2.4rem;
+        }
+    }
+
+    .authenticity__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .authenticity__image {
+        width: 52.9rem;
+        flex-shrink: 0;
+        height: 37.2rem;
+        margin: 0 0 0 -30rem;
+
+        img {
+            transform: scale(-1, 1);
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    .authenticity__info {
+        max-width: 33.2rem;
+        flex-shrink: 0;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 668*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 668*/
+    .faq {
+        .title {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -448,7 +534,82 @@
         }
     }
 
+    .dropdown__wrapper {
+        padding: 0 4.8rem;
+    }
+
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1024*/
+    .guarantees {
+        .wrapper {
+            padding: 0 4.8rem;
+        }
+
+        .switch {
+            position: absolute;
+            right: 1.6rem;
+            top: 1.6rem;
+        }
+    }
+
+    .guarantees__container {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .guarantees__info {
+        max-width: 43.3rem;
+
+        &::before {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    .guarantees__image {
+        margin: 0;
+        width: 44.8rem;
+        height: 55.7rem;
+        position: relative;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 1024*/
+    .authenticity {
+        .text__desc {
+            margin-top: 3.2rem;
+        }
+    }
+
+    .authenticity__image {
+        margin-top: 5rem;
+        margin-left: -18rem;
+
+        img {
+            transform: none;
+        }
+    }
+
+    .authenticity__info {
+        max-width: 51.2rem;
+    }
+
+    .authenticity__list-item {
+        padding-left: 5.9rem;
+        margin-bottom: 2.4rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1024*/
+    .faq {
+        .title {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1024*/
 }
 
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -489,6 +650,10 @@
         left: 8rem;
         top: 0;
         z-index: 10;
+    }
+
+    .dropdown {
+        margin-bottom: 1.6rem;
     }
 
     .dropdown__link {
@@ -663,8 +828,6 @@
         margin-bottom: 4rem;
     }
 
-    .profitability__dropdown-wrapper {}
-
     .profitability__table-wrapper {
         margin-top: 4rem;
     }
@@ -678,8 +841,95 @@
         line-height: 2.6rem;
     }
 
+    .dropdown__wrapper {
+        padding: 0 8rem;
+    }
+
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
+    .guarantees {
+        .wrapper {
+            padding: 0 8rem;
+        }
+
+        .switch {
+            left: auto;
+            right: 2.5rem;
+            top: 2.5rem;
+        }
+    }
+
+    .guarantees__container {
+        position: relative;
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 18.9rem;
+            height: 17.2rem;
+            border-left: 1px solid $border;
+            border-bottom: 1px solid $border;
+            bottom: 0;
+            left: 21rem;
+        }
+    }
+
+    .guarantees__info {
+        max-width: 45.7rem;
+
+        &::before {
+            margin-bottom: 4rem;
+            width: 7.8rem;
+            height: 7.8rem;
+            background-size: 7.8rem 7.8rem;
+        }
+    }
+
+    .guarantees__image {
+        width: 67.1rem;
+        height: 79.4rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 1500*/
+    .authenticity {
+        .text__desc {
+            margin-top: 4rem;
+        }
+    }
+
+    .authenticity__container {
+        align-items: flex-end;
+    }
+
+    .authenticity__image {
+        width: 61.4rem;
+        height: 43.2rem;
+        margin: 0 0 0 -5rem;
+    }
+
+    .authenticity__info {
+        max-width: 62rem;
+    }
+
+    .authenticity__list-item {
+        margin-bottom: 3.2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1500*/
+    .faq {
+        .title {
+            margin-bottom: 8rem;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1500*/
 }
 
 /*КОНЕЦ АДАПТИВА 1500*/
