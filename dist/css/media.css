@@ -161,11 +161,11 @@
     max-width: 44.8rem;
   }
 
-  .profitability__reporting {
+  .reporting {
     margin-top: 2.1rem;
   }
 
-  .profitability__reporting-name {
+  .reporting-name {
     max-width: 21.6rem;
   }
 
@@ -193,6 +193,82 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 668*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 668*/
+  .interiors .title {
+    margin: 0;
+  }
+  .interiors .reporting {
+    margin: 0;
+    border: 1px solid red;
+    padding: 0.4rem 2.4rem;
+  }
+
+  .interiors__title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  .tabs__list-item {
+    margin-right: 4.2rem;
+  }
+
+  .interiors__swiper-navigation {
+    margin-top: 3.2rem;
+  }
+
+  .interiors__swiper-navigation-buttons {
+    display: block;
+  }
+
+  .swiper-slide {
+    height: 33rem;
+  }
+
+  .swiper-pagination {
+    font-size: 2.2rem;
+    line-height: 3.4rem;
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+    position: static;
+    margin-top: 0;
+    width: 1rem;
+    height: 0.9rem;
+  }
+  .swiper-button-next::after,
+.swiper-button-prev::after {
+    content: "";
+    display: block;
+    top: calc(50% - 0.45rem);
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.9rem solid #381611;
+  }
+
+  .swiper-button-prev {
+    transform: rotate(-90deg);
+    margin-right: 4rem;
+  }
+
+  .swiper-button-next {
+    transform: rotate(90deg);
+  }
+
+  .interiors__swiper-navigation-buttons {
+    display: flex;
+  }
+
+  .interiors__swiper-navigation {
+    padding: 0 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 668*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 668*/
   .guarantees .wrapper {
     padding: 0 3.2rem;
@@ -508,11 +584,11 @@
     max-width: 73.6rem;
   }
 
-  .profitability__reporting {
+  .reporting {
     margin-top: 3.6rem;
   }
 
-  .profitability__reporting-name {
+  .reporting-name {
     max-width: 27.5rem;
   }
 
@@ -553,6 +629,21 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1024*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1024*/
+  .swiper-slide {
+    height: 41rem;
+  }
+
+  .interiors__swiper-navigation {
+    padding: 0 4.8rem;
+  }
+
+  .swiper-pagination {
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1024*/
   .guarantees .wrapper {
     padding: 0 4.8rem;
@@ -821,7 +912,7 @@
     max-width: 80.4rem;
   }
 
-  .profitability__reporting {
+  .reporting {
     margin-bottom: 0.6rem;
   }
 
@@ -862,6 +953,32 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1500*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
+  .interiors .reporting {
+    padding: 0.8rem 3.2rem;
+  }
+  .interiors .scroll {
+    margin-bottom: 5.6rem;
+  }
+
+  .tabs__list-item {
+    margin-right: 5rem;
+  }
+
+  .swiper-slide {
+    height: 60rem;
+  }
+
+  .interiors__swiper-navigation {
+    margin-top: 4.8rem;
+  }
+
+  .swiper-pagination {
+    font-size: 4rem;
+    line-height: 5.4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
   .guarantees .wrapper {
     padding: 0 8rem;
