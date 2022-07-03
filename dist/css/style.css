@@ -651,15 +651,20 @@ h1 span {
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ*/
+.consultation__container {
+  margin-top: 2.4rem;
+}
+
+.consultation__form {
+  margin-bottom: 3rem;
+}
+
 .consultation__form-input {
   margin-bottom: 1.8rem;
   border: none;
   width: 100%;
   padding: 0.8rem;
   height: 5.6rem;
-}
-.consultation__form-input:nth-last-of-type(1) {
-  margin-bottom: 0;
 }
 .consultation__form-input::placeholder {
   font-weight: 300;
@@ -668,16 +673,27 @@ h1 span {
   color: #947D66;
 }
 
+.consultation__form-textarea {
+  margin-bottom: 0;
+  height: 12.4rem;
+  resize: none;
+}
+
+.consultation__button {
+  margin-top: 2.4rem;
+}
+
 .consultation__button-text {
+  margin-top: 1.6rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
   font-style: italic;
   font-weight: 300;
   color: #947D66;
-  line-height: 2rem;
-  line-height: 1.1rem;
 }
 
 .consultation__map-info {
-  padding: 1.6rem 2.4rem 1.5rem;
+  padding: 1.6rem 2.4rem;
   background: #ffffff;
 }
 
@@ -692,9 +708,31 @@ h1 span {
   margin-bottom: 0;
 }
 
+.consultation__map-img {
+  position: relative;
+  width: 100%;
+  height: 18.3rem;
+}
+.consultation__map-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #D7C8BA;
+  mix-blend-mode: color;
+  left: 0;
+  top: 0;
+}
+.consultation__map-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .consultation__map-info-contacts {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .consultation__map-info-phone {
@@ -708,6 +746,10 @@ h1 span {
 }
 .consultation__map-info-email span {
   margin-left: 1.2rem;
+}
+.consultation__map-info-email svg {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ*/

@@ -267,6 +267,69 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 668*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 668*/
+  .consultation .title {
+    max-width: 44.8rem;
+  }
+
+  .consultation__container {
+    margin-top: 3.1rem;
+  }
+
+  .consultation__form {
+    margin-bottom: 5rem;
+  }
+
+  .consultation__form-input {
+    max-width: 46.3rem;
+    padding: 1.8rem 1.8rem 2.4rem;
+  }
+
+  .consultation__button {
+    display: flex;
+    align-items: center;
+  }
+
+  .consultation__button-text {
+    margin-top: 0;
+    margin-left: 2rem;
+    max-width: 31.6rem;
+  }
+
+  .consultation__map {
+    position: relative;
+  }
+
+  .consultation__map-img {
+    height: 35.3rem;
+  }
+
+  .consultation__map-info {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 32.9rem;
+  }
+
+  .consultation__map-info-title {
+    margin-bottom: 1.6rem;
+  }
+
+  .consultation__map-info-item {
+    margin-bottom: 1.2rem;
+  }
+
+  .consultation__map-info-contacts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .consultation__map-info-phone {
+    margin-bottom: 0;
+  }
+
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -549,6 +612,36 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1024*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 1024*/
+  .consultation .title {
+    max-width: 58.5rem;
+  }
+
+  .consultation__container {
+    margin-top: 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .consultation__form {
+    margin-bottom: 0;
+    max-width: 46.3rem;
+  }
+
+  .consultation__button {
+    margin-top: 3.8rem;
+  }
+
+  .consultation__map-img {
+    width: 41.7rem;
+  }
+
+  .consultation__map-info {
+    width: 33.5rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 1024*/
 }
 /*НАЧАЛО АДАПТИВА 1500*/
 @media (min-width: 1500px) {
@@ -839,5 +932,48 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1500*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 1500*/
+  .consultation .title {
+    max-width: 74rem;
+  }
+
+  .consultation__container {
+    margin-top: 4.5rem;
+  }
+
+  .consultation__form {
+    max-width: 50rem;
+  }
+
+  .consultation__form-input {
+    max-width: 50rem;
+    padding: 1.9rem;
+  }
+
+  .consultation__button {
+    margin-top: 4.4rem;
+  }
+
+  .consultation__map-img {
+    width: 71.7rem;
+    height: 35rem;
+  }
+
+  .consultation__map-info {
+    width: 41.8rem;
+    padding: 1.6rem 3.2rem;
+  }
+
+  .consultation__map-info-contacts {
+    justify-content: flex-start;
+  }
+
+  .consultation__map-info-phone {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-right: 6.4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/
