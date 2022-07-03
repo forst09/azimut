@@ -509,28 +509,33 @@ h1 {
     }
 }
 
-.profitability__reporting {
+.reporting {
     margin-top: 1.3rem;
     display: flex;
     padding-left: 1.9rem;
     align-items: center;
 }
 
-.profitability__reporting-image {
+.reporting-image {
     width: 1.3rem;
     height: 1.3rem;
     margin-right: 2.5rem;
     flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.profitability__reporting-name {
+.reporting-name {
     font-size: 1.1rem;
     color: $light-brown;
     line-height: 2.4rem;
     margin-bottom: 0.3rem;
 }
 
-.profitability__reporting-weight {
+.reporting-weight {
     color: $light-brown;
     opacity: 0.5;
     line-height: 2rem;
@@ -644,6 +649,97 @@ h1 {
 
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА*/
+
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ*/
+.interiors {
+    .reporting {
+        margin-bottom: 3.2rem;
+    }
+
+    .scroll {
+        margin-bottom: 2.8rem;
+        text-align: center;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background: transparent;
+        }
+    }
+
+    .reporting-name,
+    .reporting-weight {
+        color: $red;
+    }
+}
+
+.tabs__list {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tabs__list-item {
+    margin-right: 3.2rem;
+    width: max-content;
+
+    &:nth-last-of-type(1) {
+        margin-right: 0;
+    }
+
+    a {
+        display: inline-block;
+        line-height: 2rem;
+    }
+}
+
+.tabs__list-item.active {
+    a {
+        padding-bottom: 0.8rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 1px;
+            background-color: $light-brown;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.interiors__swiper-navigation-buttons {
+    display: none;
+}
+
+.interiors__swiper-navigation {
+    margin-top: 2.4rem;
+}
+
+.swiper-pagination {
+    position: static;
+    width: fit-content;
+    margin: auto;
+    color: #D5C9BB;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+}
+
+.swiper-slide {
+    height: 20.1rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ*/
 
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА*/
 .guarantees {
