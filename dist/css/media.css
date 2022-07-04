@@ -66,6 +66,62 @@
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
+  /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
+  .header .btn__wrapper {
+    display: block;
+  }
+
+  .header__burger {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__burger-icon {
+    margin-right: 1.6rem;
+  }
+
+  .header__burger-text {
+    display: block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #ffffff;
+  }
+
+  .header__logo {
+    width: 16.7rem;
+    height: 1.7rem;
+  }
+
+  .header__call {
+    text-align: center;
+  }
+
+  .header__phone {
+    margin-bottom: 1rem;
+  }
+
+  .header__phone-icon {
+    display: none;
+  }
+
+  .header__phone-text {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #ffffff;
+  }
+
+  .header__btn {
+    display: inline-block;
+    padding: 0.4rem 1.6rem;
+    background-color: #fff;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
   .main {
     padding: 14rem 0 5.2rem;
@@ -273,6 +329,57 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 668*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 668*/
+  .benefits .wrapper {
+    padding: 0 3.2rem;
+  }
+  .benefits .title {
+    padding: 0;
+  }
+
+  .benefits__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .benefits__image {
+    max-width: 25rem;
+  }
+
+  .benefits__img {
+    width: 35.2rem;
+    height: 54rem;
+    margin-left: -13rem;
+  }
+
+  .benefits__cards {
+    margin: 0;
+    padding: 0;
+    max-width: 33.2rem;
+  }
+
+  .benefits__card-item {
+    margin-bottom: 2rem;
+  }
+
+  .benefits__card-item-main {
+    margin-bottom: 1.6rem;
+  }
+
+  .benefits__card-image {
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-right: 2rem;
+  }
+
+  .benefits__card-text {
+    display: block;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 668*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 668*/
   .guarantees .wrapper {
     padding: 0 3.2rem;
@@ -534,9 +641,53 @@
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
+  /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__logo {
+    width: 9.6rem;
+    height: 2.9rem;
+    margin-right: 4.8rem;
+  }
+
+  .header__nav {
+    display: block;
+  }
+
+  .header__list {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__list-item {
+    margin-right: 4rem;
+  }
+  .header__list-item:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+  .header__list-item a {
+    line-height: 2rem;
+    color: #fff;
+  }
+
+  .header__call {
+    margin-left: auto;
+  }
+
+  .header__btn {
+    padding: 1rem 2.4rem;
+  }
+
+  /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
   .main {
-    padding: 12.8rem 0 7.4rem;
+    padding: 12.8rem 0 7.2rem;
     position: relative;
   }
   .main::before {
@@ -709,6 +860,48 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1024*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 1024*/
+  .benefits .switch {
+    position: absolute;
+    top: 0;
+    right: -3.7rem;
+  }
+  .benefits .wrapper {
+    padding: 0 4.8rem;
+  }
+
+  .benefits__image {
+    max-width: none;
+  }
+
+  .benefits__img {
+    position: relative;
+    width: 37rem;
+    height: 50.7rem;
+    margin: 0;
+  }
+
+  .benefits__cards {
+    max-width: 46.5rem;
+  }
+
+  .benefits__card-item {
+    margin-bottom: 1.6rem;
+    padding: 2.4rem 3.2rem;
+  }
+
+  .benefits__card-image {
+    width: 4.4rem;
+    height: 4.4rem;
+    margin-right: 2.4rem;
+  }
+
+  .benefits__card-text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1024*/
   .guarantees .wrapper {
     padding: 0 4.8rem;
@@ -860,13 +1053,6 @@
     padding: 0 8rem;
   }
 
-  .switch {
-    position: absolute;
-    left: 8rem;
-    top: 0;
-    z-index: 10;
-  }
-
   .dropdown {
     margin-bottom: 1.6rem;
   }
@@ -887,6 +1073,38 @@
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
+  /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
+  .header__logo {
+    width: 14.4rem;
+    height: 4.4rem;
+    margin-right: 6.4rem;
+  }
+
+  .header__list-item {
+    margin-right: 4.8rem;
+  }
+  .header__list-item a {
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+  }
+
+  .header__phone {
+    margin-bottom: 1.2rem;
+  }
+
+  .header__phone-text {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  .header__btn {
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    padding: 0.8rem 2.4rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
   .main {
     padding: 17.7rem 0 12.8rem;
@@ -932,6 +1150,13 @@
 
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* 1500*/
+  .description .switch {
+    position: absolute;
+    left: 8rem;
+    top: 0;
+    z-index: 10;
+  }
+
   .description__container {
     position: relative;
     justify-content: space-between;
@@ -1079,6 +1304,38 @@
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1500*/
+  /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 1500*/
+  .benefits .wrapper {
+    padding: 0 8rem;
+  }
+
+  .benefits__img {
+    width: 62.6rem;
+    height: 67.8rem;
+  }
+
+  .benefits__cards {
+    max-width: 52.9rem;
+  }
+
+  .benefits__card-item {
+    margin-bottom: 3.2rem;
+  }
+
+  .benefits__card-item-main {
+    margin-bottom: 2.4rem;
+  }
+
+  .benefits__card-image {
+    margin-right: 3.2rem;
+  }
+
+  .benefits__card-title {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
   .guarantees .wrapper {
     padding: 0 8rem;

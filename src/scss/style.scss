@@ -297,6 +297,81 @@ h1 {
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 
+
+/*НАЧАЛО СТИЛЕЙ ШАПКИ */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding-top: 1.6rem;
+
+    .btn__wrapper {
+        display: none;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__burger-icon {
+    height: 1.3rem;
+    width: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+        width: 100%;
+        height: 1px;
+        display: block;
+        background-color: #fff;
+    }
+}
+
+.header__burger-text {
+    display: none;
+}
+
+.header__logo {
+    width: 11rem;
+    height: 1.1rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.header__nav {
+    display: none;
+}
+
+.header__phone {
+    display: inline-block;
+}
+
+.header__phone-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.header__phone-text {
+    display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ ШАПКИ */
+
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА */
 .main {
     padding: 9.6rem 0 7.6rem;
@@ -710,6 +785,85 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ*/
+
+/*НАЧАЛО СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА*/
+.benefits {
+    .wrapper {
+        padding: 0;
+    }
+
+    .title {
+        padding: 0 1.6rem;
+    }
+}
+
+.benefits__img {
+    width: 100%;
+    height: 16.3rem;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.benefits__cards {
+    padding: 0 1.6rem;
+    margin-top: 4rem;
+}
+
+.benefits__card-item {
+    padding: 1.6rem 2.4rem;
+    border: 1px solid #F3EBE1;
+    margin-bottom: 0.8rem;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+}
+
+.benefits__card-item-main {
+    display: flex;
+    align-items: center;
+}
+
+.benefits__card-image {
+    width: 4.4rem;
+    height: 4.4rem;
+    margin-right: 2.4rem;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+.benefits__card-title {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 300;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.benefits__card-text {
+    display: none;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА*/
 
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА*/
 .guarantees {
