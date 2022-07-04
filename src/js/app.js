@@ -1,8 +1,8 @@
 // ПЕРЕКЛЮЧЕНИЕ ТАБОВ
 $(document).on('click', ".tabs__list-item", function () {
-    $('.tab-content').removeClass('active');
+    $(this).parents('section').find('.tab-content').removeClass('active');
     $('#' + $(this).attr("data-tab")).addClass('active');
-    $('.tabs__list-item').removeClass('active');
+    $(this).parents('section').find('.tabs__list-item').removeClass('active');
     $(this).addClass('active');
 });
 
@@ -78,6 +78,66 @@ const swiperInteriorsLayouts = new Swiper('.swiper-interiors-layouts', {
     },
     pagination: {
         el: '.interiors-layouts-pagination',
+        type: 'fraction',
+    },
+});
+
+//ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ, ВХОДНАЯ ГРУППА И МОП
+const swiperLayoutsEntryGroup = new Swiper('.swiper-layouts-entry-group', {
+    speed: 400,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.interiors-entry-group-button-next',
+        prevEl: '.interiors-entry-group-button-prev',
+    },
+    pagination: {
+        el: '.interiors-entry-group-pagination',
+        type: 'fraction',
+    },
+});
+
+//ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ, РЕСТОРАН
+const swiperLayoutsRestaurant = new Swiper('.swiper-layouts-restaurant', {
+    speed: 400,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.interiors-restaurant-button-next',
+        prevEl: '.interiors-restaurant-button-prev',
+    },
+    pagination: {
+        el: '.interiors-restaurant-pagination',
+        type: 'fraction',
+    },
+});
+
+//ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ, ТЕРРИТОРИЯ
+const swiperLayoutsTerritory = new Swiper('.swiper-layouts-territory', {
+    speed: 400,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.interiors-territory-button-next',
+        prevEl: '.interiors-territory-button-prev',
+    },
+    pagination: {
+        el: '.interiors-territory-pagination',
+        type: 'fraction',
+    },
+});
+
+//ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ, ФАСАД
+const swiperLayoutsFacade = new Swiper('.swiper-layouts-facade', {
+    speed: 400,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.interiors-facade-button-next',
+        prevEl: '.interiors-facade-button-prev',
+    },
+    pagination: {
+        el: '.interiors-facade-pagination',
         type: 'fraction',
     },
 });
