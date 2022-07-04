@@ -328,6 +328,12 @@
         }
     }
 
+    .guarantees__text {
+        .text {
+            margin-bottom: 2.4rem;
+        }
+    }
+
     .guarantees__image {
         margin-top: 0;
         margin-left: 5.5rem;
@@ -785,6 +791,12 @@
         align-items: flex-start;
     }
 
+    .guarantees__text {
+        .text {
+            margin-bottom: 3.2rem;
+        }
+    }
+
     .guarantees__info {
         max-width: 43.3rem;
 
@@ -1140,7 +1152,7 @@
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1500*/
 
-    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
+    /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1500*/
     .interiors {
         .reporting {
             padding: 0.8rem 3.2rem;
@@ -1167,7 +1179,7 @@
         line-height: 5.4rem;
     }
 
-    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
+    /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ГАРАНТИИ ДЛЯ ИНВЕСТОРА 1500*/
     .guarantees {
@@ -1195,6 +1207,12 @@
             border-bottom: 1px solid $border;
             bottom: 0;
             left: 21rem;
+        }
+    }
+
+    .guarantees__text {
+        .text {
+            margin-bottom: 4rem;
         }
     }
 
