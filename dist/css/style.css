@@ -279,6 +279,14 @@ h1 span {
   display: none;
 }
 
+.header.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -875,10 +883,11 @@ h1 span {
   margin-bottom: 1.8rem;
   border: none;
   width: 100%;
-  padding: 0.8rem;
+  padding: 1.6rem;
   height: 5.6rem;
 }
 .consultation__form-input::placeholder {
+  font-family: "TT Hoves";
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.4rem;

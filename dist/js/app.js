@@ -20,6 +20,23 @@ $(document).on('click', ".dropdown", function () {
     }
 });
 
+//ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
+let header = document.querySelector('.header');
+headerHeight = header.clientHeight;
+
+document.onscroll = function () {
+    let scroll = window.scrollY;
+
+    if (scroll > headerHeight) {
+        header.classList.add('fixed');
+        document.body.style.paddingTop = headerHeight + 'px';
+    }
+    else {
+        header.classList.remove('fixed');
+        document.body.removeAttribute('style');
+    }
+};
+
 // swiper.loopDestroy();
 
 //ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ, СТАНДАРТНЫЙ НОМЕР
