@@ -34,7 +34,6 @@ h1 {
 
 .title {
     margin-bottom: 1.6rem;
-    // padding-bottom: 1.6rem;
     font-size: 1.8rem;
     line-height: 2.6rem;
     font-weight: 300;
@@ -44,6 +43,10 @@ h1 {
     span {
         font-weight: 400;
     }
+}
+
+.title-without-line {
+    margin-bottom: 3.2rem;
 }
 
 .text {
@@ -411,7 +414,7 @@ h1 {
 }
 
 .main__desc {
-    margin: 1rem 0 2.4rem;
+    margin: 0.8rem 0 3.2rem;
     font-weight: 300;
     color: $white;
     font-size: 1.2rem;
@@ -430,7 +433,7 @@ h1 {
 }
 
 .main__numbers-item-count {
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 2.8rem;
     color: $white;
     font-weight: 700;
@@ -453,17 +456,16 @@ h1 {
 
 .main__buttons {
     margin-top: 3.2rem;
-    display: flex;
-    align-items: flex-end;
 
     .btn-main {
         margin-bottom: 1.6rem;
     }
 }
 
-.main__buttons-action {
+.main__buttons-wrapper {
+    margin-top: 2.4rem;
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
 .main__buttons-watch {
@@ -472,7 +474,7 @@ h1 {
 }
 
 .main__buttons-logo {
-    width: 7.1rem;
+    width: 6.8rem;
     height: 2.1rem;
     margin-left: auto;
     opacity: 0.5;
@@ -962,6 +964,12 @@ h1 {
 
 
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ*/
+.consultation {
+    .title {
+        margin-bottom: 2.4rem;
+    }
+}
+
 .consultation__container {
     margin-top: 2.4rem;
 }
