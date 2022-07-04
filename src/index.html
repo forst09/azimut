@@ -10,15 +10,28 @@
 
     <!-- НАЧАЛО ГЛАВНОГО ЭКРАНА -->
     <main class="main">
-        <div class="main__background">
+        <div class="main__background main__background-night">
             <picture>
-                <source srcset="img/main/320-night.jpg" type="image/jpg" media="(max-width:667px)">
+                <source class="night" srcset="img/main/320-night.jpg" type="image/jpg" media="(max-width:667px)">
                 <source srcset="img/main/668-night.jpg" type="image/jpg"
                     media="(min-width:668px) and (max-width:1023px)">
-                <source srcset="img/main/1024-night.jpg" type="image/jpg"
+                <source class="night" srcset="img/main/1024-night.jpg" type="image/jpg"
                     media="(min-width:1024px) and (max-width:1500px)">
-                <source srcset="img/main/1500-night.jpg" type="image/jpg" media="(min-width:1500px)">
-                <img src="img/main/320-night.jpg" alt="">
+                <source class="day" srcset="img/main/1024-day.jpg" type="image/jpg"
+                    media="(min-width:1024px) and (max-width:1500px)">
+                <source class="night" srcset="img/main/1500-night.jpg" type="image/jpg" media="(min-width:1500px)">
+                <img class="night" src="img/main/320-night.jpg" alt="">
+            </picture>
+        </div>
+        <div class="main__background main__background-day">
+            <picture>
+                <source class="day" srcset="img/main/320-day.jpg" type="image/jpg" media="(max-width:667px)">
+                <source class="day" srcset="img/main/668-day.jpg" type="image/jpg"
+                    media="(min-width:668px) and (max-width:1023px)">
+                <source class="day" srcset="img/main/1024-day.jpg" type="image/jpg"
+                    media="(min-width:1024px) and (max-width:1500px)">
+                <source class="day" srcset="img/main/1500-day.jpg" type="image/jpg" media="(min-width:1500px)">
+                <img class="night" src="img/main/320-day.jpg" alt="">
             </picture>
         </div>
         <div class="wrapper">
