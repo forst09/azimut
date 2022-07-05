@@ -195,6 +195,10 @@ h1 {
     }
 }
 
+.scroll-hide {
+    overflow: hidden;
+}
+
 /*СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
 .tab-content {
     display: none;
@@ -262,6 +266,18 @@ h1 {
     width: 1.3rem;
     height: 1.3rem;
     opacity: 0.5;
+    transition: opacity 0.3s ease;
+
+    path {
+        transition: 0.3s ease;
+    }
+}
+
+.switch__item-sun.active,
+.switch__item-moon.active {
+    path {
+        fill: $brown;
+    }
 }
 
 
@@ -272,6 +288,13 @@ h1 {
     .switch__item-moon {
         path {
             fill: $white;
+        }
+    }
+
+    .switch__item-sun.active,
+    .switch__item-moon.active {
+        path {
+            fill: $border-before;
         }
     }
 
@@ -772,12 +795,13 @@ h1 {
 
 .interiors__swiper-navigation {
     margin-top: 2.4rem;
+    text-align: center;
 }
 
 .swiper-pagination {
     position: static;
+    display: inline-flex;
     width: fit-content;
-    margin: auto;
     color: #D5C9BB;
     font-size: 1.8rem;
     line-height: 2.6rem;
@@ -792,6 +816,68 @@ h1 {
         height: 100%;
         object-fit: cover;
     }
+}
+
+.thumbs-wrapper {
+    margin-top: 0.8rem;
+    // overflow-x: scroll;
+    padding: 0 1.6rem;
+}
+
+.swiper-thumbs {
+    // display: inline-flex;
+    // overflow-x: auto;
+
+    .swiper-wrapper {
+        // transform: translate3d(0px, 0, 0) !important;
+        justify-content: center;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+    }
+
+    .swiper-slide-thumb-active {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(252, 248, 247, 0.5), rgba(252, 248, 247, 0.5));
+        }
+    }
+}
+
+.interiors-layouts {
+    .interiors__swiper-navigation {
+        margin-top: 1.6rem;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .swiper-thumbs {
+        .swiper-slide {
+            width: 3rem !important;
+            height: 3rem !important;
+
+            .swiper-thumbs-wrapper {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+}
+
+.swiper-image-wrapper {
+    width: 16.3rem;
+    height: 16.3rem;
+    margin: auto;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ*/
@@ -1205,6 +1291,108 @@ h1 {
 }
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
+
+/*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 76%;
+    height: 100%;
+    background-color: $bgcolor;
+    padding: 2.4rem;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+.mobile-menu__header-logo {
+    width: 9.6rem;
+    height: 2.9rem;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.mobile-menu__header-close {
+    width: 2.8rem;
+    height: 2.8rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $border;
+        top: auto;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $border;
+        bottom: auto;
+        transform: rotate(-45deg);
+    }
+}
+
+.mobile-menu__list-item {
+    position: relative;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: $mobile-line;
+        bottom: 0;
+        left: 0;
+    }
+
+    &:nth-last-of-type(1) {
+        position: static;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    a {
+        font-size: 1.1rem;
+        line-height: 2.4rem;
+    }
+}
+
+.mobile-menu__phone {
+    margin-top: 6rem;
+}
+
+.mobile-menu__phone-link {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #947D66;
+    font-weight: 500;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 
 @keyframes night {
     0% {

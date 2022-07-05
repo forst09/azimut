@@ -37,6 +37,32 @@ document.onscroll = function () {
     }
 };
 
+//ОТКРЫТИЕ МОБИЛЬНОГО МЕНЮ
+$(document).on('click', ".header__burger", function () {
+    $('.mobile-menu').addClass('active');
+    $('body').addClass('scroll-hide');
+});
+
+//ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
+$(document).on('click', ".mobile-menu__header-close", function () {
+    $('.mobile-menu').removeClass('active');
+    $('body').removeClass('scroll-hide');
+});
+
+//ПЕРЕКЛЮЧАТЕЛЬ ТЕМНЫХ/СВЕТЛЫХ КАРТИНОК
+$(document).on('click', ".switch__item-label", function () {
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $(this).parents('.switch').find('.switch__item-sun').removeClass('active');
+        $(this).parents('.switch').find('.switch__item-moon').addClass('active');
+    }
+    else {
+        $(this).addClass('active');
+        $(this).parents('.switch').find('.switch__item-sun').addClass('active');
+        $(this).parents('.switch').find('.switch__item-moon').removeClass('active');
+    }
+});
+
 // swiper.loopDestroy();
 
 //ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ, СТАНДАРТНЫЙ НОМЕР
@@ -84,11 +110,21 @@ const swiperInteriorsDuplex = new Swiper('.swiper-interiors-duplex', {
     },
 });
 
+//ИНИЦИАЛИЗАЦИЯ ТУМБОВ СВАЙПЕРА СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ, ПЛАНИРОВКИ
+const swiperInteriorsLayoutsThumbs = new Swiper('.swiper-interiors-layouts-thumbs', {
+    speed: 400,
+    // slidesPerView: 6,
+    // centeredSlides: true,
+    spaceBetween: 8,
+    virtualTranslate: true,
+    // loop: true,
+});
+
 //ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ, ПЛАНИРОВКИ
 const swiperInteriorsLayouts = new Swiper('.swiper-interiors-layouts', {
     speed: 400,
     slidesPerView: 1,
-    loop: true,
+    // loop: true,
     navigation: {
         nextEl: '.interiors-layouts-button-next',
         prevEl: '.interiors-layouts-button-prev',
@@ -97,6 +133,9 @@ const swiperInteriorsLayouts = new Swiper('.swiper-interiors-layouts', {
         el: '.interiors-layouts-pagination',
         type: 'fraction',
     },
+    thumbs: {
+        swiper: swiperInteriorsLayoutsThumbs
+    }
 });
 
 //ИНИЦИАЛИЗАЦИЯ СВАЙПЕРА СЕКЦИИ ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ, ВХОДНАЯ ГРУППА И МОП

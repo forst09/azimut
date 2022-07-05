@@ -149,7 +149,7 @@
 
                     <input id="switch-1" class="switch__item-checkbox" type='checkbox'><label for="switch-1"
                         class="switch__item-label"></label>
-                    <svg class="switch__item-moon" width="13" height="14" viewBox="0 0 13 14" fill="none"
+                    <svg class="switch__item-moon active" width="13" height="14" viewBox="0 0 13 14" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M6.67881 0.113487C6.50314 0.108732 6.342 0.210544 6.27085 0.371233C6.19971 0.531922 6.23266 0.719667 6.35427 0.846528C7.25009 1.78105 7.79988 3.04807 7.79988 4.4444C7.79988 7.31628 5.47176 9.6444 2.59988 9.6444C2.23203 9.6444 1.87355 9.60627 1.52803 9.5339C1.356 9.49787 1.17924 9.56932 1.08057 9.71478C0.981909 9.86024 0.980883 10.0509 1.07798 10.1974C2.24098 11.9523 4.235 13.1111 6.49986 13.1111C10.0897 13.1111 12.9999 10.2009 12.9999 6.61107C12.9999 3.08107 10.1861 0.208406 6.67881 0.113487Z"
@@ -505,21 +505,22 @@
         </div>
         <div class="scroll-swiper">
             <ul class="tabs__list">
-                <li class="tabs__list-item active" data-tab="interiorsStandard"><a href="javascript:void(0)">Стандартный
+                <li class="tabs__list-item" data-tab="interiorsStandard"><a href="javascript:void(0)">Стандартный
                         номер</a></li>
                 <li class="tabs__list-item" data-tab="interiorsTwoRoom"><a href="javascript:void(0)">Двухкомнатный
                         номер</a>
                 </li>
                 <li class="tabs__list-item" data-tab="interiorsDuplex"><a href="javascript:void(0)">Двухуровневый
                         номер</a></li>
-                <li class="tabs__list-item" data-tab="interiorsLayouts"><a href="javascript:void(0)">Планировки</a>
+                <li class="tabs__list-item active" data-tab="interiorsLayouts"><a
+                        href="javascript:void(0)">Планировки</a>
                 </li>
             </ul>
         </div>
         </div>
 
         <!-- СЛАЙДЕР СТАНДАРТНЫЙ НОМЕР -->
-        <div id="interiorsStandard" class="tab-content active">
+        <div id="interiorsStandard" class="tab-content">
             <div class="swiper swiper-interiors-standard">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -663,52 +664,132 @@
         <!--КОНЕЦ СЛАЙДЕРА ДВУХУРОВНЕВЫЙ НОМЕР -->
 
         <!-- СЛАЙДЕР ПЛАНИРОВКИ -->
-        <div id="interiorsLayouts" class="tab-content">
+        <div id="interiorsLayouts" class="tab-content active interiors-layouts">
             <div class="swiper swiper-interiors-layouts">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-1.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-2.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-3.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-4.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/interiors/interiors-1.jpg" alt="">
-                    </div>
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
+                    </div> -->
                 </div>
-                <div class="interiors__swiper-navigation">
-                    <div class="interiors__swiper-navigation-pagination">
-                        <div class="swiper-pagination interiors-layouts-pagination"></div>
-                    </div>
-                    <div class="interiors__swiper-navigation-buttons">
-                        <div class="swiper-button-prev interiors-layouts-button-prev"></div>
-                        <div class="swiper-button-next interiors-layouts-button-next"></div>
+            </div>
+
+            <div class="thumbs-wrapper">
+                <!--ТУМБЫ ДЛЯ СЛАЙДЕРА ПЛАНИРОВКИ -->
+                <div class="swiper swiper-interiors-layouts-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-5.png" alt="">
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-thumbs-wrapper">
+                                <img src="img/interiors/layouts/layouts-5.png" alt="">
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
+
+
+            <div class="interiors__swiper-navigation">
+                <div class="interiors__swiper-navigation-pagination">
+                    <div class="swiper-pagination interiors-layouts-pagination"></div>
+                </div>
+                <div class="interiors__swiper-navigation-buttons">
+                    <div class="swiper-button-prev interiors-layouts-button-prev"></div>
+                    <div class="swiper-button-next interiors-layouts-button-next"></div>
+                </div>
+            </div>
+            <!--КОНЕЦ СЛАЙДЕРА ПЛАНИРОВКИ -->
         </div>
-        <!--КОНЕЦ СЛАЙДЕРА ПЛАНИРОВКИ -->
     </section>
     <!-- КОНЕЦ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ -->
 
@@ -747,8 +828,8 @@
 
                                 <input id="switch-3" class="switch__item-checkbox" type='checkbox'><label for="switch-3"
                                     class="switch__item-label"></label>
-                                <svg class="switch__item-moon" width="13" height="14" viewBox="0 0 13 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="switch__item-moon active" width="13" height="14" viewBox="0 0 13 14"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M6.67881 0.113487C6.50314 0.108732 6.342 0.210544 6.27085 0.371233C6.19971 0.531922 6.23266 0.719667 6.35427 0.846528C7.25009 1.78105 7.79988 3.04807 7.79988 4.4444C7.79988 7.31628 5.47176 9.6444 2.59988 9.6444C2.23203 9.6444 1.87355 9.60627 1.52803 9.5339C1.356 9.49787 1.17924 9.56932 1.08057 9.71478C0.981909 9.86024 0.980883 10.0509 1.07798 10.1974C2.24098 11.9523 4.235 13.1111 6.49986 13.1111C10.0897 13.1111 12.9999 10.2009 12.9999 6.61107C12.9999 3.08107 10.1861 0.208406 6.67881 0.113487Z"
                                         fill="#947D66" />
@@ -1089,7 +1170,7 @@
 
                             <input id="switch-2" class="switch__item-checkbox" type='checkbox'><label for="switch-2"
                                 class="switch__item-label"></label>
-                            <svg class="switch__item-moon" width="13" height="14" viewBox="0 0 13 14" fill="none"
+                            <svg class="switch__item-moon active" width="13" height="14" viewBox="0 0 13 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M6.67881 0.113487C6.50314 0.108732 6.342 0.210544 6.27085 0.371233C6.19971 0.531922 6.23266 0.719667 6.35427 0.846528C7.25009 1.78105 7.79988 3.04807 7.79988 4.4444C7.79988 7.31628 5.47176 9.6444 2.59988 9.6444C2.23203 9.6444 1.87355 9.60627 1.52803 9.5339C1.356 9.49787 1.17924 9.56932 1.08057 9.71478C0.981909 9.86024 0.980883 10.0509 1.07798 10.1974C2.24098 11.9523 4.235 13.1111 6.49986 13.1111C10.0897 13.1111 12.9999 10.2009 12.9999 6.61107C12.9999 3.08107 10.1861 0.208406 6.67881 0.113487Z"
@@ -1320,6 +1401,32 @@
     </div>
 </footer>
 <!-- КОНЕЦ ФУТЕРА -->
+
+    <!-- НАЧАЛО МОБИЛЬНОГО МЕНЮ -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__header-logo">
+                <img src="img/logo-mobile-menu.svg" alt="">
+            </div>
+            <div class="mobile-menu__header-close">
+            </div>
+        </div>
+        <div class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__list-item"><a href="#">Об отеле</a></li>
+                <li class="mobile-menu__list-item"><a href="#">О нас</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Галерея</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Доходность</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Планировки</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Вопрос-ответ</a></li>
+                <li class="mobile-menu__list-item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="mobile-menu__phone">
+            <a href="tel:89189131003" class="mobile-menu__phone-link">8 (918) 913 - 10 - 03</a>
+        </div>
+    </div>
+    <!-- КОНЕЦ МОБИЛЬНОГО МЕНЮ -->
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
