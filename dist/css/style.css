@@ -291,7 +291,7 @@ h1 span {
   left: 0;
   z-index: 10;
   width: 100%;
-  padding-top: 1.6rem;
+  padding: 1.6rem 0;
 }
 .header .btn__wrapper {
   display: none;
@@ -303,6 +303,26 @@ h1 span {
   top: 0;
   width: 100%;
   z-index: 100;
+  background-color: #FCF8F7;
+}
+.header.fixed .header__burger-icon span {
+  background-color: #947D66;
+}
+.header.fixed .header__phone-icon svg path {
+  fill: #947D66;
+}
+.header.fixed .header__logo {
+  position: relative;
+}
+.header.fixed .header__logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #947D66;
+  mix-blend-mode: color;
+  left: 0;
+  top: 0;
 }
 
 .header__container {
@@ -740,8 +760,13 @@ h1 span {
   padding: 0 1.6rem;
 }
 
+.slides-center {
+  justify-content: center !important;
+}
+
 .swiper-thumbs .swiper-wrapper {
-  justify-content: center;
+  width: auto !important;
+  margin: 0 auto;
 }
 .swiper-thumbs .swiper-slide {
   cursor: pointer;
@@ -1153,19 +1178,19 @@ h1 span {
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
 /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 .mobile-menu {
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -76%;
   width: 76%;
   height: 100%;
   background-color: #FCF8F7;
   padding: 2.4rem;
   z-index: 1000;
+  transition: 0.3s ease;
 }
 
 .mobile-menu.active {
-  display: block;
+  left: 0;
 }
 
 .mobile-menu__header {
@@ -1184,14 +1209,14 @@ h1 span {
   height: auto;
 }
 
-.mobile-menu__header-close {
+.close {
   width: 2.8rem;
   height: 2.8rem;
   position: relative;
   display: flex;
   align-items: center;
 }
-.mobile-menu__header-close::before {
+.close::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1200,7 +1225,7 @@ h1 span {
   top: auto;
   transform: rotate(45deg);
 }
-.mobile-menu__header-close::after {
+.close::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1246,23 +1271,49 @@ h1 span {
 }
 
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
-@keyframes night {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+/*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
+.offer {
+  display: none;
+  transition: opacity 0.8s ease;
+  z-index: 1000;
+  animation: fadeEffect 0.3s;
 }
-.main__background-day {
-  animation: night 10s ease-out infinite;
+.offer .close {
+  margin-left: auto;
+  margin-bottom: 0.8rem;
 }
+.offer .close::before, .offer .close::after {
+  background-color: #947D66;
+}
+.offer .consultation__container {
+  margin-top: 3.2rem;
+}
+.offer .consultation__form-input {
+  margin-bottom: 0.8rem;
+  border: 1px solid #F3EBE1;
+}
+.offer .consultation__form-textarea {
+  margin-bottom: 0;
+}
+.offer .consultation__button {
+  margin-top: 3.2rem;
+}
+
+.offer.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.offer__container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 1.6rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/

@@ -331,7 +331,7 @@ h1 {
     left: 0;
     z-index: 10;
     width: 100%;
-    padding-top: 1.6rem;
+    padding: 1.6rem 0;
 
     .btn__wrapper {
         display: none;
@@ -344,6 +344,34 @@ h1 {
     top: 0;
     width: 100%;
     z-index: 100;
+    background-color: #FCF8F7;
+
+    .header__burger-icon {
+        span {
+            background-color: #947D66;
+        }
+    }
+
+    .header__phone-icon {
+        svg path {
+            fill: #947D66;
+        }
+    }
+
+    .header__logo {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $light-brown;
+            mix-blend-mode: color;
+            left: 0;
+            top: 0;
+        }
+    }
 }
 
 .header__container {
@@ -824,13 +852,20 @@ h1 {
     padding: 0 1.6rem;
 }
 
+.slides-center {
+    justify-content: center !important;
+}
+
 .swiper-thumbs {
     // display: inline-flex;
     // overflow-x: auto;
 
+
     .swiper-wrapper {
         // transform: translate3d(0px, 0, 0) !important;
-        justify-content: center;
+        // justify-content: center;
+        width: auto !important;
+        margin: 0 auto;
     }
 
     .swiper-slide {
@@ -1294,19 +1329,21 @@ h1 {
 
 /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 .mobile-menu {
-    display: none;
+    // display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -76%;
     width: 76%;
     height: 100%;
     background-color: $bgcolor;
     padding: 2.4rem;
     z-index: 1000;
+    transition: 0.3s ease;
 }
 
 .mobile-menu.active {
-    display: block;
+    // display: block;
+    left: 0;
 }
 
 .mobile-menu__header {
@@ -1326,7 +1363,7 @@ h1 {
     }
 }
 
-.mobile-menu__header-close {
+.close {
     width: 2.8rem;
     height: 2.8rem;
     position: relative;
@@ -1394,32 +1431,95 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
 
-@keyframes night {
-    0% {
-        opacity: 0;
+/*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
+.offer {
+    display: none;
+    transition: opacity 0.8s ease;
+    z-index: 1000;
+    animation: fadeEffect 0.3s;
+
+    .close {
+        margin-left: auto;
+        margin-bottom: 0.8rem;
+
+        &::before,
+        &::after {
+            background-color: $light-brown;
+        }
     }
 
-    20% {
-        opacity: 1;
+    .consultation__container {
+        margin-top: 3.2rem;
     }
 
-    50% {
-        opacity: 1;
+    .consultation__form-input {
+        margin-bottom: 0.8rem;
+        border: 1px solid $mobile-line;
     }
 
-    80% {
-        opacity: 0;
+    .consultation__form-textarea {
+        margin-bottom: 0;
     }
 
-    100% {
-        opacity: 0;
+    .consultation__button {
+        margin-top: 3.2rem;
     }
 }
+
+.offer.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.offer__container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1.6rem;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
+
+// @keyframes night {
+//     0% {
+//         opacity: 0;
+//     }
+
+//     20% {
+//         opacity: 1;
+//     }
+
+//     50% {
+//         opacity: 1;
+//     }
+
+//     80% {
+//         opacity: 0;
+//     }
+
+//     100% {
+//         opacity: 0;
+//     }
+// }
 
 // .main__background-night {
 //     animation: night 6s ease-out infinite;
 // }
 
-.main__background-day {
-    animation: night 10s ease-out infinite;
-}
+// .main__background-day {
+//     animation: night 10s ease-out infinite;
+// }
+
+
+// .main__background {
+//     opacity: 0;
+// }
+
+// .main__background.active {
+//     opacity: 1;
+// }

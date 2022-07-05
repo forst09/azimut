@@ -657,9 +657,64 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 668*/
+
+    /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
+    .mobile-menu {
+        width: 46%;
+        left: -46%;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОБИЛЬНОГО МЕНЮ 668*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 668*/
+    .offer {
+        .close {
+            position: absolute;
+            right: 1.6rem;
+            top: 1.6rem;
+            margin-bottom: 0;
+        }
+
+        .title {
+            margin-bottom: 1.6rem;
+        }
+
+        .consultation__container {
+            margin-top: 2.4rem;
+        }
+
+        .consultation__form {
+            margin-bottom: 0;
+        }
+
+        .consultation__form-input {
+            max-width: none;
+        }
+
+        .consultation__button {
+            margin-top: 2.4rem;
+        }
+
+        .consultation__button-text {
+            max-width: 21.3rem;
+        }
+    }
+
+    .offer.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .offer__container {
+        max-width: 63.6rem;
+        height: fit-content;
+        padding: 2.4rem 4.8rem;
+        position: relative;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 668*/
 }
-
-
 
 /*КОНЕЦ АДАПТИВА 668*/
 
@@ -1169,6 +1224,38 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1024*/
+    .offer {
+        .close {
+            top: 2.4rem;
+            right: 2.4rem;
+        }
+
+        .consultation__container {
+            margin-top: 4.8rem;
+        }
+
+        .consultation__form {
+            max-width: none;
+            width: 100%;
+        }
+
+        .consultation__button {
+            margin-top: 4.8rem;
+        }
+
+        .consultation__button-text {
+            max-width: 31.6rem;
+        }
+    }
+
+    .offer__container {
+        padding: 4.8rem 9.5rem;
+        max-width: 73.6rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1024*/
 }
 
 /*НАЧАЛО АДАПТИВА 1500*/
@@ -1721,6 +1808,37 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1500*/
+    .offer {
+        .close {
+            top: 3.2rem;
+            right: 3.2rem;
+        }
+
+        .title {
+            margin-bottom: 2.5rem;
+        }
+
+        .consultation__container {
+            margin-top: 5.4rem;
+        }
+
+        .consultation__form-input {
+            margin-bottom: 1.6rem;
+        }
+
+        .consultation__button {
+            margin-top: 5.4rem;
+        }
+    }
+
+    .offer__container {
+        padding: 8rem 16.6rem;
+        max-width: 102.8rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1500*/
 }
 
 /*КОНЕЦ АДАПТИВА 1500*/

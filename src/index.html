@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="main__buttons">
-                <a href="" class="btn-main">Получить персональное предложение</a>
+                <a href="javascript:void(0)" class="btn-main">Получить персональное предложение</a>
                 <div class="main__buttons-wrapper">
                     <a href="" class="main__buttons-watch">Посмотреть номера</a>
 
@@ -642,11 +642,6 @@
                             <img src="img/interiors/layouts/layouts-5.png" alt="">
                         </div>
                     </div>
-                    <!-- <div class="swiper-slide">
-                        <div class="swiper-image-wrapper">
-                            <img src="img/interiors/layouts/layouts-5.png" alt="">
-                        </div>
-                    </div>
                     <div class="swiper-slide">
                         <div class="swiper-image-wrapper">
                             <img src="img/interiors/layouts/layouts-5.png" alt="">
@@ -661,7 +656,12 @@
                         <div class="swiper-image-wrapper">
                             <img src="img/interiors/layouts/layouts-5.png" alt="">
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-image-wrapper">
+                            <img src="img/interiors/layouts/layouts-5.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -669,56 +669,56 @@
                 <!--ТУМБЫ ДЛЯ СЛАЙДЕРА ПЛАНИРОВКИ -->
                 <div class="swiper swiper-interiors-layouts-thumbs">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-1.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-2.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-3.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-4.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-5.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-5.png" alt="">
                             </div>
                         </div>
-                        <!-- <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-5.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-5.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-5.png" alt="">
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide js-slide">
                             <div class="swiper-thumbs-wrapper">
                                 <img src="img/interiors/layouts/layouts-5.png" alt="">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1293,7 +1293,7 @@
             <div class="mobile-menu__header-logo">
                 <img src="img/logo-mobile-menu.svg" alt="">
             </div>
-            <div class="mobile-menu__header-close">
+            <div class="close">
             </div>
         </div>
         <div class="mobile-menu__nav">
@@ -1312,6 +1312,33 @@
         </div>
     </div>
     <!-- КОНЕЦ МОБИЛЬНОГО МЕНЮ -->
+
+    <!-- НАЧАЛО МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
+    <div class="offer">
+        <div class="offer__container">
+            <div class="close">
+            </div>
+            <h2 class="title">получить <span>персональное предложение</span></h2>
+            <div class="text">Мы готовы ответить на все ваши вопросы</div>
+            <div class="consultation__container">
+                <div class="consultation__form">
+                    <form action="">
+                        <input class="consultation__form-input" type="text" id="consultation-name" placeholder="Имя">
+                        <input class="consultation__form-input" type="text" id="consultation-phone"
+                            placeholder="Телефон">
+                        <textarea class="consultation__form-input consultation__form-textarea" id="consultation-comment"
+                            placeholder="Комментарий"></textarea>
+                        <div class="consultation__button">
+                            <input class="btn" type="submit" value="Отправить заявку">
+                            <div class="consultation__button-text">Отправляя заявку, вы соглашаетесь с политикой
+                                конфиденциальности</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
