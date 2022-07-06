@@ -15,6 +15,9 @@ $(document).ready(function () {
             $(this).find('.dropdown__content').slideUp();
         }
         else {
+            $(this).parents('section').find('.dropdown').removeClass('active');
+            $(this).parents('section').find('.dropdown__link').removeClass('active');
+            $(this).parents('section').find('.dropdown__content').slideUp();
             $(this).addClass('active');
             $(this).find('.dropdown__link').addClass('active');
             $(this).find('.dropdown__content').slideDown();
@@ -76,6 +79,11 @@ $(document).ready(function () {
             $(this).parents('.switch').find('.switch__item-moon').removeClass('active');
         }
     });
+
+    //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
+    if ($(".input-phone").length !== 0) {
+        Inputmask("+7 (999) 999-99-99").mask(".input-phone");
+    }
 
     // swiper.loopDestroy();
 
@@ -227,21 +235,17 @@ $(document).ready(function () {
         },
     });
 
-    // let mainBg = $('.main__background');
+    let mainBg = $('.main__background');
 
-    // mainBg.each(function (index, el) {
-    //     let bg = $(this);
-    //     setTimeout(function () {
-    //         bg.addClass('active');
-    //         console.log('hi');
-    //     }, 2000);
+    mainBg.each(function (index, el) {
+        let bg = $(this);
+        bg.addClass('active');
 
-    //     setTimeout(function () {
-    //         bg.removeClass('active');
-    //         console.log('bye');
-    //     }, 20000);
+        setTimeout(function () {
+            bg.removeClass('active');
+        }, 2000);
 
-    //     // $(this).removeClass('active');
-    // });
+        // $(this).removeClass('active');
+    });
 
 });

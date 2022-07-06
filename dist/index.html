@@ -111,7 +111,17 @@
             <div class="main__buttons">
                 <a href="javascript:void(0)" class="btn-main">Получить персональное предложение</a>
                 <div class="main__buttons-wrapper">
-                    <a href="" class="main__buttons-watch">Посмотреть номера</a>
+                    <a href="javascript:void(0)" class="main__buttons-watch">
+                        <div class="main__buttons-watch-img">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 11.5L8.25 17.1292L8.25 5.87083L18 11.5Z" fill="white" />
+                                <circle opacity="0.8" cx="11.5" cy="11.5" r="11.1094" stroke="white"
+                                    stroke-width="0.78125" />
+                            </svg>
+                        </div>
+                        <span>Посмотреть номера</span>
+                    </a>
 
                     <div class="main__buttons-logo">
                         <img src="img/main/azimut.svg" alt="">
@@ -1294,7 +1304,7 @@
                 <div class="consultation__form">
                     <form action="">
                         <input class="consultation__form-input" type="text" id="consultation-name" placeholder="Имя">
-                        <input class="consultation__form-input" type="text" id="consultation-phone"
+                        <input class="consultation__form-input input-phone" type="text" id="consultation-phone"
                             placeholder="Телефон">
                         <textarea class="consultation__form-input consultation__form-textarea" id="consultation-comment"
                             placeholder="Комментарий"></textarea>
@@ -1438,10 +1448,10 @@
             <div class="consultation__container">
                 <div class="consultation__form">
                     <form action="">
-                        <input class="consultation__form-input" type="text" id="consultation-name" placeholder="Имя">
-                        <input class="consultation__form-input" type="text" id="consultation-phone"
+                        <input class="consultation__form-input" type="text" id="offer-name" placeholder="Имя">
+                        <input class="consultation__form-input input-phone" type="text" id="offer-phone"
                             placeholder="Телефон">
-                        <textarea class="consultation__form-input consultation__form-textarea" id="consultation-comment"
+                        <textarea class="consultation__form-input consultation__form-textarea" id="offer-comment"
                             placeholder="Комментарий"></textarea>
                         <div class="consultation__button">
                             <input class="btn" type="submit" value="Отправить заявку">

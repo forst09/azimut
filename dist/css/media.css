@@ -75,6 +75,19 @@
     display: block;
   }
 
+  .header.fixed .header__burger-text {
+    color: #947D66;
+  }
+  .header.fixed .header__phone {
+    margin-bottom: 0;
+  }
+  .header.fixed .header__phone-text {
+    color: #947D66;
+  }
+  .header.fixed .btn__wrapper {
+    display: none;
+  }
+
   .header__burger {
     display: flex;
     align-items: center;
@@ -121,7 +134,7 @@
   .header__btn {
     display: inline-block;
     padding: 0.4rem 1.6rem;
-    background-color: #fff;
+    background-color: #ffffff;
     line-height: 2rem;
     font-weight: 400;
   }
@@ -391,6 +404,7 @@
 
   .benefits__card-item {
     margin-bottom: 2rem;
+    max-width: none;
   }
 
   .benefits__card-item-main {
@@ -724,6 +738,24 @@
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
+  .header.fixed {
+    padding: 1rem 0;
+  }
+  .header.fixed .header__list-link {
+    color: #947D66;
+  }
+  .header.fixed .header__phone {
+    margin-bottom: 1rem;
+  }
+  .header.fixed .btn__wrapper {
+    display: block;
+  }
+  .header.fixed .header__btn {
+    padding: 0.4rem 1.6rem;
+    background-color: #947D66;
+    color: #fff;
+  }
+
   .header__container {
     justify-content: flex-start;
   }
@@ -756,7 +788,7 @@
   }
   .header__list-item a {
     line-height: 2rem;
-    color: #fff;
+    color: #ffffff;
   }
 
   .header__call {
@@ -802,6 +834,24 @@
 
   .main__buttons-wrapper {
     margin-left: 5.6rem;
+  }
+
+  .main__buttons-watch {
+    padding-left: 1.55rem;
+  }
+
+  .main__buttons-watch-img {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  .main__buttons-watch-img::after {
+    width: 5.4rem;
+    height: 5.4rem;
+    left: calc(50% - 2.7rem);
+    top: calc(50% - 2.7rem);
+  }
+  .main__buttons-watch-img span {
+    margin-left: 3.1rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
@@ -1197,6 +1247,21 @@
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
+  .header.fixed {
+    padding: 1.6rem 0;
+  }
+  .header.fixed .header__call {
+    display: flex;
+    align-items: center;
+  }
+  .header.fixed .header__phone {
+    margin-bottom: 0;
+    margin-right: 4rem;
+  }
+  .header.fixed .header__btn {
+    padding: 0.8rem 2.4rem;
+  }
+
   .header__logo {
     width: 14.4rem;
     height: 4.4rem;

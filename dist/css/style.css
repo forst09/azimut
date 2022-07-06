@@ -15,7 +15,7 @@ section {
 }
 
 h1 {
-  color: #fff;
+  color: #ffffff;
   font-weight: 300;
   font-size: 1.8rem;
   line-height: 2.6rem;
@@ -143,7 +143,7 @@ h1 span {
 }
 .dropdown__link span {
   display: inline-block;
-  max-width: 21.4rem;
+  max-width: 83%;
 }
 
 .dropdown__link.active::after {
@@ -164,7 +164,7 @@ h1 span {
   line-height: 2.2rem;
   border: none;
   padding: 1.1rem 2.6rem;
-  color: #fff;
+  color: #ffffff;
   background: #BD8A66;
 }
 
@@ -313,16 +313,7 @@ h1 span {
 }
 .header.fixed .header__logo {
   position: relative;
-}
-.header.fixed .header__logo::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #947D66;
-  mix-blend-mode: color;
-  left: 0;
-  top: 0;
+  filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
 }
 
 .header__container {
@@ -342,7 +333,7 @@ h1 span {
   width: 100%;
   height: 1px;
   display: block;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .header__burger-text {
@@ -426,13 +417,16 @@ h1 span {
 
 .main__numbers {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .main__numbers-item {
   display: flex;
   align-items: center;
+  margin-right: 4.7rem;
+}
+.main__numbers-item:nth-last-of-type(1) {
+  margin-right: 0;
 }
 
 .main__numbers-item-count {
@@ -471,8 +465,37 @@ h1 span {
 }
 
 .main__buttons-watch {
+  padding-left: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+}
+.main__buttons-watch span {
+  margin-left: 2.7rem;
   color: #ffffff;
   line-height: 2rem;
+}
+
+.main__buttons-watch-img {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.main__buttons-watch-img::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 1.9rem);
+  top: calc(50% - 1.9rem);
+  display: block;
+  width: 3.8rem;
+  height: 3.8rem;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: 0.3s ease;
+}
+.main__buttons-watch-img svg {
+  width: 100%;
+  height: auto;
 }
 
 .main__buttons-logo {
@@ -832,7 +855,8 @@ h1 span {
 .benefits__card-item {
   padding: 1.6rem 2.4rem;
   border: 1px solid #F3EBE1;
-  margin-bottom: 0.8rem;
+  margin: 0 auto 0.8rem;
+  max-width: 28.8rem;
 }
 .benefits__card-item:nth-last-of-type(1) {
   margin-bottom: 0;
@@ -969,7 +993,7 @@ h1 span {
 }
 
 .consultation__form-input {
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.8rem;
   border: none;
   width: 100%;
   padding: 1.6rem;
@@ -1092,7 +1116,7 @@ h1 span {
 
 .footer__list-item {
   line-height: 2rem;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 0.8rem;
   flex: 0 41%;
   display: inline-flex;
@@ -1103,10 +1127,7 @@ h1 span {
   display: flex;
   flex-direction: column-reverse;
   margin-top: 2.4rem;
-}
-
-.footer__contacts-info {
-  text-align: end;
+  align-items: flex-start;
 }
 
 .footer__contacts-socials {
@@ -1118,7 +1139,7 @@ h1 span {
 .footer__contacts-socials-span {
   display: inline-block;
   max-width: 8.4rem;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.1rem;
   line-height: 1.3rem;
   margin-right: 2.4rem;
@@ -1142,14 +1163,14 @@ h1 span {
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 0.8rem;
   display: inline-block;
 }
 
 .footer__contacts-info-address {
   line-height: 1.2rem;
-  color: #fff;
+  color: #ffffff;
   opacity: 0.5;
 }
 
@@ -1164,14 +1185,14 @@ h1 span {
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
   line-height: 2.1rem;
-  color: #fff;
+  color: #ffffff;
   opacity: 0.5;
 }
 
 .footer__add-info-upfly {
   font-size: 1.1rem;
   line-height: 2.1rem;
-  color: #fff;
+  color: #ffffff;
   font-weight: 300;
 }
 
@@ -1312,8 +1333,15 @@ h1 span {
 .offer__container {
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 1.6rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
+.main__background {
+  opacity: 0;
+}
+
+.main__background.active {
+  opacity: 1;
+}
