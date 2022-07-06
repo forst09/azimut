@@ -49,6 +49,35 @@ h1 span {
   font-size: 1.2rem;
   line-height: 2rem;
 }
+.text p, .text > * {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.text ul {
+  margin-top: 1.6rem;
+}
+.text li {
+  margin-bottom: 0.8rem;
+  padding-left: 4.3rem;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 2.1rem;
+}
+.text li:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.text li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 0.95rem);
+  width: 1.9rem;
+  height: 1.9rem;
+  background-image: url("../img/list.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.9rem 1.9rem;
+}
 
 .text__desc {
   font-weight: 400;
@@ -314,6 +343,7 @@ h1 span {
 .header.fixed .header__logo {
   position: relative;
   filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
+  display: inline-block;
 }
 
 .header__container {
@@ -374,7 +404,7 @@ h1 span {
 /*КОНЕЦ СТИЛЕЙ ШАПКИ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА */
 .main {
-  padding: 9.6rem 0 7.6rem;
+  padding: 9.5rem 0 4.8rem;
   position: relative;
 }
 .main::before {
@@ -465,7 +495,7 @@ h1 span {
 }
 
 .main__buttons-watch {
-  padding-left: 1.1rem;
+  padding: 0.9rem 0 0.9rem 1.1rem;
   display: inline-flex;
   align-items: center;
 }
@@ -473,6 +503,9 @@ h1 span {
   margin-left: 2.7rem;
   color: #ffffff;
   line-height: 2rem;
+}
+.main__buttons-watch:active .main__buttons-watch-img::after, .main__buttons-watch:focus .main__buttons-watch-img::after, .main__buttons-watch:focus-within .main__buttons-watch-img::after {
+  opacity: 0.5;
 }
 
 .main__buttons-watch-img {
@@ -499,10 +532,13 @@ h1 span {
 }
 
 .main__buttons-logo {
+  position: relative;
+  display: inline-block;
   width: 6.8rem;
   height: 2.1rem;
   margin-left: auto;
   opacity: 0.5;
+  transition: 0.3s ease;
 }
 .main__buttons-logo img {
   width: 100%;
@@ -526,6 +562,22 @@ h1 span {
 .description__image img {
   width: 100%;
   height: auto;
+}
+
+.switch-image-day,
+.switch-image-night {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.switch-image-day.active,
+.switch-image-night.active {
+  opacity: 1;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* */
@@ -579,17 +631,32 @@ h1 span {
 }
 
 .reporting {
+  position: relative;
   margin-top: 1.3rem;
-  display: flex;
+  display: inline-flex;
   padding-left: 1.9rem;
   align-items: center;
+}
+.reporting:active::before, .reporting:focus::before, .reporting:focus-within::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #F3EBE1;
+  left: 0;
+  top: 0;
+}
+.reporting:active .reporting-image, .reporting:focus .reporting-image, .reporting:focus-within .reporting-image {
+  opacity: 1;
 }
 
 .reporting-image {
   width: 1.3rem;
   height: 1.3rem;
-  margin-right: 2.5rem;
+  margin-right: 2.7rem;
   flex-shrink: 0;
+  opacity: 0.6;
+  transition: 0.3s ease;
 }
 .reporting-image img {
   width: 100%;
@@ -733,6 +800,7 @@ h1 span {
 .tabs__list-item a {
   display: inline-block;
   line-height: 2rem;
+  transition: 0.3s ease;
 }
 
 .tabs__list-item.active a {
@@ -951,27 +1019,6 @@ h1 span {
   height: auto;
 }
 
-.authenticity__list-item {
-  margin-bottom: 0.8rem;
-  padding-left: 4.3rem;
-  position: relative;
-}
-.authenticity__list-item:nth-last-of-type(1) {
-  margin-bottom: 0;
-}
-.authenticity__list-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: calc(50% - 0.95rem);
-  width: 1.9rem;
-  height: 1.9rem;
-  background-image: url("../img/list.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 1.9rem 1.9rem;
-}
-
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ*/
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
 .faq .title {
@@ -992,12 +1039,20 @@ h1 span {
   margin-bottom: 3rem;
 }
 
-.consultation__form-input {
+.consultation__form-input-wrapper {
   margin-bottom: 0.8rem;
-  border: none;
+  position: relative;
+}
+
+.consultation__form-input {
+  position: relative;
+  border: transparent;
   width: 100%;
   padding: 1.6rem;
   height: 5.6rem;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  color: #381611;
 }
 .consultation__form-input::placeholder {
   font-family: "TT Hoves";
@@ -1007,8 +1062,54 @@ h1 span {
   color: #947D66;
 }
 
+/* СТИЛИ ДЛЯ ОШИБКИ ВВОДА В ИНПУТЫ*/
+.input-error {
+  color: #D3513F;
+}
+
+.input-error-info {
+  display: none;
+  position: absolute;
+  padding: 0.7rem 1rem;
+  background-color: #FCE1DD;
+  color: #D3513F;
+}
+.input-error-info::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.7rem;
+  left: calc(50% - 0.45rem);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1rem solid #FCE1DD;
+  transition: 0.3s ease;
+  transform: rotate(180deg);
+}
+.input-error-info span {
+  margin-right: 0.8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+.input-error-info p {
+  width: 19.2rem;
+}
+
+.input-error-info.active {
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  top: 1.5rem;
+}
+
+.btn-disabled {
+  opacity: 0.3;
+}
+
+/* КОНЕЦ СТИЛЕЙ ДЛЯ ОШИБКИ ВВОДА В ИНПУТЫ*/
 .consultation__form-textarea {
-  margin-bottom: 0;
   height: 12.4rem;
   resize: none;
 }
@@ -1158,6 +1259,14 @@ h1 span {
   width: 100%;
   height: auto;
 }
+.footer__contacts-socials-link:active svg path, .footer__contacts-socials-link:focus svg path, .footer__contacts-socials-link:focus-within svg path {
+  fill: #D5C9BB;
+}
+
+.footer__contacts-info {
+  display: flex;
+  flex-direction: column;
+}
 
 .footer__contacts-info-phone {
   font-size: 1.4rem;
@@ -1173,6 +1282,9 @@ h1 span {
   color: #ffffff;
   opacity: 0.5;
 }
+.footer__contacts-info-address:active, .footer__contacts-info-address:focus, .footer__contacts-info-address:focus-within {
+  opacity: 0.5;
+}
 
 .footer__add-info {
   display: flex;
@@ -1183,9 +1295,13 @@ h1 span {
 
 .footer__add-info-privacy {
   margin-bottom: 0.8rem;
+  display: inline-block;
   font-size: 1.1rem;
   line-height: 2.1rem;
   color: #ffffff;
+  opacity: 0.5;
+}
+.footer__add-info-privacy:active, .footer__add-info-privacy:focus, .footer__add-info-privacy:focus-within {
   opacity: 0.5;
 }
 
@@ -1194,6 +1310,10 @@ h1 span {
   line-height: 2.1rem;
   color: #ffffff;
   font-weight: 300;
+}
+.footer__add-info-upfly:active, .footer__add-info-upfly:focus, .footer__add-info-upfly:focus-within {
+  opacity: 0.5;
+  padding-top: 0.4rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
@@ -1234,7 +1354,7 @@ h1 span {
   width: 2.8rem;
   height: 2.8rem;
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 .close::before {
@@ -1310,7 +1430,6 @@ h1 span {
   margin-top: 3.2rem;
 }
 .offer .consultation__form-input {
-  margin-bottom: 0.8rem;
   border: 1px solid #F3EBE1;
 }
 .offer .consultation__form-textarea {
@@ -1338,10 +1457,3 @@ h1 span {
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
-.main__background {
-  opacity: 0;
-}
-
-.main__background.active {
-  opacity: 1;
-}

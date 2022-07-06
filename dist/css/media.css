@@ -15,6 +15,13 @@
     font-size: 1.4rem;
     line-height: 2.2rem;
   }
+  .text p, .text > * {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+  .text ul {
+    margin-top: 2.4rem;
+  }
 
   .text__line {
     padding-top: 2.4rem;
@@ -197,7 +204,12 @@
   }
 
   .main__buttons-logo {
+    position: relative;
+    top: 0;
     margin-left: 7.4rem;
+  }
+  .main__buttons-logo:active, .main__buttons-logo:focus, .main__buttons-logo:focus-within {
+    top: 0.4rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
@@ -282,8 +294,20 @@
   }
   .interiors .reporting {
     margin: 0;
-    border: 1px solid red;
+    position: relative;
     padding: 0.4rem 2.4rem;
+  }
+  .interiors .reporting::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #D3513F;
+    left: 0;
+    top: 0;
+  }
+  .interiors .reporting:active::before, .interiors .reporting:focus::before, .interiors .reporting:focus-within::before {
+    opacity: 0.5;
   }
 
   .interiors__title-container {
@@ -316,16 +340,16 @@
 
   .swiper-button-next,
 .swiper-button-prev {
-    position: static;
+    position: relative;
     margin-top: 0;
-    width: 1rem;
-    height: 0.9rem;
+    width: 2.6rem;
+    height: 2.6rem;
   }
   .swiper-button-next::after,
 .swiper-button-prev::after {
     content: "";
     display: block;
-    top: calc(50% - 0.45rem);
+    position: absolute;
     border-left: 0.5rem solid transparent;
     border-right: 0.5rem solid transparent;
     border-bottom: 0.9rem solid #381611;
@@ -594,6 +618,10 @@
     justify-content: flex-end;
   }
 
+  .footer__contacts-info {
+    text-align: end;
+  }
+
   .footer__contacts-socials {
     margin-top: 2.4rem;
   }
@@ -698,6 +726,16 @@
     padding: 0 4.8rem;
   }
 
+  .text ul {
+    margin-top: 3.2rem;
+  }
+  .text li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding-left: 5.9rem;
+    margin-bottom: 2.4rem;
+  }
+
   .text__desc {
     font-size: 1.2rem;
     line-height: 2rem;
@@ -734,6 +772,28 @@
 
   .scroll-swiper {
     padding: 0 4.8rem;
+  }
+
+  .tabs__list-item:hover a {
+    padding-bottom: 0.8rem;
+    position: relative;
+  }
+  .tabs__list-item:hover a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    background-color: #947D66;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  .close {
+    transition: 0.3s ease;
+  }
+  .close:hover {
+    opacity: 0.5;
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
@@ -781,7 +841,10 @@
   }
 
   .header__list-item {
+    position: relative;
     margin-right: 3.2rem;
+    transition: 0.3s ease;
+    top: 0;
   }
   .header__list-item:nth-last-of-type(1) {
     margin-right: 0;
@@ -789,6 +852,12 @@
   .header__list-item a {
     line-height: 2rem;
     color: #ffffff;
+  }
+  .header__list-item:active, .header__list-item:focus, .header__list-item:focus-within, .header__list-item:hover {
+    top: 0.4rem;
+  }
+  .header__list-item:active a, .header__list-item:focus a, .header__list-item:focus-within a {
+    opacity: 0.5;
   }
 
   .header__call {
@@ -830,6 +899,10 @@
     opacity: 1;
     width: 11.9rem;
     height: 3.5rem;
+    transition: 0.3s ease;
+  }
+  .main__buttons-logo:hover {
+    bottom: -6.2rem;
   }
 
   .main__buttons-wrapper {
@@ -837,7 +910,10 @@
   }
 
   .main__buttons-watch {
-    padding-left: 1.55rem;
+    padding: 1.7rem 0 1.7rem 1.55rem;
+  }
+  .main__buttons-watch:hover .main__buttons-watch-img::after {
+    opacity: 0.5;
   }
 
   .main__buttons-watch-img {
@@ -849,6 +925,7 @@
     height: 5.4rem;
     left: calc(50% - 2.7rem);
     top: calc(50% - 2.7rem);
+    transition: 0.3s ease;
   }
   .main__buttons-watch-img span {
     margin-left: 3.1rem;
@@ -942,6 +1019,9 @@
   .reporting {
     margin-top: 3.6rem;
   }
+  .reporting:hover .reporting-image {
+    opacity: 0.8;
+  }
 
   .reporting-name {
     max-width: 27.5rem;
@@ -985,8 +1065,30 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1024*/
+  .interiors .reporting::before {
+    transition: 0.3s ease;
+  }
+  .interiors .reporting:hover::before {
+    transform: scale(1.05);
+  }
+
   .swiper-slide {
     height: 41rem;
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+    transition: 0.3s ease;
+  }
+  .swiper-button-next:hover,
+.swiper-button-prev:hover {
+    opacity: 0.5;
+  }
+  .swiper-button-next:active, .swiper-button-next:focus, .swiper-button-next:focus-within,
+.swiper-button-prev:active,
+.swiper-button-prev:focus,
+.swiper-button-prev:focus-within {
+    opacity: 1;
   }
 
   .interiors__swiper-navigation {
@@ -1097,11 +1199,6 @@
     max-width: 51.2rem;
   }
 
-  .authenticity__list-item {
-    padding-left: 5.9rem;
-    margin-bottom: 2.4rem;
-  }
-
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 1024*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1024*/
   .faq .title {
@@ -1112,6 +1209,9 @@
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ 1024*/
   .consultation .title {
     max-width: 58.5rem;
+  }
+  .consultation .consultation__form-input:hover {
+    border: 1px solid #F3EBE1;
   }
 
   .consultation__container {
@@ -1124,6 +1224,10 @@
   .consultation__form {
     margin-bottom: 0;
     max-width: 46.3rem;
+  }
+
+  .consultation__form-input {
+    transition: 0.3s ease;
   }
 
   .consultation__button {
@@ -1157,11 +1261,48 @@
     flex: unset;
     margin-right: 4rem;
     margin-bottom: 0;
+    position: relative;
+    top: 0;
+    transition: 0.3s ease;
+  }
+  .footer__list-item:hover {
+    top: 0.4rem;
+  }
+
+  .footer__contacts-socials-link {
+    transition: 0.3s ease;
+  }
+  .footer__contacts-socials-link svg path {
+    transition: 0.3s ease;
+  }
+  .footer__contacts-socials-link:hover svg path {
+    fill: #D5C9BB;
+  }
+
+  .footer__contacts-info-address {
+    transition: 0.3s ease;
+  }
+  .footer__contacts-info-address:hover {
+    opacity: 1;
   }
 
   .footer__add-info-privacy,
 .footer__add-info-upfly {
     line-height: 1.3rem;
+  }
+
+  .footer__add-info-privacy {
+    transition: 0.3s ease;
+  }
+  .footer__add-info-privacy:hover {
+    opacity: 1;
+  }
+
+  .footer__add-info-upfly {
+    transition: 0.3s ease;
+  }
+  .footer__add-info-upfly:hover {
+    padding-top: 0.4rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/
@@ -1176,6 +1317,9 @@
   .offer .consultation__form {
     max-width: none;
     width: 100%;
+  }
+  .offer .consultation__form-input:hover {
+    border: 1px solid #D5C9BB;
   }
   .offer .consultation__button {
     margin-top: 4.8rem;
@@ -1206,6 +1350,16 @@
   .text {
     font-size: 1.6rem;
     line-height: 2.6rem;
+  }
+  .text p, .text > * {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+  .text ul {
+    margin-top: 4rem;
+  }
+  .text li {
+    margin-bottom: 3.2rem;
   }
 
   .text__line {
@@ -1468,7 +1622,7 @@
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1500*/
   .interiors .reporting {
-    padding: 0.8rem 3.2rem;
+    padding: 1rem 3.2rem;
   }
 
   .tabs__list-item {
@@ -1604,10 +1758,6 @@
     max-width: 62rem;
   }
 
-  .authenticity__list-item {
-    margin-bottom: 3.2rem;
-  }
-
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ 1500*/
   .faq .title {
@@ -1626,6 +1776,10 @@
 
   .consultation__form {
     max-width: 50rem;
+  }
+
+  .consultation__form-input-wrapper {
+    margin-bottom: 1.6rem;
   }
 
   .consultation__form-input {

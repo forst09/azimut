@@ -68,9 +68,9 @@
                         <span>Посмотреть номера</span>
                     </a>
 
-                    <div class="main__buttons-logo">
+                    <a class="main__buttons-logo" href="javascript:void(0)">
                         <img src="img/main/azimut.svg" alt="">
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -113,7 +113,12 @@
                 </div>
             </div>
             <div class="description__image">
-                <img src="img/description/description-1.png" alt="">
+                <div class="switch-image-day">
+                    <img src="img/description/description-day.png" alt="">
+                </div>
+                <div class="switch-image-night active">
+                    <img src="img/description/description-night.png" alt="">
+                </div>
             </div>
             <div class="description__info">
                 <h2 class="title">AZIMUT Парк Отель Плас Резиденс Сочи 4*</h2>
@@ -755,7 +760,12 @@
                 <div class="benefits__image">
                     <h2 class="title title-without-line">ПРЕИМУЩЕСТВА</h2>
                     <div class="benefits__img">
-                        <img src="img/benefits/benefits-1.jpg" alt="">
+                        <div class="switch-image-day">
+                            <img src="img/benefits/benefits-day.jpg" alt="">
+                        </div>
+                        <div class="switch-image-night active">
+                            <img src="img/benefits/benefits-night.jpg" alt="">
+                        </div>
                         <div class="switch">
                             <div class="switch__item">
                                 <svg class="switch__item-sun" width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -781,8 +791,8 @@
                                     <path d="M6.93333 12.9921V11.2593H6.06667V12.9921H6.93333Z" fill="#947D66" />
                                 </svg>
 
-                                <input id="switch-3" class="switch__item-checkbox" type='checkbox'><label for="switch-3"
-                                    class="switch__item-label"></label>
+                                <input id="switch-3" data-count="switch-3_1" class="switch__item-checkbox"
+                                    type='checkbox'><label for="switch-3" class="switch__item-label"></label>
                                 <svg class="switch__item-moon active" width="13" height="14" viewBox="0 0 13 14"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -1163,8 +1173,8 @@
                                 приоритетным
                                 для
                                 нас.</p>
-                        </div>
-                        <div class="text__desc">
+
+
                             <ul class="authenticity__list">
                                 <li class="authenticity__list-item">Все помещения уже поставлены на индивидуальный
                                     кадастровый
@@ -1183,6 +1193,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <!-- КОНЕЦ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ -->
@@ -1248,11 +1259,33 @@
             <div class="consultation__container">
                 <div class="consultation__form">
                     <form action="">
-                        <input class="consultation__form-input" type="text" id="consultation-name" placeholder="Имя">
-                        <input class="consultation__form-input input-phone" type="text" id="consultation-phone"
-                            placeholder="Телефон">
-                        <textarea class="consultation__form-input consultation__form-textarea" id="consultation-comment"
-                            placeholder="Комментарий"></textarea>
+                        <div class="consultation__form-input-wrapper">
+                            <input class="consultation__form-input" type="text" id="consultation-name"
+                                placeholder="Имя">
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__form-input-wrapper">
+                            <input class="consultation__form-input input-phone" type="text" id="consultation-phone"
+                                placeholder="Телефон">
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__form-input-wrapper">
+                            <textarea class="consultation__form-input consultation__form-textarea"
+                                id="consultation-comment" placeholder="Комментарий"></textarea>
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
                         <div class="consultation__button">
                             <input class="btn" type="submit" value="Отправить заявку">
                             <div class="consultation__button-text">Отправляя заявку, вы соглашаетесь с политикой
@@ -1303,8 +1336,8 @@
             <div class="mobile-menu__header-logo">
                 <img src="img/logo-mobile-menu.svg" alt="">
             </div>
-            <div class="close">
-            </div>
+            <a class="close" href="javascript:void(0)">
+            </a>
         </div>
         <div class="mobile-menu__nav">
             <ul class="mobile-menu__list">
@@ -1326,18 +1359,39 @@
     <!-- НАЧАЛО МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
     <div class="offer">
         <div class="offer__container">
-            <div class="close">
-            </div>
+            <a class="close" href="javascript:void(0)">
+            </a>
             <h2 class="title">получить <span>персональное предложение</span></h2>
             <div class="text">Мы готовы ответить на все ваши вопросы</div>
             <div class="consultation__container">
                 <div class="consultation__form">
                     <form action="">
-                        <input class="consultation__form-input" type="text" id="offer-name" placeholder="Имя">
-                        <input class="consultation__form-input input-phone" type="text" id="offer-phone"
-                            placeholder="Телефон">
-                        <textarea class="consultation__form-input consultation__form-textarea" id="offer-comment"
-                            placeholder="Комментарий"></textarea>
+                        <div class="consultation__form-input-wrapper">
+                            <input class="consultation__form-input" type="text" id="offer-name" placeholder="Имя">
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__form-input-wrapper">
+                            <input class="consultation__form-input input-phone" type="text" id="offer-phone"
+                                placeholder="Телефон">
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__form-input-wrapper">
+                            <textarea class="consultation__form-input consultation__form-textarea" id="offer-comment"
+                                placeholder="Комментарий"></textarea>
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
                         <div class="consultation__button">
                             <input class="btn" type="submit" value="Отправить заявку">
                             <div class="consultation__button-text">Отправляя заявку, вы соглашаетесь с политикой

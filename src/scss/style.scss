@@ -52,6 +52,41 @@ h1 {
 .text {
     font-size: 1.2rem;
     line-height: 2rem;
+
+    p,
+    &>* {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    ul {
+        margin-top: 1.6rem;
+    }
+
+    li {
+        margin-bottom: 0.8rem;
+        padding-left: 4.3rem;
+        position: relative;
+        font-size: 1.1rem;
+        line-height: 2.1rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: calc(50% - 0.95rem);
+            width: 1.9rem;
+            height: 1.9rem;
+            background-image: url('@img/list.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.9rem 1.9rem;
+        }
+    }
 }
 
 .text__desc {
@@ -361,6 +396,7 @@ h1 {
     .header__logo {
         position: relative;
         filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
+        display: inline-block;
     }
 }
 
@@ -426,7 +462,7 @@ h1 {
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА */
 .main {
-    padding: 9.6rem 0 7.6rem;
+    padding: 9.5rem 0 4.8rem;
     position: relative;
 
     &::before {
@@ -522,7 +558,7 @@ h1 {
 }
 
 .main__buttons-watch {
-    padding-left: 1.1rem;
+    padding: 0.9rem 0 0.9rem 1.1rem;
     display: inline-flex;
     align-items: center;
 
@@ -530,6 +566,14 @@ h1 {
         margin-left: 2.7rem;
         color: $white;
         line-height: 2rem;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        .main__buttons-watch-img::after {
+            opacity: 0.5;
+        }
     }
 }
 
@@ -559,10 +603,18 @@ h1 {
 }
 
 .main__buttons-logo {
+    position: relative;
+    display: inline-block;
     width: 6.8rem;
     height: 2.1rem;
     margin-left: auto;
     opacity: 0.5;
+    transition: 0.3s ease;
+    // top: 0;
+
+    // &:hover {
+    //     top: 0.4rem;2
+    // }
 
     img {
         width: 100%;
@@ -590,6 +642,22 @@ h1 {
         width: 100%;
         height: auto;
     }
+}
+
+.switch-image-day,
+.switch-image-night {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.switch-image-day.active,
+.switch-image-night.active {
+    opacity: 1;
 }
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* */
@@ -653,17 +721,38 @@ h1 {
 }
 
 .reporting {
+    position: relative;
     margin-top: 1.3rem;
-    display: flex;
+    display: inline-flex;
     padding-left: 1.9rem;
     align-items: center;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #F3EBE1;
+            left: 0;
+            top: 0;
+        }
+
+        .reporting-image {
+            opacity: 1;
+        }
+    }
 }
 
 .reporting-image {
     width: 1.3rem;
     height: 1.3rem;
-    margin-right: 2.5rem;
+    margin-right: 2.7rem;
     flex-shrink: 0;
+    opacity: 0.6;
+    transition: 0.3s ease;
 
     img {
         width: 100%;
@@ -822,6 +911,7 @@ h1 {
     a {
         display: inline-block;
         line-height: 2rem;
+        transition: 0.3s ease;
     }
 }
 
@@ -1083,29 +1173,6 @@ h1 {
     }
 }
 
-.authenticity__list-item {
-    margin-bottom: 0.8rem;
-    padding-left: 4.3rem;
-    position: relative;
-
-    &:nth-last-of-type(1) {
-        margin-bottom: 0;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: calc(50% - 0.95rem);
-        width: 1.9rem;
-        height: 1.9rem;
-        background-image: url('@img/list.svg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 1.9rem 1.9rem;
-    }
-}
-
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ*/
 
 /*НАЧАЛО СТИЛЕЙ СЕКЦИИ ВОПРОС - ОТВЕТ*/
@@ -1134,12 +1201,20 @@ h1 {
     margin-bottom: 3rem;
 }
 
-.consultation__form-input {
+.consultation__form-input-wrapper {
     margin-bottom: 0.8rem;
-    border: none;
+    position: relative;
+}
+
+.consultation__form-input {
+    position: relative;
+    border: transparent;
     width: 100%;
     padding: 1.6rem;
     height: 5.6rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    color: $brown;
 
     &::placeholder {
         font-family: "TT Hoves";
@@ -1150,8 +1225,59 @@ h1 {
     }
 }
 
+/* СТИЛИ ДЛЯ ОШИБКИ ВВОДА В ИНПУТЫ*/
+.input-error {
+    color: $red;
+}
+
+.input-error-info {
+    display: none;
+    position: absolute;
+    padding: 0.7rem 1rem;
+    background-color: $bg-input-error;
+    color: $red;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: -0.7rem;
+        left: calc(50% - 0.45rem);
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        border-bottom: 1rem solid $bg-input-error;
+        transition: 0.3s ease;
+        transform: rotate(180deg);
+
+    }
+
+    span {
+        margin-right: 0.8rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+
+    p {
+        width: 19.2rem;
+    }
+}
+
+.input-error-info.active {
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    top: 1.5rem;
+}
+
+.btn-disabled {
+    opacity: 0.3;
+}
+
+/* КОНЕЦ СТИЛЕЙ ДЛЯ ОШИБКИ ВВОДА В ИНПУТЫ*/
+
 .consultation__form-textarea {
-    margin-bottom: 0;
     height: 12.4rem;
     resize: none;
 }
@@ -1310,6 +1436,19 @@ h1 {
         width: 100%;
         height: auto;
     }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg path {
+            fill: $border;
+        }
+    }
+}
+
+.footer__contacts-info {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__contacts-info-phone {
@@ -1325,6 +1464,12 @@ h1 {
     line-height: 1.2rem;
     color: $white;
     opacity: 0.5;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        opacity: 0.5;
+    }
 }
 
 .footer__add-info {
@@ -1336,10 +1481,17 @@ h1 {
 
 .footer__add-info-privacy {
     margin-bottom: 0.8rem;
+    display: inline-block;
     font-size: 1.1rem;
     line-height: 2.1rem;
     color: $white;
     opacity: 0.5;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        opacity: 0.5;
+    }
 }
 
 .footer__add-info-upfly {
@@ -1347,6 +1499,13 @@ h1 {
     line-height: 2.1rem;
     color: $white;
     font-weight: 300;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        opacity: 0.5;
+        padding-top: 0.4rem;
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
@@ -1391,7 +1550,7 @@ h1 {
     width: 2.8rem;
     height: 2.8rem;
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &::before {
@@ -1477,7 +1636,6 @@ h1 {
     }
 
     .consultation__form-input {
-        margin-bottom: 0.8rem;
         border: 1px solid $mobile-line;
     }
 
@@ -1540,10 +1698,10 @@ h1 {
 // }
 
 
-.main__background {
-    opacity: 0;
-}
+// .main__background {
+//     opacity: 0;
+// }
 
-.main__background.active {
-    opacity: 1;
-}
+// .main__background.active {
+//     opacity: 1;
+// }
