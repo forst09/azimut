@@ -1544,8 +1544,13 @@
 
     /*##################################################################################################################################*/
     /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ 1024*/
+
+
+    .header-thanks {
+        padding: 2.4rem 0 0 !important;
+    }
+
     .thanks {
-        padding: 15rem 0;
 
         .wrapper {
             padding: 0 4.8rem;
@@ -1563,7 +1568,28 @@
     }
 
     .thanks__info {
+        position: relative;
         max-width: 36.8rem;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 19.2rem;
+            height: 7.1rem;
+            left: 50%;
+            border-left: 1px solid $border;
+        }
+
+        &::before {
+            top: -12.5rem;
+            border-top: 1px solid $border;
+        }
+
+        &::after {
+            bottom: -12.5rem;
+            border-bottom: 1px solid $border;
+        }
     }
 
     .thanks__image {
@@ -2208,6 +2234,38 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1500*/
+
+    /*##################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ 1500*/
+    .thanks {
+        .wrapper {
+            padding: 0 8rem;
+        }
+    }
+
+    .thanks__info {
+        max-width: 45.7rem;
+
+        &::before,
+        &::after {
+            height: 9.2rem;
+            width: 29.6rem;
+            left: 35%;
+        }
+    }
+
+    .thanks__container {
+        right: -6.9rem;
+    }
+
+    .thanks__image {
+        margin-top: 7rem;
+        width: 57.1rem;
+        height: 78.1rem;
+        margin-left: 24.3rem;
+    }
+
+
 }
 
 /*КОНЕЦ АДАПТИВА 1500*/

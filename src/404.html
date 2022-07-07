@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>404</title>
+</head>
+
+<body>
+
+    <!-- НАЧАЛО ШАПКИ -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__container">
+                <a class="header__logo" href="#">
+                    <picture>
+                        <source srcset="@img/logo-mobile.svg" type="image/svg+xml" media="(max-width:1023px)">
+                        <source srcset="@img/logo.svg" type="image/svg+xml" media="(min-width:1024px)">
+                        <img src="@img/logo-mobile.svg" alt="">
+                    </picture>
+                </a>
+
+            </div>
+        </div>
+    </header>
+    <!-- КОНЕЦ ШАПКИ -->
+
+    <section class="not-found">
+        <div class="main__background main__background-night">
+            <!-- <picture>
+                <source class="night" srcset="img/main/320-night.jpg" type="image/jpg" media="(max-width:667px)">
+                <source srcset="img/main/668-night.jpg" type="image/jpg"
+                    media="(min-width:668px) and (max-width:1023px)">
+                <source class="night" srcset="img/main/1024-night.jpg" type="image/jpg"
+                    media="(min-width:1024px) and (max-width:1500px)">
+                <source class="day" srcset="img/main/1024-day.jpg" type="image/jpg"
+                    media="(min-width:1024px) and (max-width:1500px)">
+                <source class="night" srcset="img/main/1500-night.jpg" type="image/jpg" media="(min-width:1500px)">
+                <img class="night" src="img/main/320-night.jpg" alt="">
+            </picture> -->
+            <img src="img/404/404-night.jpg" alt="">
+        </div>
+        <div class="main__background main__background-day">
+            <!-- <picture>
+                <source class="day" srcset="img/main/320-day.jpg" type="image/jpg" media="(max-width:667px)">
+                <source class="day" srcset="img/main/668-day.jpg" type="image/jpg"
+                    media="(min-width:668px) and (max-width:1023px)">
+                <source class="day" srcset="img/main/1024-day.jpg" type="image/jpg"
+                    media="(min-width:1024px) and (max-width:1500px)">
+                <source class="day" srcset="img/main/1500-day.jpg" type="image/jpg" media="(min-width:1500px)">
+                <img class="night" src="img/main/320-day.jpg" alt="">
+            </picture> -->
+            <img src="img/404/404-day.jpg" alt="">
+        </div>
+        <div class="wrapper">
+            <h1 class="not-found__title">404</h1>
+            <div class="text">
+                <p>Страница не найдена</p>
+            </div>
+            <div class="text__desc">
+                Страница, на которую вы пытаетесь перейти, не существует или была удалена. Возможно вам стоит перейти на
+                главную
+            </div>
+            <a href="index.html" class="btn-main">Перейти на главную</a>
+            <a class="main__buttons-logo" href="javascript:void(0)">
+                <img src="img/main/azimut.svg" alt="">
+            </a>
+        </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/switch.js"></script>
+</body>
+
+</html>
