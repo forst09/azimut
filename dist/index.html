@@ -1162,7 +1162,12 @@
                     </div>
                 </div>
                 <div class="guarantees__image">
-                    <img src="img/guarantees/guarantees-1-night.jpg" alt="">
+                    <div class="switch-image-day">
+                        <img src="img/guarantees/guarantees-day.jpg" alt="">
+                    </div>
+                    <div class="switch-image-night active">
+                        <img src="img/guarantees/guarantees-night.jpg" alt="">
+                    </div>
                     <div class="switch switch-light">
                         <div class="switch__item">
                             <svg class="switch__item-sun" width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -1473,8 +1478,8 @@
     <!-- КОНЕЦ МОБИЛЬНОГО МЕНЮ -->
 
     <!-- НАЧАЛО МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
-    <div class="offer">
-        <div class="offer__container">
+    <div class="modal offer">
+        <div class="modal__container offer__container">
             <a class="close" href="javascript:void(0)">
             </a>
             <h2 class="title">получить <span>персональное предложение</span></h2>
@@ -1520,10 +1525,57 @@
     </div>
     <!-- КОНЕЦ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
 
+    <!-- НАЧАЛО МОДАЛЬНОГО ОКНА ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ  -->
+    <div class="modal privacy">
+        <div class="modal__container privacy__container">
+            <a class="close" href="javascript:void(0)"></a>
+            <div class="text">
+                <h2>политика конфиденциальности - H2</h2>
+                <p>Рост стоимости инвестиционного актива в сочетании с ежегодным доходом от управления на горизонте 5
+                    лет
+                    (срок заключения договора доверительного управления) после ввода объекта в эксплуатацию позволит
+                    инвестору
+                    выйти из проекта и получить доходность от 46% до 486% в зависимости от времени приобретения и
+                    среднего ADR.</p>
+                <p>Вот нумерованный список:</p>
+                <ol>
+                    <li>срок владения недвижимостью с начала
+                        эксплуатации — 5 лет</li>
+                    <li>в первый год эксплуатации срок работы отеля
+                        3 месяца</li>
+                    <li>среднегодовой рост
+                        стоимости недвижимости — 3,0%</li>
+                    <li>цена продажи
+                        недвижимости 1748,1 тыс. руб./м2</li>
+                    <li>капитализация ежегодного дохода от управления</li>
+                </ol>
+                <p>Вот маркированный список:</p>
+                <ul>
+                    <li>срок владения недвижимостью с начала
+                        эксплуатации — 5 лет</li>
+                    <li>в первый год эксплуатации срок работы отеля
+                        3 месяца</li>
+                    <li>среднегодовой рост
+                        стоимости недвижимости — 3,0%</li>
+                    <li>цена продажи
+                        недвижимости 1748,1 тыс. руб./м2</li>
+                    <li>капитализация ежегодного дохода от управления</li>
+                </ul>
+                <b>Жирный</b>
+                <i>Курсив</i>
+                <a href="javascript:void(0)">Ссылка</a>
+                <h3>Политика конфиденциальности - H3</h3>
+                <h4>Политика конфиденциальности - H4</h4>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ МОДАЛЬНОГО ОКНА ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ  -->
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/inputmask.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/switch.js"></script>
 </body>
 
 </html>

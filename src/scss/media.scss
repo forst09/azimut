@@ -83,12 +83,33 @@
         padding: 0 3.2rem;
     }
 
+
+
+    .modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal__container {
+        max-width: 63.6rem;
+        height: fit-content;
+        padding: 2.4rem 4.8rem;
+        position: relative;
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
     .header {
         .btn__wrapper {
             display: block;
+        }
+    }
+
+    .header-thanks {
+        .header__logo {
+            margin-left: 0;
         }
     }
 
@@ -222,16 +243,7 @@
     }
 
     .main__buttons-logo {
-        position: relative;
-        top: 0;
         margin-left: 7.4rem;
-
-        &:active,
-        &:focus,
-        &:focus-within {
-            top: 0.4rem;
-            // opacity: 0.5;
-        }
     }
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 668*/
@@ -728,12 +740,6 @@
 
     /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 668*/
     .offer {
-        .close {
-            position: absolute;
-            right: 1.6rem;
-            top: 1.6rem;
-            margin-bottom: 0;
-        }
 
         .title {
             margin-bottom: 1.6rem;
@@ -760,23 +766,32 @@
         }
     }
 
-    .offer.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .offer__container {
-        max-width: 63.6rem;
-        height: fit-content;
-        padding: 2.4rem 4.8rem;
-        position: relative;
-    }
-
     /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 668*/
+
+    /*##################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ*/
+    .thanks {
+        .wrapper {
+            padding: 0 0 0 3.2rem;
+        }
+    }
+
+
+    .thanks__info {
+        max-width: 25.6rem;
+    }
+
+    .thanks__btn {
+        margin-top: 2.4rem;
+    }
+
+    .thanks__image {
+        margin-left: 4.6rem;
+    }
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
+
 
 /*НАЧАЛО АДАПТИВА 1024*/
 @media(min-width: 1024px) {
@@ -889,6 +904,18 @@
         &:hover {
             opacity: 0.5;
         }
+    }
+
+    .modal {
+        .close {
+            top: 2.4rem;
+            right: 2.4rem;
+        }
+    }
+
+    .modal__container {
+        padding: 4.8rem 9.5rem;
+        max-width: 73.6rem;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
@@ -1488,10 +1515,6 @@
 
     /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1024*/
     .offer {
-        .close {
-            top: 2.4rem;
-            right: 2.4rem;
-        }
 
         .consultation__container {
             margin-top: 4.8rem;
@@ -1517,13 +1540,50 @@
         }
     }
 
-    .offer__container {
-        padding: 4.8rem 9.5rem;
-        max-width: 73.6rem;
+    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1024*/
+
+    /*##################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ 1024*/
+    .thanks {
+        padding: 15rem 0;
+
+        .wrapper {
+            padding: 0 4.8rem;
+        }
     }
 
-    /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1024*/
+    .thanks__container {
+        align-items: center;
+
+        .switch {
+            position: absolute;
+            right: -5.6rem;
+            top: 0;
+        }
+    }
+
+    .thanks__info {
+        max-width: 36.8rem;
+    }
+
+    .thanks__image {
+        width: 38.3rem;
+        height: 52.3rem;
+        margin-left: 10.8rem;
+        align-self: auto;
+
+        .switch-image-night,
+        .switch-image-day {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
 }
+
+
+
+/*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ 1024*/
 
 /*НАЧАЛО АДАПТИВА 1500*/
 
@@ -1600,6 +1660,19 @@
         padding: 0 8rem;
     }
 
+    .modal {
+
+        .close {
+            top: 3.2rem;
+            right: 3.2rem;
+        }
+    }
+
+    .modal__container {
+        padding: 8rem 16.6rem;
+        max-width: 102.8rem;
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
@@ -1625,6 +1698,12 @@
         width: 14.4rem;
         height: 4.4rem;
         margin-right: 6.4rem;
+    }
+
+    .header-thanks {
+        .header__phone {
+            margin-right: 0 !important;
+        }
     }
 
     .header__list-item {
@@ -2110,10 +2189,6 @@
 
     /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1500*/
     .offer {
-        .close {
-            top: 3.2rem;
-            right: 3.2rem;
-        }
 
         .title {
             margin-bottom: 2.5rem;
@@ -2130,11 +2205,6 @@
         .consultation__button {
             margin-top: 5.4rem;
         }
-    }
-
-    .offer__container {
-        padding: 8rem 16.6rem;
-        max-width: 102.8rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 1500*/

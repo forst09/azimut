@@ -66,22 +66,23 @@ $(document).ready(function () {
         $('body').removeClass('scroll-hide');
     });
 
-    //ПЕРЕКЛЮЧАТЕЛЬ ТЕМНЫХ/СВЕТЛЫХ КАРТИНОК
-    $(document).on('click', ".switch__item-label", function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).parents('.switch').find('.switch__item-sun').removeClass('active');
-            $(this).parents('.switch').find('.switch__item-moon').addClass('active');
-            $(this).parents('.switch').find('.switch__item-moon').addClass('active');
-            $(this).parents('section').find('.switch-image-night').addClass('active');
-            $(this).parents('section').find('.switch-image-day').removeClass('active');
-        }
-        else {
-            $(this).addClass('active');
-            $(this).parents('.switch').find('.switch__item-sun').addClass('active');
-            $(this).parents('.switch').find('.switch__item-moon').removeClass('active');
-            $(this).parents('section').find('.switch-image-night').removeClass('active');
-            $(this).parents('section').find('.switch-image-day').addClass('active');
+    //ОТКРЫТИЕ МОДАЛЬНОГО ОКНА ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+    $(document).on('click', ".footer__add-info-privacy", function () {
+        $('.privacy').addClass('active');
+        $('body').addClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+    $(document).on('click', ".privacy .close", function () {
+        $('.privacy').removeClass('active');
+        $('body').removeClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
+    $(document).click(function (e) {
+        if ($(e.target).is('.modal')) {
+            $('.modal').removeClass('active');
+            $('body').removeClass('scroll-hide');
         }
     });
 

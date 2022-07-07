@@ -59,21 +59,42 @@ h1 {
         line-height: 2rem;
     }
 
-    ul {
-        margin-top: 1.6rem;
+    p {
+        margin-bottom: 0.8rem;
     }
 
-    li {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 300;
+        margin-bottom: 1.6rem;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    ul,
+    ol {
+        margin-top: 1.6rem;
         margin-bottom: 0.8rem;
-        padding-left: 4.3rem;
-        position: relative;
-        font-size: 1.1rem;
-        line-height: 2.1rem;
+    }
 
-        &:nth-last-of-type(1) {
-            margin-bottom: 0;
-        }
-
+    ul li {
         &::before {
             content: '';
             position: absolute;
@@ -86,6 +107,42 @@ h1 {
             background-position: center center;
             background-size: 1.9rem 1.9rem;
         }
+    }
+
+    ol li {
+        padding-left: 0.4rem;
+
+        &::before {
+            content: counter(list-item)"\a0\a0";
+            display: inline-block;
+            min-width: 2.2rem;
+            left: 0;
+        }
+    }
+
+    li {
+        margin-bottom: 0.8rem;
+        padding-left: 4.3rem;
+        position: relative;
+        font-size: 1.1rem;
+        line-height: 2.1rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    b {
+        font-weight: 500;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    a {
+        color: #947D66;
+        text-decoration: underline;
     }
 }
 
@@ -232,6 +289,42 @@ h1 {
 
 .scroll-hide {
     overflow: hidden;
+}
+
+.modal {
+    display: none;
+    transition: opacity 0.8s ease;
+    z-index: 1000;
+    animation: fadeEffect 0.3s;
+
+    .close {
+        position: absolute;
+        right: 1.6rem;
+        top: 1.6rem;
+
+        &::before,
+        &::after {
+            background-color: $light-brown;
+        }
+    }
+}
+
+.modal.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    padding: 5.2rem 1.6rem 1.6rem;
 }
 
 /*СТИЛИ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
@@ -545,10 +638,6 @@ h1 {
 
 .main__buttons {
     margin-top: 3.2rem;
-
-    .btn-main {
-        margin-bottom: 1.6rem;
-    }
 }
 
 .main__buttons-wrapper {
@@ -610,11 +699,14 @@ h1 {
     margin-left: auto;
     opacity: 0.5;
     transition: 0.3s ease;
-    // top: 0;
+    bottom: 0;
 
-    // &:hover {
-    //     top: 0.4rem;2
-    // }
+    &:active,
+    &:focus,
+    &:focus-within {
+        bottom: -0.4rem;
+        opacity: 0.2;
+    }
 
     img {
         width: 100%;
@@ -634,6 +726,7 @@ h1 {
 }
 
 .description__image {
+    position: relative;
     margin-top: 4.8rem;
     width: 28.9rem;
     height: 38.1rem;
@@ -653,6 +746,11 @@ h1 {
     height: 100%;
     opacity: 0;
     transition: 0.5s ease;
+
+    img {
+        width: auto;
+        height: 100%;
+    }
 }
 
 .switch-image-day.active,
@@ -1045,6 +1143,7 @@ h1 {
 }
 
 .benefits__img {
+    position: relative;
     width: 100%;
     height: 16.3rem;
 
@@ -1125,6 +1224,7 @@ h1 {
 }
 
 .guarantees__image {
+    position: relative;
     margin: 4rem auto 0;
     width: 32rem;
     height: 35.7rem;
@@ -1616,20 +1716,6 @@ h1 {
 
 /*НАЧАЛО СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
 .offer {
-    display: none;
-    transition: opacity 0.8s ease;
-    z-index: 1000;
-    animation: fadeEffect 0.3s;
-
-    .close {
-        margin-left: auto;
-        margin-bottom: 0.8rem;
-
-        &::before,
-        &::after {
-            background-color: $light-brown;
-        }
-    }
 
     .consultation__container {
         margin-top: 3.2rem;
@@ -1646,23 +1732,6 @@ h1 {
     .consultation__button {
         margin-top: 3.2rem;
     }
-}
-
-.offer.active {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-.offer__container {
-    width: 100%;
-    height: 100%;
-    background-color: $white;
-    padding: 1.6rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ*/
@@ -1705,3 +1774,56 @@ h1 {
 // .main__background.active {
 //     opacity: 1;
 // }
+
+/*##################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ*/
+
+.thanks {
+    padding: 8rem 0 0 0;
+    height: 100vh;
+
+    .wrapper {
+        padding: 0 0 0 1.6rem;
+        height: 100%;
+    }
+}
+
+.thanks__container {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+
+.thanks__info {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 19rem;
+    align-self: center;
+}
+
+.thanks__btn {
+    padding: 0.75rem 2.4rem;
+    background-color: $light-brown;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    margin-top: 1.6rem;
+}
+
+.thanks__image {
+    position: relative;
+    margin-left: 3.2rem;
+
+    .switch-image-night,
+    .switch-image-day {
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: fill;
+            max-width: none;
+        }
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ*/
