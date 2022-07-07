@@ -78,18 +78,45 @@ $(document).ready(function () {
         $('body').removeClass('scroll-hide');
     });
 
-    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
-    $(document).click(function (e) {
-        if ($(e.target).is('.modal')) {
-            $('.modal').removeClass('active');
-            $('body').removeClass('scroll-hide');
-        }
-    });
-
     //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
     if ($(".input-phone").length !== 0) {
         Inputmask("+7 (999) 999-99-99").mask(".input-phone");
     }
+
+    //ОТКРЫТИЕ ВИДЕО НА СТРАНИЦЕ О КОМПАНИИ
+    $(document).on('click', '.main__buttons-watch', function (e) {
+        e.preventDefault();
+        let firstString = 'https://www.youtube.com/embed/';
+        let link = $(this).attr('href');
+        let newLink;
+        if (link.indexOf('v=') !== -1) {
+            let arrayLinks = link.split('v=');
+            let secondString = arrayLinks[arrayLinks.length - 1];
+            newLink = firstString + secondString;
+        }
+        else {
+            newLink = link;
+        }
+
+        $.fancybox.open({
+            src: newLink,
+            type: 'iframe'
+        });
+
+    });
+
+    //СМЕНА ФОНА
+    let mainBg = $('.main__background');
+    let k = 1;
+
+    setInterval(function () {
+        mainBg.removeClass('active');
+        mainBg[k].classList.add('active');
+        k++;
+        if (mainBg.length == k) {
+            k = 0;
+        }
+    }, 5000);
 
     // swiper.loopDestroy();
 
@@ -142,23 +169,33 @@ $(document).ready(function () {
     const swiperInteriorsLayoutsThumbs = new Swiper('.swiper-interiors-layouts-thumbs', {
         speed: 400,
         slidesPerView: 7.7,
-        // centeredSlides: true,
-        // centeredSlidesBounds: true,
         spaceBetween: 8,
-        // virtualTranslate: true,
-
-        // loop: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 7.78,
+                spaceBetween: 8,
+            },
+            // when window width is >= 480px
+            668: {
+                slidesPerView: 8.15,
+            },
+            // when window width is >= 640px
+            1024: {
+                slidesPerView: 10,
+            }
+        }
     });
 
-    if ($(window).width() >= 668) {
+    if ($(window).width() >= 1024) {
         $(".swiper-interiors-layouts-thumbs .swiper-wrapper").addClass("slides-center");
     }
 
-    if ($(window).width() < 668) {
+    if ($(window).width() < 1024) {
         $(".swiper-interiors-layouts-thumbs .swiper-wrapper").addClass("slides-center");
     }
 
-    if ($(window).width() < 400 && [...$(".js-slide")].length > 7) {
+    if ($(window).width() < 1024 && [...$(".js-slide")].length > 7) {
         $(".swiper-interiors-layouts-thumbs .swiper-wrapper").removeClass("slides-center");
     }
 
@@ -239,19 +276,6 @@ $(document).ready(function () {
             el: '.interiors-facade-pagination',
             type: 'fraction',
         },
-    });
-
-    let mainBg = $('.main__background');
-
-    mainBg.each(function (index, el) {
-        let bg = $(this);
-        bg.addClass('active');
-
-        setTimeout(function () {
-            bg.removeClass('active');
-        }, 2000);
-
-        // $(this).removeClass('active');
     });
 
 });

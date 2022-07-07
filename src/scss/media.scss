@@ -364,6 +364,11 @@
 
     }
 
+    .swiper-interiors-layouts-thumbs {
+        margin-top: 1.6rem;
+        padding: 0 3.2rem;
+    }
+
     .interiors__title-container {
         display: flex;
         align-items: center;
@@ -769,7 +774,7 @@
     /*КОНЕЦ СТИЛЕЙ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ 668*/
 
     /*##################################################################################################################################*/
-    /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ*/
+    /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ 668*/
     .thanks {
         .wrapper {
             padding: 0 0 0 3.2rem;
@@ -787,6 +792,48 @@
 
     .thanks__image {
         margin-left: 4.6rem;
+    }
+
+    /*##################################################################################################################################*/
+    /*404 668*/
+
+    .not-found {
+
+        .btn-main {
+            margin: 6.4rem 0 0 0;
+        }
+
+        .main__buttons-logo {
+            margin-top: 0.7rem;
+            margin-left: auto;
+        }
+    }
+
+    .not-found-container {
+        max-width: 45.7rem;
+    }
+
+    .not-found-header {
+        padding: 3.2rem 0 0 0;
+
+        .header__logo {
+            margin-left: 0;
+        }
+    }
+
+    .not-found__title {
+        font-size: 8rem;
+        line-height: 9.4rem;
+        margin-bottom: 1.6rem;
+    }
+
+    /*##################################################################################################################################*/
+    /*ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ*/
+
+    .privacy {
+        .modal__container {
+            max-height: 59.3rem;
+        }
     }
 }
 
@@ -1180,7 +1227,13 @@
 
         &:hover {
             .reporting-image {
-                opacity: 0.8;
+                svg path {
+                    fill: #7D6248;
+                }
+            }
+
+            .reporting-name {
+                color: #7D6248;
             }
         }
     }
@@ -1605,6 +1658,36 @@
             }
         }
     }
+
+    /*##################################################################################################################################*/
+    /*404 1024*/
+
+    .not-found {
+
+        &::before {
+            width: 56rem;
+        }
+
+        .btn-main {
+            margin: 6.4rem 0 0 0;
+        }
+
+        .main__buttons-logo {
+            margin-top: 0;
+            position: fixed;
+            right: 4.8rem;
+            bottom: 5.6rem;
+
+            &:hover {
+                bottom: 5.2rem;
+            }
+        }
+    }
+
+    .not-found__title {
+        font-size: 10.4rem;
+        line-height: 12.2rem;
+    }
 }
 
 
@@ -1801,6 +1884,10 @@
 
     .main__buttons-logo {
         bottom: -10.4rem;
+
+        &:hover {
+            bottom: -10.8rem;
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1500*/
@@ -2265,7 +2352,26 @@
         margin-left: 24.3rem;
     }
 
+    /*##################################################################################################################################*/
+    /*НАЧАЛО СТИЛЕЙ 404 1500*/
+    .not-found {
+        .btn-main {
+            margin: 16rem 0 0 0;
+        }
 
+        .main__buttons-logo {
+            right: 7.9rem;
+            bottom: 6rem;
+        }
+    }
+
+    .not-found__title {
+        font-size: 12.8rem;
+        line-height: 15rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ 404 1500*/
 }
 
 /*КОНЕЦ АДАПТИВА 1500*/

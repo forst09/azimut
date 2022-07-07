@@ -438,6 +438,12 @@ h1 {
 
 /*КОНЕЦ СТИЛЕЙ ДЛЯ ПЕРЕКЛЮЧАТЕЛЕЙ КАРТИНОК СВЕТЛЫЕ-ТЕМНЫЕ*/
 
+.swiper-slide {
+    &:nth-last-of-type(1) {
+        margin-right: 0 !important;
+    }
+}
+
 
 @keyframes fadeEffect {
     from {
@@ -816,6 +822,10 @@ h1 {
             text-transform: uppercase;
         }
     }
+
+    .reporting-image {
+        opacity: 1;
+    }
 }
 
 .reporting {
@@ -828,18 +838,11 @@ h1 {
     &:active,
     &:focus,
     &:focus-within {
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #F3EBE1;
-            left: 0;
-            top: 0;
-        }
 
-        .reporting-image {
-            opacity: 1;
+
+        .reporting-image,
+        .reporting-text {
+            opacity: 0.7;
         }
     }
 }
@@ -977,6 +980,14 @@ h1 {
     line-height: 2rem;
 }
 
+.table-text__desc {
+    color: $light-brown;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
 
 /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА*/
 
@@ -1099,6 +1110,11 @@ h1 {
             background: linear-gradient(0deg, rgba(252, 248, 247, 0.5), rgba(252, 248, 247, 0.5));
         }
     }
+}
+
+.swiper-interiors-layouts-thumbs {
+    margin-top: 0.8rem;
+    padding: 0 1.6rem;
 }
 
 .interiors-layouts {
@@ -1767,13 +1783,14 @@ h1 {
 // }
 
 
-// .main__background {
-//     opacity: 0;
-// }
+.main__background {
+    opacity: 0;
+    transition: 2s ease;
+}
 
-// .main__background.active {
-//     opacity: 1;
-// }
+.main__background.active {
+    opacity: 1;
+}
 
 /*##################################################################################################################################*/
 /*НАЧАЛО СТИЛЕЙ СПАСИБО ЗА ЗАЯВКУ*/
@@ -1834,7 +1851,8 @@ h1 {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    padding-top: 9.5rem;
+    display: flex;
+    align-items: center;
 
     .wrapper {
         position: relative;
@@ -1861,18 +1879,14 @@ h1 {
         margin-bottom: 1.6rem;
     }
 
-    .text__desc {
-        max-width: 23.9rem;
-    }
-
     .btn-main {
         margin-top: 4rem;
-        margin-bottom: 3.9rem;
     }
 
     .main__buttons-logo {
         display: block;
         margin-left: 0;
+        margin-top: 3.9rem;
     }
 }
 
@@ -1881,4 +1895,17 @@ h1 {
     font-size: 6.6rem;
     line-height: 7.8rem;
     margin-bottom: 0.8rem;
+}
+
+.not-found-container {
+    max-width: 23.9rem;
+}
+
+/*##################################################################################################################################*/
+/*ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ*/
+
+.privacy {
+    .modal__container {
+        overflow: auto;
+    }
 }
