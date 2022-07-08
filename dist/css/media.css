@@ -23,6 +23,10 @@
     margin-top: 2.4rem;
   }
 
+  .text__desc li {
+    margin-bottom: 0.5rem;
+  }
+
   .text__line {
     padding-top: 2.4rem;
   }
@@ -295,7 +299,7 @@
   }
 
   .profitability__table-wrapper .scroll {
-    padding: 0 0 3.3rem;
+    padding: 0 0 2.8rem;
     margin-bottom: 1.7rem;
   }
 
@@ -740,7 +744,7 @@
   /*##################################################################################################################################*/
   /*ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ*/
   .privacy .modal__container {
-    max-height: 59.3rem;
+    max-height: 85%;
   }
 }
 /*КОНЕЦ АДАПТИВА 668*/
@@ -1122,6 +1126,13 @@
 
   .dropdown__wrapper {
     padding: 0 4.8rem;
+  }
+
+  .table-text__desc {
+    margin-top: 3.2rem;
+  }
+  .table-text__desc p {
+    margin-bottom: 0;
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА 1024*/
@@ -1749,6 +1760,10 @@
     margin-top: 4rem;
   }
 
+  .table-text__desc {
+    margin-top: 4rem;
+  }
+
   .profitability__table-text-big,
 .profitability__table-text-medium,
 .profitability__table div,
@@ -2005,9 +2020,6 @@
   }
   .offer .consultation__container {
     margin-top: 5.4rem;
-  }
-  .offer .consultation__form-input {
-    margin-bottom: 1.6rem;
   }
   .offer .consultation__button {
     margin-top: 5.4rem;
