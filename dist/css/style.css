@@ -185,6 +185,7 @@ h1 span {
   font-size: 1.2rem;
   line-height: 2.1rem;
   color: #947D66;
+  margin-right: 0.4rem;
 }
 .text__desc li {
   margin-bottom: 0.2rem;
@@ -241,6 +242,13 @@ h1 span {
   overflow-x: auto;
   padding: 0 1.7rem;
   overflow-y: hidden;
+}
+
+.btn-main:active, .btn-main:focus, .btn-main:focus-within,
+.header__btn:active,
+.header__btn:focus,
+.header__btn:focus-within {
+  background-color: #FCF8F7;
 }
 
 .dropdown {
@@ -310,6 +318,9 @@ h1 span {
   padding: 1.1rem 2.6rem;
   color: #ffffff;
   background: #BD8A66;
+}
+.btn:active, .btn:focus, .btn:focus-within {
+  background: #996C4B;
 }
 
 .scroll-swiper {
@@ -464,6 +475,14 @@ h1 span {
     opacity: 1;
   }
 }
+@keyframes headerF {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ*/
 /*НАЧАЛО СТИЛЕЙ ШАПКИ */
 .header {
@@ -485,6 +504,7 @@ h1 span {
   width: 100%;
   z-index: 100;
   background-color: #FCF8F7;
+  animation: headerF 0.3s;
 }
 .header.fixed .header__burger-icon span {
   background-color: #947D66;
@@ -953,6 +973,7 @@ h1 span {
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
+  min-height: 2.8rem;
 }
 
 .tabs__list-item {
@@ -1225,6 +1246,7 @@ h1 span {
   font-size: 1.1rem;
   line-height: 1.7rem;
   color: #381611;
+  font-family: "TT Hoves";
 }
 .consultation__form-input::placeholder {
   font-family: "TT Hoves";
@@ -1372,6 +1394,7 @@ h1 span {
 }
 
 .footer__logo {
+  display: inline-block;
   flex-shrink: 0;
   width: 9.6rem;
   height: 2.9rem;
@@ -1490,19 +1513,26 @@ h1 span {
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
 /*НАЧАЛО СТИЛЕЙ МОБИЛЬНОГО МЕНЮ*/
-.mobile-menu {
+.mobile-menu__wrapper {
   position: fixed;
   top: 0;
-  left: -76%;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(56, 22, 17, 0.05);
+  transition: 0.3s ease;
+}
+
+.mobile-menu {
   width: 76%;
   height: 100%;
   background-color: #FCF8F7;
   padding: 2.4rem;
-  z-index: 1000;
-  transition: 0.3s ease;
+  z-index: 1001;
 }
 
-.mobile-menu.active {
+.mobile-menu__wrapper.active {
   left: 0;
 }
 
@@ -1613,6 +1643,7 @@ h1 span {
 .thanks {
   padding: 8rem 0 0 0;
   height: 100vh;
+  overflow: hidden;
 }
 .thanks .wrapper {
   padding: 0 0 0 1.6rem;
@@ -1621,7 +1652,6 @@ h1 span {
 
 .thanks__container {
   display: flex;
-  overflow: hidden;
   height: 100%;
 }
 
@@ -1645,6 +1675,20 @@ h1 span {
 .thanks__image {
   position: relative;
   margin-left: 3.2rem;
+}
+.thanks__image .switch-image-night,
+.thanks__image .switch-image-day {
+  position: absolute;
+}
+.thanks__image .switch-image-night::after,
+.thanks__image .switch-image-day::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(0deg, #fcf8f7 0%, rgba(255, 255, 255, 0) 20%);
 }
 .thanks__image .switch-image-night img,
 .thanks__image .switch-image-day img {
@@ -1676,7 +1720,7 @@ h1 span {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
 }
 .not-found .text,
 .not-found .text__desc {
@@ -1707,6 +1751,28 @@ h1 span {
 
 /*##################################################################################################################################*/
 /*ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ*/
-.privacy .modal__container {
-  overflow: auto;
+.privacy__content {
+  padding-right: 0.2rem;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-color: #458245 #714826;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: auto;
+  /* толщина */
+  /* ползунок скроллбара */
+}
+.privacy__content ::-webkit-scrollbar {
+  width: 24px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: #143861;
+}
+.privacy__content ::-webkit-scrollbar-thumb {
+  background-color: #843465;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+.privacy__content ::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
 }

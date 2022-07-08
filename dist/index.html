@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title>Главная</title>
@@ -1412,9 +1413,9 @@
     <div class="wrapper">
         <div class="footer__wrapper">
             <div class="footer__container">
-                <div class="footer__logo">
+                <a class="footer__logo" href="javascript:void(0)">
                     <img src="img/logo.svg" alt="">
-                </div>
+                </a>
                 <nav class="footer__nav">
                     <ul class="footer__list">
                         <li class="footer__list-item"><a class="footer__list-link" href="">Об отеле</a></li>
@@ -1471,33 +1472,35 @@
 <!-- КОНЕЦ ФУТЕРА -->
 
     <!-- НАЧАЛО МОБИЛЬНОГО МЕНЮ -->
-    <div class="mobile-menu">
-        <div class="mobile-menu__header">
-            <div class="mobile-menu__header-logo">
-                <img src="img/logo-mobile-menu.svg" alt="">
+    <div class="mobile-menu__wrapper">
+        <div class="mobile-menu">
+            <div class="mobile-menu__header">
+                <div class="mobile-menu__header-logo">
+                    <img src="img/logo-mobile-menu.svg" alt="">
+                </div>
+                <a class="close" href="javascript:void(0)">
+                </a>
             </div>
-            <a class="close" href="javascript:void(0)">
-            </a>
-        </div>
-        <div class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-                <li class="mobile-menu__list-item"><a href="#">Об отеле</a></li>
-                <li class="mobile-menu__list-item"><a href="#">О нас</a></li>
-                <li class="mobile-menu__list-item"><a href="#">Галерея</a></li>
-                <li class="mobile-menu__list-item"><a href="#">Доходность</a></li>
-                <li class="mobile-menu__list-item"><a href="#">Планировки</a></li>
-                <li class="mobile-menu__list-item"><a href="#">Вопрос-ответ</a></li>
-                <li class="mobile-menu__list-item"><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="mobile-menu__phone">
-            <a href="tel:89189131003" class="mobile-menu__phone-link">8 (918) 913 - 10 - 03</a>
+            <div class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__list-item"><a href="#">Об отеле</a></li>
+                    <li class="mobile-menu__list-item"><a href="#">О нас</a></li>
+                    <li class="mobile-menu__list-item"><a href="#">Галерея</a></li>
+                    <li class="mobile-menu__list-item"><a href="#">Доходность</a></li>
+                    <li class="mobile-menu__list-item"><a href="#">Планировки</a></li>
+                    <li class="mobile-menu__list-item"><a href="#">Вопрос-ответ</a></li>
+                    <li class="mobile-menu__list-item"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu__phone">
+                <a href="tel:89189131003" class="mobile-menu__phone-link">8 (918) 913 - 10 - 03</a>
+            </div>
         </div>
     </div>
     <!-- КОНЕЦ МОБИЛЬНОГО МЕНЮ -->
 
     <!-- НАЧАЛО МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
-    <div class="modal offer">
+    <div class="modal offer personal">
         <div class="modal__container offer__container">
             <a class="close" href="javascript:void(0)">
             </a>
@@ -1544,47 +1547,98 @@
     </div>
     <!-- КОНЕЦ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ  -->
 
+    <!-- НАЧАЛО МОДАЛЬНОГО ОКНА УЗНАТЬ ПОДРОБНОСТИ  -->
+    <div class="modal offer details">
+        <div class="modal__container offer__container">
+            <a class="close" href="javascript:void(0)">
+            </a>
+            <h2 class="title">УЗНАТЬ ПОДРОБНОСТИ</span></h2>
+            <div class="text">Мы готовы ответить на все ваши вопросы</div>
+            <div class="consultation__container">
+                <div class="consultation__form">
+                    <form action="">
+                        <div class="consultation__form-input-wrapper">
+                            <input class="consultation__form-input" type="text" id="offer-name" placeholder="Имя">
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__form-input-wrapper">
+                            <input class="consultation__form-input input-phone" type="text" id="offer-phone"
+                                placeholder="Телефон">
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__form-input-wrapper">
+                            <textarea class="consultation__form-input consultation__form-textarea" id="offer-comment"
+                                placeholder="Комментарий"></textarea>
+                            <div class="input-error-info">
+                                <span>!</span>
+                                <p>Максимальное кол-во символов - 20 199, это большая ошика чтобы показать что делать
+                                    если в ней очень много различных символов</p>
+                            </div>
+                        </div>
+                        <div class="consultation__button">
+                            <input class="btn" type="submit" value="Отправить заявку">
+                            <div class="consultation__button-text">Отправляя заявку, вы соглашаетесь с политикой
+                                конфиденциальности</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ МОДАЛЬНОГО ОКНА УЗНАТЬ ПОДРОБНОСТИ  -->
+
     <!-- НАЧАЛО МОДАЛЬНОГО ОКНА ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ  -->
     <div class="modal privacy">
         <div class="modal__container privacy__container">
             <a class="close" href="javascript:void(0)"></a>
-            <div class="text__desc">
-                <h2>политика конфиденциальности - H2</h2>
-                <p>Рост стоимости инвестиционного актива в сочетании с ежегодным доходом от управления на горизонте 5
-                    лет
-                    (срок заключения договора доверительного управления) после ввода объекта в эксплуатацию позволит
-                    инвестору
-                    выйти из проекта и получить доходность от 46% до 486% в зависимости от времени приобретения и
-                    среднего ADR.</p>
-                <p>Вот нумерованный список:</p>
-                <ol>
-                    <li>срок владения недвижимостью с начала
-                        эксплуатации — 5 лет</li>
-                    <li>в первый год эксплуатации срок работы отеля
-                        3 месяца</li>
-                    <li>среднегодовой рост
-                        стоимости недвижимости — 3,0%</li>
-                    <li>цена продажи
-                        недвижимости 1748,1 тыс. руб./м2</li>
-                    <li>капитализация ежегодного дохода от управления</li>
-                </ol>
-                <p>Вот маркированный список:</p>
-                <ul>
-                    <li>срок владения недвижимостью с начала
-                        эксплуатации — 5 лет</li>
-                    <li>в первый год эксплуатации срок работы отеля
-                        3 месяца</li>
-                    <li>среднегодовой рост
-                        стоимости недвижимости — 3,0%</li>
-                    <li>цена продажи
-                        недвижимости 1748,1 тыс. руб./м2</li>
-                    <li>капитализация ежегодного дохода от управления</li>
-                </ul>
-                <b>Жирный</b>
-                <i>Курсив</i>
-                <a href="javascript:void(0)">Ссылка</a>
-                <h3>Политика конфиденциальности - H3</h3>
-                <h4>Политика конфиденциальности - H4</h4>
+            <div class="privacy__content">
+                <div class="text__desc">
+                    <h2>политика конфиденциальности - H2</h2>
+                    <p>Рост стоимости инвестиционного актива в сочетании с ежегодным доходом от управления на горизонте
+                        5
+                        лет
+                        (срок заключения договора доверительного управления) после ввода объекта в эксплуатацию позволит
+                        инвестору
+                        выйти из проекта и получить доходность от 46% до 486% в зависимости от времени приобретения и
+                        среднего ADR.</p>
+                    <p>Вот нумерованный список:</p>
+                    <ol>
+                        <li>срок владения недвижимостью с начала
+                            эксплуатации — 5 лет</li>
+                        <li>в первый год эксплуатации срок работы отеля
+                            3 месяца</li>
+                        <li>среднегодовой рост
+                            стоимости недвижимости — 3,0%</li>
+                        <li>цена продажи
+                            недвижимости 1748,1 тыс. руб./м2</li>
+                        <li>капитализация ежегодного дохода от управления</li>
+                    </ol>
+                    <p>Вот маркированный список:</p>
+                    <ul>
+                        <li>срок владения недвижимостью с начала
+                            эксплуатации — 5 лет</li>
+                        <li>в первый год эксплуатации срок работы отеля
+                            3 месяца</li>
+                        <li>среднегодовой рост
+                            стоимости недвижимости — 3,0%</li>
+                        <li>цена продажи
+                            недвижимости 1748,1 тыс. руб./м2</li>
+                        <li>капитализация ежегодного дохода от управления</li>
+                    </ul>
+                    <b>Жирный</b>
+                    <i>Курсив</i>
+                    <a href="javascript:void(0)">Ссылка</a>
+                    <h3>Политика конфиденциальности - H3</h3>
+                    <h4>Политика конфиденциальности - H4</h4>
+                </div>
             </div>
         </div>
     </div>

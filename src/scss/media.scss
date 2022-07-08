@@ -32,6 +32,15 @@
         li {
             margin-bottom: 0.5rem;
         }
+
+        h3 {
+            font-size: 1.7rem;
+            line-height: 2rem;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+        }
     }
 
     .text__line {
@@ -95,13 +104,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        background: rgba(56, 22, 17, 0.05);
     }
 
     .modal__container {
         max-width: 63.6rem;
-        height: fit-content;
         padding: 2.4rem 4.8rem;
-        position: relative;
+        height: fit-content;
     }
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
@@ -381,6 +390,8 @@
         justify-content: space-between;
         margin-bottom: 4rem;
     }
+
+
 
     .tabs__list-item {
         margin-right: 4.2rem;
@@ -810,8 +821,18 @@
         }
 
         .main__buttons-logo {
-            margin-top: 0.7rem;
-            margin-left: auto;
+            margin: 0;
+            position: fixed;
+            right: 3.2rem;
+            bottom: 6.6rem;
+
+            &:active,
+            &:focus,
+            &:focus-within {
+                bottom: 6.2rem;
+            }
+
+
         }
     }
 
@@ -835,11 +856,15 @@
 
     /*##################################################################################################################################*/
     /*ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ*/
-
     .privacy {
         .modal__container {
-            max-height: 85%;
+            height: inherit;
+            max-height: 80%;
         }
+    }
+
+    .privacy__content {
+        height: 100%;
     }
 }
 
@@ -891,11 +916,47 @@
     }
 
     .text__desc {
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 2rem;
+        }
+
         font-size: 1.2rem;
         line-height: 2rem;
 
         p {
             margin-bottom: 1.6rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.9rem;
+            line-height: 2.2rem;
+        }
+
+        h4 {
+            line-height: 2.1rem;
+            font-size: 1.8rem;
+        }
+
+        ol,
+        ul {
+            margin-top: 0.6rem;
+        }
+
+        ol li {
+            margin-bottom: 0.7rem;
+        }
+
+        ul li {
+            padding-left: 3rem;
         }
     }
 
@@ -993,6 +1054,12 @@
             padding: 0.4rem 1.6rem;
             background-color: #947D66;
             color: #fff;
+
+            &:active,
+            &:focus,
+            &:focus-within {
+                background-color: #7D6248;
+            }
         }
     }
 
@@ -1059,6 +1126,17 @@
         padding: 1rem 2.4rem;
     }
 
+    .header__btn,
+    .btn-main,
+    .btn,
+    .thanks__btn {
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
     .main {
         padding: 12.8rem 0 7.2rem;
@@ -1074,7 +1152,7 @@
     }
 
     .main__desc {
-        margin: 1.6rem 0 3.1rem;
+        margin: 1.6rem 0;
     }
 
     .main__buttons {
@@ -1629,7 +1707,7 @@
 
         .switch {
             position: absolute;
-            right: -5.6rem;
+            right: -6.9rem;
             top: 0;
         }
     }
@@ -1662,6 +1740,7 @@
     .thanks__image {
         width: 38.3rem;
         height: 52.3rem;
+        margin-top: 14rem;
         margin-left: 10.8rem;
         align-self: auto;
 
@@ -1671,6 +1750,10 @@
                 max-width: 100%;
             }
         }
+    }
+
+    .thanks__btn {
+        margin-top: 3.2rem;
     }
 
     /*##################################################################################################################################*/
@@ -1687,8 +1770,6 @@
         }
 
         .main__buttons-logo {
-            margin-top: 0;
-            position: fixed;
             right: 4.8rem;
             bottom: 5.6rem;
 
@@ -1717,6 +1798,10 @@
         font-size: 0.666668vw;
     }
 
+    section {
+        padding: 12.8rem 0;
+    }
+
     h1 {
         font-size: 4rem;
         line-height: 5.4rem;
@@ -1738,6 +1823,52 @@
 
         li {
             margin-bottom: 3.2rem;
+        }
+    }
+
+    .text__desc {
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 2.4rem;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            line-height: 3.2rem;
+        }
+
+        p {
+            margin-bottom: 1.8rem;
+        }
+
+        ol {
+            margin-top: 1.5rem;
+
+            li {
+                margin-bottom: 0.9rem;
+
+                &::before {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+
+        ul {
+            margin-top: 1.2rem;
+
+            li {
+                margin-bottom: 0.8rem;
+            }
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
         }
     }
 
@@ -1870,6 +2001,8 @@
     }
 
     .main__desc {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
         margin: 2.4rem 0;
     }
 
@@ -1961,7 +2094,7 @@
             content: '';
             position: absolute;
             display: block;
-            bottom: -10rem;
+            bottom: -10.5rem;
             left: 12rem;
             width: 20.8rem;
             height: 10.4rem;
@@ -2056,6 +2189,10 @@
         .reporting {
             padding: 1rem 3.2rem;
         }
+    }
+
+    .tabs__list {
+        min-height: 3rem;
     }
 
     .tabs__list-item {
@@ -2344,6 +2481,7 @@
         }
     }
 
+
     .thanks__info {
         max-width: 45.7rem;
 
@@ -2360,10 +2498,14 @@
     }
 
     .thanks__image {
-        margin-top: 7rem;
+        // margin-top: 7rem;
         width: 57.1rem;
         height: 78.1rem;
         margin-left: 24.3rem;
+    }
+
+    .thanks__btn {
+        margin-top: 4rem;
     }
 
     /*##################################################################################################################################*/

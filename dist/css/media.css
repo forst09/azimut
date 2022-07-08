@@ -26,6 +26,13 @@
   .text__desc li {
     margin-bottom: 0.5rem;
   }
+  .text__desc h3 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  .text__desc h4 {
+    font-size: 1.6rem;
+  }
 
   .text__line {
     padding-top: 2.4rem;
@@ -84,13 +91,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(56, 22, 17, 0.05);
   }
 
   .modal__container {
     max-width: 63.6rem;
-    height: fit-content;
     padding: 2.4rem 4.8rem;
-    position: relative;
+    height: fit-content;
   }
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
@@ -720,8 +727,13 @@
     margin: 6.4rem 0 0 0;
   }
   .not-found .main__buttons-logo {
-    margin-top: 0.7rem;
-    margin-left: auto;
+    margin: 0;
+    position: fixed;
+    right: 3.2rem;
+    bottom: 6.6rem;
+  }
+  .not-found .main__buttons-logo:active, .not-found .main__buttons-logo:focus, .not-found .main__buttons-logo:focus-within {
+    bottom: 6.2rem;
   }
 
   .not-found-container {
@@ -744,7 +756,12 @@
   /*##################################################################################################################################*/
   /*ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ*/
   .privacy .modal__container {
-    max-height: 85%;
+    height: inherit;
+    max-height: 80%;
+  }
+
+  .privacy__content {
+    height: 100%;
   }
 }
 /*КОНЕЦ АДАПТИВА 668*/
@@ -792,8 +809,36 @@
     font-size: 1.2rem;
     line-height: 2rem;
   }
+  .text__desc h2,
+.text__desc h3,
+.text__desc h4,
+.text__desc h5,
+.text__desc h6 {
+    margin-bottom: 2rem;
+  }
   .text__desc p {
     margin-bottom: 1.6rem;
+  }
+  .text__desc h2 {
+    font-size: 2rem;
+  }
+  .text__desc h3 {
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+  }
+  .text__desc h4 {
+    line-height: 2.1rem;
+    font-size: 1.8rem;
+  }
+  .text__desc ol,
+.text__desc ul {
+    margin-top: 0.6rem;
+  }
+  .text__desc ol li {
+    margin-bottom: 0.7rem;
+  }
+  .text__desc ul li {
+    padding-left: 3rem;
   }
 
   .text__line {
@@ -877,6 +922,9 @@
     background-color: #947D66;
     color: #fff;
   }
+  .header.fixed .header__btn:active, .header.fixed .header__btn:focus, .header.fixed .header__btn:focus-within {
+    background-color: #7D6248;
+  }
 
   .header__container {
     justify-content: flex-start;
@@ -930,6 +978,19 @@
     padding: 1rem 2.4rem;
   }
 
+  .header__btn,
+.btn-main,
+.btn,
+.thanks__btn {
+    transition: 0.3s ease;
+  }
+  .header__btn:hover,
+.btn-main:hover,
+.btn:hover,
+.thanks__btn:hover {
+    transform: scale(1.1);
+  }
+
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОГО ЭКРАНА 1024*/
   .main {
     padding: 12.8rem 0 7.2rem;
@@ -944,7 +1005,7 @@
   }
 
   .main__desc {
-    margin: 1.6rem 0 3.1rem;
+    margin: 1.6rem 0;
   }
 
   .main__buttons {
@@ -1412,7 +1473,7 @@
   }
   .thanks__container .switch {
     position: absolute;
-    right: -5.6rem;
+    right: -6.9rem;
     top: 0;
   }
 
@@ -1440,12 +1501,17 @@
   .thanks__image {
     width: 38.3rem;
     height: 52.3rem;
+    margin-top: 14rem;
     margin-left: 10.8rem;
     align-self: auto;
   }
   .thanks__image .switch-image-night img,
 .thanks__image .switch-image-day img {
     max-width: 100%;
+  }
+
+  .thanks__btn {
+    margin-top: 3.2rem;
   }
 
   /*##################################################################################################################################*/
@@ -1457,8 +1523,6 @@
     margin: 6.4rem 0 0 0;
   }
   .not-found .main__buttons-logo {
-    margin-top: 0;
-    position: fixed;
     right: 4.8rem;
     bottom: 5.6rem;
   }
@@ -1479,6 +1543,10 @@
     font-size: 0.666668vw;
   }
 
+  section {
+    padding: 12.8rem 0;
+  }
+
   h1 {
     font-size: 4rem;
     line-height: 5.4rem;
@@ -1497,6 +1565,41 @@
   }
   .text li {
     margin-bottom: 3.2rem;
+  }
+
+  .text__desc h2,
+.text__desc h3,
+.text__desc h4,
+.text__desc h5,
+.text__desc h6 {
+    margin-bottom: 2.4rem;
+  }
+  .text__desc h2 {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+  .text__desc p {
+    margin-bottom: 1.8rem;
+  }
+  .text__desc ol {
+    margin-top: 1.5rem;
+  }
+  .text__desc ol li {
+    margin-bottom: 0.9rem;
+  }
+  .text__desc ol li::before {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .text__desc ul {
+    margin-top: 1.2rem;
+  }
+  .text__desc ul li {
+    margin-bottom: 0.8rem;
+  }
+  .text__desc h3 {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
   }
 
   .text__line {
@@ -1611,6 +1714,8 @@
   }
 
   .main__desc {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     margin: 2.4rem 0;
   }
 
@@ -1694,7 +1799,7 @@
     content: "";
     position: absolute;
     display: block;
-    bottom: -10rem;
+    bottom: -10.5rem;
     left: 12rem;
     width: 20.8rem;
     height: 10.4rem;
@@ -1781,6 +1886,10 @@
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ 1500*/
   .interiors .reporting {
     padding: 1rem 3.2rem;
+  }
+
+  .tabs__list {
+    min-height: 3rem;
   }
 
   .tabs__list-item {
@@ -2046,10 +2155,13 @@
   }
 
   .thanks__image {
-    margin-top: 7rem;
     width: 57.1rem;
     height: 78.1rem;
     margin-left: 24.3rem;
+  }
+
+  .thanks__btn {
+    margin-top: 4rem;
   }
 
   /*##################################################################################################################################*/

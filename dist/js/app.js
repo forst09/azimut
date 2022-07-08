@@ -51,26 +51,48 @@ $(document).ready(function () {
 
     //ОТКРЫТИЕ МОБИЛЬНОГО МЕНЮ
     $(document).on('click', ".header__burger", function () {
-        $('.mobile-menu').addClass('active');
+        $('.mobile-menu__wrapper').addClass('active');
         $('body').addClass('scroll-hide');
     });
 
     //ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
     $(document).on('click', ".mobile-menu .close", function () {
-        $('.mobile-menu').removeClass('active');
+        $('.mobile-menu__wrapper').removeClass('active');
         $('body').removeClass('scroll-hide');
+    });
+
+
+
+    //ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ ПО КЛИКУ ФОНА
+    $(document).click(function (e) {
+        if ($(e.target).is('.mobile-menu__wrapper')) {
+            $('.mobile-menu__wrapper').removeClass('active');
+            $('body').removeClass('scroll-hide');
+        }
     });
 
 
     //ОТКРЫТИЕ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
     $(document).on('click', ".btn-main", function () {
-        $('.offer').addClass('active');
+        $('.personal').addClass('active');
         $('body').addClass('scroll-hide');
     });
 
     //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ ПЕРСОНАЛЬНОЕ ПРЕДЛОЖЕНИЕ
     $(document).on('click', ".offer .close", function () {
-        $('.offer').removeClass('active');
+        $('.personal').removeClass('active');
+        $('body').removeClass('scroll-hide');
+    });
+
+    //ОТКРЫТИЕ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ УЗНАТЬ ПОДРОБНОСТИ
+    $(document).on('click', ".header__btn", function () {
+        $('.details').addClass('active');
+        $('body').addClass('scroll-hide');
+    });
+
+    //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПОЛУЧИТЬ УЗНАТЬ ПОДРОБНОСТИ
+    $(document).on('click', ".details .close", function () {
+        $('.details').removeClass('active');
         $('body').removeClass('scroll-hide');
     });
 
