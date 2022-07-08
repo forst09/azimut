@@ -1306,6 +1306,19 @@ h1 span {
 .consultation__form-textarea {
   height: 12.4rem;
   resize: none;
+  overflow-y: auto;
+  scrollbar-color: #D5C9BB transparent;
+  /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+}
+.consultation__form-textarea::-webkit-scrollbar {
+  width: 3px;
+}
+.consultation__form-textarea::-webkit-scrollbar-thumb {
+  background-color: #D5C9BB;
+}
+.consultation__form-textarea::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .consultation__button {
@@ -1755,24 +1768,16 @@ h1 span {
   padding-right: 0.2rem;
   height: 100%;
   overflow-y: auto;
-  scrollbar-color: #458245 #714826;
+  scrollbar-color: #D5C9BB transparent;
   /* «цвет ползунка» «цвет полосы скроллбара» */
-  scrollbar-width: auto;
-  /* толщина */
-  /* ползунок скроллбара */
+  scrollbar-width: thin;
 }
-.privacy__content ::-webkit-scrollbar {
-  width: 24px;
-  /* ширина для вертикального скролла */
-  height: 8px;
-  /* высота для горизонтального скролла */
-  background-color: #143861;
+.privacy__content::-webkit-scrollbar {
+  width: 3px;
 }
-.privacy__content ::-webkit-scrollbar-thumb {
-  background-color: #843465;
-  border-radius: 9em;
-  box-shadow: inset 1px 1px 10px #f3faf7;
+.privacy__content::-webkit-scrollbar-thumb {
+  background-color: #D5C9BB;
 }
-.privacy__content ::-webkit-scrollbar-thumb:hover {
-  background-color: #253861;
+.privacy__content::-webkit-scrollbar-track {
+  background-color: transparent;
 }
