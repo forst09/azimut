@@ -8,20 +8,9 @@ $(document).ready(function () {
     });
 
     //РАСКРЫТИЕ ДРОПДАУНОВ
-    $(document).on('click', ".dropdown", function () {
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).find('.dropdown__link').removeClass('active');
-            $(this).find('.dropdown__content').slideUp();
-        }
-        else {
-            $(this).parents('section').find('.dropdown').removeClass('active');
-            $(this).parents('section').find('.dropdown__link').removeClass('active');
-            $(this).parents('section').find('.dropdown__content').slideUp();
-            $(this).addClass('active');
-            $(this).find('.dropdown__link').addClass('active');
-            $(this).find('.dropdown__content').slideDown();
-        }
+    $(document).on('click', ".dropdown__link", function () {
+        $(this).toggleClass("active").parent().siblings().find(".dropdown__link").removeClass("active");
+        $(this).parent().find('.dropdown__content').slideToggle().parent().siblings().find(".dropdown__content").slideUp();
     });
 
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
@@ -32,6 +21,7 @@ $(document).ready(function () {
         let scroll = window.scrollY;
 
         if (scroll > headerHeight) {
+
             header.classList.add('fixed');
             document.body.style.paddingTop = headerHeight + 'px';
         }
@@ -40,6 +30,8 @@ $(document).ready(function () {
             document.body.removeAttribute('style');
         }
     };
+
+
 
     //ЗАКРЫТИЕ МОДАЛЬНОГО ОКНА ПО КЛИКУ ВНЕ ЕГО ОБЛАСТИ
     $(document).click(function (e) {
@@ -147,6 +139,24 @@ $(document).ready(function () {
             k = 0;
         }
     }, 5000);
+
+    // Anchor
+    const anchorScroll = function (e, _this) {
+        e.preventDefault();
+        let elementClick = _this.attr("href");
+        let destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 1000);
+        return false;
+    }
+
+    $(document).on('click', '.header__list-link', function (e) {
+        anchorScroll(e, $(this));
+    });
+    // $(document).on('click', '.map-site__item a', function (e) {
+    //     anchorScroll(e, $(this));
+    // });
 
     // swiper.loopDestroy();
 

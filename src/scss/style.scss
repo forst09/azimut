@@ -562,7 +562,7 @@ h1 {
 
 @keyframes headerF {
     from {
-        top: -100%;
+        top: -10%;
     }
 
     to {
@@ -576,12 +576,17 @@ h1 {
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ */
 .header {
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     width: 100%;
     padding: 1.6rem 0;
+
+    background-color: transparent;
+    // background-color: red;
+    transition: background-color .4s linear, padding .4s linear;
 
     .btn__wrapper {
         display: none;
@@ -589,13 +594,13 @@ h1 {
 }
 
 .header.fixed {
-    position: fixed;
-    left: 0;
-    top: 0;
+    // position: fixed;
+    // left: 0;
+    // top: 0;
     width: 100%;
     z-index: 100;
     background-color: #FCF8F7;
-    animation: headerF 0.3s;
+    // animation: headerF 0.5s ease-in-out;
 
     .header__burger-icon {
         span {
