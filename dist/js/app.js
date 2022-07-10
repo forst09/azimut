@@ -14,20 +14,19 @@ $(document).ready(function () {
     });
 
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
+    let headerFix = document.querySelector('.header-fix');
+    headerFixHeight = headerFix.clientHeight;
     let header = document.querySelector('.header');
-    headerHeight = header.clientHeight;
-
+    headerHeight = header.clientHeight + 100;
+    headerFix.style.top = 0 - headerFixHeight + 'px';
     document.onscroll = function () {
         let scroll = window.scrollY;
 
         if (scroll > headerHeight) {
-
-            header.classList.add('fixed');
-            document.body.style.paddingTop = headerHeight + 'px';
+            headerFix.style.top = 0;
         }
         else {
-            header.classList.remove('fixed');
-            document.body.removeAttribute('style');
+            headerFix.style.top = 0 - headerFixHeight + 'px';
         }
     };
 

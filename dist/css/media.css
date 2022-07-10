@@ -110,16 +110,16 @@
     margin-left: 0;
   }
 
-  .header.fixed .header__burger-text {
+  .header-fix .header__burger-text {
     color: #947D66;
   }
-  .header.fixed .header__phone {
+  .header-fix .header__phone {
     margin-bottom: 0;
   }
-  .header.fixed .header__phone-text {
+  .header-fix .header__phone-text {
     color: #947D66;
   }
-  .header.fixed .btn__wrapper {
+  .header-fix .btn__wrapper {
     display: none;
   }
 
@@ -905,24 +905,24 @@
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
-  .header.fixed {
+  .header-fix {
     padding: 1rem 0;
   }
-  .header.fixed .header__list-link {
+  .header-fix .header__list-link {
     color: #947D66;
   }
-  .header.fixed .header__phone {
+  .header-fix .header__phone {
     margin-bottom: 1rem;
   }
-  .header.fixed .btn__wrapper {
+  .header-fix .btn__wrapper {
     display: block;
   }
-  .header.fixed .header__btn {
+  .header-fix .header__btn {
     padding: 0.4rem 1.6rem;
     background-color: #947D66;
     color: #fff;
   }
-  .header.fixed .header__btn:active, .header.fixed .header__btn:focus, .header.fixed .header__btn:focus-within {
+  .header-fix .header__btn:active, .header-fix .header__btn:focus, .header-fix .header__btn:focus-within {
     background-color: #7D6248;
   }
 
@@ -1651,18 +1651,18 @@
 
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
-  .header.fixed {
+  .header-fix {
     padding: 1.6rem 0;
   }
-  .header.fixed .header__call {
+  .header-fix .header__call {
     display: flex;
     align-items: center;
   }
-  .header.fixed .header__phone {
+  .header-fix .header__phone {
     margin-bottom: 0;
     margin-right: 4rem;
   }
-  .header.fixed .header__btn {
+  .header-fix .header__btn {
     padding: 0.8rem 2.4rem;
   }
 

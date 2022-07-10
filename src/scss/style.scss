@@ -576,20 +576,42 @@ h1 {
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ */
 .header {
-    // position: absolute;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
     width: 100%;
     padding: 1.6rem 0;
 
-    background-color: transparent;
-    // background-color: red;
-    transition: background-color .4s linear, padding .4s linear;
-
     .btn__wrapper {
         display: none;
+    }
+}
+
+.header-fix {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #FCF8F7;
+    transition: 0.5s ease-in-out;
+    padding: 1.6rem 0;
+
+    .header__burger-icon {
+        span {
+            background-color: #947D66;
+        }
+    }
+
+    .header__phone-icon {
+        svg path {
+            fill: #947D66;
+        }
+    }
+
+    .header__logo {
+        position: relative;
+        filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
+        display: inline-block;
     }
 }
 
