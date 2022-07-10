@@ -143,14 +143,14 @@ $(document).ready(function () {
     const anchorScroll = function (e, _this) {
         e.preventDefault();
         let elementClick = _this.attr("href");
-        let destination = $(elementClick).offset().top;
+        let destination = $(elementClick).offset().top - 20;
         jQuery("html:not(:animated),body:not(:animated)").animate({
             scrollTop: destination
         }, 1000);
         return false;
     }
 
-    $(document).on('click', '.header__list-link', function (e) {
+    $(document).on('click', '.navigation-link', function (e) {
         anchorScroll(e, $(this));
     });
     // $(document).on('click', '.map-site__item a', function (e) {
