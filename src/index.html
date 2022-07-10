@@ -8,7 +8,7 @@
 <body>
     @@include('html/header.html',{})
 
-    <!-- НАЧАЛО ШАПКИ -->
+    <!-- НАЧАЛО ФИКСИРОВАННОЙ ШАПКИ -->
     <div class="header-fix">
         <div class="wrapper">
             <div class="header__container">
@@ -21,7 +21,7 @@
                     </div>
                     <div class="header__burger-text">Меню</div>
                 </div>
-                <a class="header__logo" href="#">
+                <a class="header__logo navigation-link" href="#main">
                     <picture>
                         <source srcset="@img/logo-mobile.svg" type="image/svg+xml" media="(max-width:1023px)">
                         <source srcset="@img/logo.svg" type="image/svg+xml" media="(min-width:1024px)">
@@ -30,13 +30,22 @@
                 </a>
                 <nav class="header__nav">
                     <ul class="header__list">
-                        <li class="header__list-item"><a class="header__list-link" href="#test">Об отеле</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="">О нас</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="">Галерея</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="">Доходность</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="">Планировки</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="">Вопрос-ответ</a></li>
-                        <li class="header__list-item"><a class="header__list-link" href="">Контакты</a></li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link"
+                                href="#description">Об отеле</a></li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link" href="#operator">О
+                                нас</a></li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link"
+                                href="#layouts">Галерея</a></li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link"
+                                href="#profitability">Доходность</a>
+                        </li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link"
+                                href="#interiors">Планировки</a></li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link"
+                                href="#faq">Вопрос-ответ</a></li>
+                        <li class="header__list-item"><a class="header__list-link navigation-link"
+                                href="#consultation">Контакты</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__call">
@@ -56,10 +65,10 @@
             </div>
         </div>
     </div>
-    <!-- КОНЕЦ ШАПКИ -->
+    <!-- КОНЕЦ ФИКСИРОВАННОЙ ШАПКИ -->
 
     <!-- НАЧАЛО ГЛАВНОГО ЭКРАНА -->
-    <main class="main">
+    <main id="main" class="main">
         <div class="main__background main__background-night active">
             <picture>
                 <source class="night" srcset="img/main/320-night.jpg" type="image/jpg" media="(max-width:667px)">
@@ -129,7 +138,7 @@
     <!-- КОНЕЦ ГЛАВНОГО ЭКРАНА -->
 
     <!-- НАЧАЛО СЕКЦИИ AZIMUT Парк Отель Плас Резиденс Сочи 4*-->
-    <section id="test" class="description">
+    <section id="description" class="description">
         <div class="description__container">
 
             <div class="switch">
@@ -193,7 +202,7 @@
     <!-- КОНЕЦ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4*-->
 
     <!-- НАЧАЛО СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР -->
-    <section class="operator">
+    <section id="operator" class="operator">
         <div class="wrapper">
             <div class="operator__container">
                 <div class="operator__item">
@@ -257,7 +266,7 @@
     <!-- КОНЕЦ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР -->
 
     <!-- НАЧАЛО СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
-    <section class="profitability">
+    <section id="profitability" class="profitability">
         <!-- <div class="profitability__container"> -->
         <div class="wrapper">
             <div class="profitability__container">
@@ -319,203 +328,203 @@
 
         <div class="dropdown__wrapper">
             <a class="dropdown" href="javascript:void(0)">
-                <div class="dropdown__link"><span>Доходность (годовая) инвестора в зависимости от среднего ADR и цены
-                        покупки 1 м2</span></div>
-                <div class="dropdown__content">
-                    <div class="text__desc">
-                        <p>Рост стоимости инвестиционного актива в сочетании с ежегодным доходом от управления на
-                            горизонте
-                            5 лет
-                            (срок заключения договора доверительного управления) после ввода объекта в эксплуатацию
-                            позволит
-                            инвестору
-                            выйти из проекта и получить доходность от 46% до 486% в зависимости от времени приобретения
-                            и
-                            среднего ADR.</p>
-                        <ul class="text__desc-list">
-                            <li class="text__desc-list-item">срок владения недвижимостью с начала
-                                эксплуатации — 5 лет</li>
-                            <li class="text__desc-list-item">в первый год эксплуатации срок работы отеля
-                                3 месяца</li>
-                            <li class="text__desc-list-item">среднегодовой рост стоимости недвижимости — 3,0%</li>
-                            <li class="text__desc-list-item">цена продажи недвижимости 1748,1 тыс. руб./м2</li>
-                            <li class="text__desc-list-item">капитализация ежегодного дохода от управления</li>
-                            <li class="text__desc-list-item">индексация ADR на уровне 4,0% ежегодно</li>
-                        </ul>
-                    </div>
+            </a>
+            <div class="dropdown__link"><span>Доходность (годовая) инвестора в зависимости от среднего ADR и цены
+                    покупки 1 м2</span></div>
+            <div class="dropdown__content">
+                <div class="text__desc">
+                    <p>Рост стоимости инвестиционного актива в сочетании с ежегодным доходом от управления на
+                        горизонте
+                        5 лет
+                        (срок заключения договора доверительного управления) после ввода объекта в эксплуатацию
+                        позволит
+                        инвестору
+                        выйти из проекта и получить доходность от 46% до 486% в зависимости от времени приобретения
+                        и
+                        среднего ADR.</p>
+                    <ul class="text__desc-list">
+                        <li class="text__desc-list-item">срок владения недвижимостью с начала
+                            эксплуатации — 5 лет</li>
+                        <li class="text__desc-list-item">в первый год эксплуатации срок работы отеля
+                            3 месяца</li>
+                        <li class="text__desc-list-item">среднегодовой рост стоимости недвижимости — 3,0%</li>
+                        <li class="text__desc-list-item">цена продажи недвижимости 1748,1 тыс. руб./м2</li>
+                        <li class="text__desc-list-item">капитализация ежегодного дохода от управления</li>
+                        <li class="text__desc-list-item">индексация ADR на уровне 4,0% ежегодно</li>
+                    </ul>
+                </div>
 
-                    <div class="profitability__table-wrapper">
-                        <div class="scroll">
-                            <table class="profitability__table">
-                                <tr>
-                                    <td colspan="2">
-                                        <span class="profitability__table-text-big">Средний ADR, руб.</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="profitability__table-text-big">12 000</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="profitability__table-text-big">13 000</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="profitability__table-text-big">14 000</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="profitability__table-text-big">15 000</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="profitability__table-text-big">16 000</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="12">
-                                        <span class="profitability__table-text-big">Доходность</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="left">
-                                        <span class="profitability__table-text-medium">Цена покупки</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">Цена продажи</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">млн руб.</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">%</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">млн руб.</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">%</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">млн руб.</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">%</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">млн руб.</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">%</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">млн руб.</span>
-                                    </td>
-                                    <td>
-                                        <span class="profitability__table-text-medium">%</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="left">
-                                        <b class="profitability__table-stage">Начало продаж</b>
-                                        <p>868 тыс. руб.*</p>
-                                        <p>29,6 млн руб.**</p>
-                                    </td>
-                                    <td rowspan="3">
-                                        <div class="left">57,8 млн руб. (стоимость недвижимости после 5 лет
-                                            эксплуатации)
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>61,2***</div>
-                                    </td>
-                                    <td><b>442,0</b></td>
-                                    <td>
-                                        <div>62,8</div>
-                                    </td>
-                                    <td><b>453,1</b></td>
-                                    <td>
-                                        <div>64,3</div>
-                                    </td>
-                                    <td><b>464,2</b></td>
-                                    <td>
-                                        <div>65,8</div>
-                                    </td>
-                                    <td><b>475,3</b></td>
-                                    <td>
-                                        <div>67,4</div>
-                                    </td>
-                                    <td><b>486,4</b></td>
-                                </tr>
-                                <tr>
-                                    <td class="left">
-                                        <b class="profitability__table-stage">Начало эксплуатации</b>
-                                        <p>1, 535 млн руб.*</p>
-                                        <p>51,3 млн руб.**</p>
-                                    </td>
-                                    <td>
-                                        <div>45,5</div>
-                                    </td>
-                                    <td><b>153,5</b></td>
-                                    <td>
-                                        <div>47,0</div>
-                                    </td>
-                                    <td><b>158,7</b></td>
-                                    <td>
-                                        <div>51,1</div>
-                                    </td>
-                                    <td><b>172,4</b></td>
-                                    <td>
-                                        <div>51,3</div>
-                                    </td>
-                                    <td><b>173,4</b></td>
-                                    <td>
-                                        <div>51,6</div>
-                                    </td>
-                                    <td><b>174,3</b></td>
-                                </tr>
-                                <tr>
-                                    <td class="left"> <b class="profitability__table-stage">На сентябрь 2021 г.</b>
-                                        <p>384 тыс. руб.*</p>
-                                        <p>13,9 млн руб.**</p>
-                                    </td>
-                                    <td>
-                                        <div>23,8</div>
-                                    </td>
-                                    <td><b>46,3</b></td>
-                                    <td>
-                                        <div>25,3</div>
-                                    </td>
-                                    <td><b>49,3</b></td>
-                                    <td>
-                                        <div>29,3</div>
-                                    </td>
-                                    <td><b>57,2</b></td>
-                                    <td>
-                                        <div>29,6</div>
-                                    </td>
-                                    <td><b>57,7</b></td>
-                                    <td>
-                                        <div>29,9</div>
-                                    </td>
-                                    <td><b>58,3</b></td>
-                                </tr>
+                <div class="profitability__table-wrapper">
+                    <div class="scroll">
+                        <table class="profitability__table">
+                            <tr>
+                                <td colspan="2">
+                                    <span class="profitability__table-text-big">Средний ADR, руб.</span>
+                                </td>
+                                <td colspan="2">
+                                    <span class="profitability__table-text-big">12 000</span>
+                                </td>
+                                <td colspan="2">
+                                    <span class="profitability__table-text-big">13 000</span>
+                                </td>
+                                <td colspan="2">
+                                    <span class="profitability__table-text-big">14 000</span>
+                                </td>
+                                <td colspan="2">
+                                    <span class="profitability__table-text-big">15 000</span>
+                                </td>
+                                <td colspan="2">
+                                    <span class="profitability__table-text-big">16 000</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="12">
+                                    <span class="profitability__table-text-big">Доходность</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <span class="profitability__table-text-medium">Цена покупки</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">Цена продажи</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">млн руб.</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">%</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">млн руб.</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">%</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">млн руб.</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">%</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">млн руб.</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">%</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">млн руб.</span>
+                                </td>
+                                <td>
+                                    <span class="profitability__table-text-medium">%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <b class="profitability__table-stage">Начало продаж</b>
+                                    <p>868 тыс. руб.*</p>
+                                    <p>29,6 млн руб.**</p>
+                                </td>
+                                <td rowspan="3">
+                                    <div class="left">57,8 млн руб. (стоимость недвижимости после 5 лет
+                                        эксплуатации)
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>61,2***</div>
+                                </td>
+                                <td><b>442,0</b></td>
+                                <td>
+                                    <div>62,8</div>
+                                </td>
+                                <td><b>453,1</b></td>
+                                <td>
+                                    <div>64,3</div>
+                                </td>
+                                <td><b>464,2</b></td>
+                                <td>
+                                    <div>65,8</div>
+                                </td>
+                                <td><b>475,3</b></td>
+                                <td>
+                                    <div>67,4</div>
+                                </td>
+                                <td><b>486,4</b></td>
+                            </tr>
+                            <tr>
+                                <td class="left">
+                                    <b class="profitability__table-stage">Начало эксплуатации</b>
+                                    <p>1, 535 млн руб.*</p>
+                                    <p>51,3 млн руб.**</p>
+                                </td>
+                                <td>
+                                    <div>45,5</div>
+                                </td>
+                                <td><b>153,5</b></td>
+                                <td>
+                                    <div>47,0</div>
+                                </td>
+                                <td><b>158,7</b></td>
+                                <td>
+                                    <div>51,1</div>
+                                </td>
+                                <td><b>172,4</b></td>
+                                <td>
+                                    <div>51,3</div>
+                                </td>
+                                <td><b>173,4</b></td>
+                                <td>
+                                    <div>51,6</div>
+                                </td>
+                                <td><b>174,3</b></td>
+                            </tr>
+                            <tr>
+                                <td class="left"> <b class="profitability__table-stage">На сентябрь 2021 г.</b>
+                                    <p>384 тыс. руб.*</p>
+                                    <p>13,9 млн руб.**</p>
+                                </td>
+                                <td>
+                                    <div>23,8</div>
+                                </td>
+                                <td><b>46,3</b></td>
+                                <td>
+                                    <div>25,3</div>
+                                </td>
+                                <td><b>49,3</b></td>
+                                <td>
+                                    <div>29,3</div>
+                                </td>
+                                <td><b>57,2</b></td>
+                                <td>
+                                    <div>29,6</div>
+                                </td>
+                                <td><b>57,7</b></td>
+                                <td>
+                                    <div>29,9</div>
+                                </td>
+                                <td><b>58,3</b></td>
+                            </tr>
 
-                            </table>
-                        </div>
-                    </div>
-                    <div class="text__desc table-text__desc">
-                        <p>* - Средняя удельная цена покупки недвижимости (апартамента) в объекте
-                        </p>
-                        <p>** - Бюджет покупки
-                            условного апартамента площадью 32,6 кв.м с меблировкой</p>
-                        <p>*** - Доходность собственника
-                            недвижимости за 5 доверительного управления (за вычетом расходов) с момента сдачи объекта в
-                            эксплуатацию и рыночной стоимости апартамента (за вычетом стоимости покупки)</p>
+                        </table>
                     </div>
                 </div>
-            </a>
+                <div class="text__desc table-text__desc">
+                    <p>* - Средняя удельная цена покупки недвижимости (апартамента) в объекте
+                    </p>
+                    <p>** - Бюджет покупки
+                        условного апартамента площадью 32,6 кв.м с меблировкой</p>
+                    <p>*** - Доходность собственника
+                        недвижимости за 5 доверительного управления (за вычетом расходов) с момента сдачи объекта в
+                        эксплуатацию и рыночной стоимости апартамента (за вычетом стоимости покупки)</p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- КОНЕЦ СЕКЦИИ ДОХОДНОСТЬ ДЛЯ ИНВЕСТОРА -->
 
     <!-- НАЧАЛО СЕКЦИИ НОМЕРА И ПЛАНИРОВКИ -->
-    <section class="interiors">
+    <section id="interiors" class="interiors">
         <div class="wrapper">
             <div class="interiors__title-container">
                 <h2 class="title title-without-line">номера и планировки</h2>
@@ -932,7 +941,7 @@
     <!-- КОНЕЦ СЕКЦИИ ПРЕИМУЩЕСТВА -->
 
     <!-- НАЧАЛО СЕКЦИИ ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ -->
-    <section class="layouts">
+    <section id="layouts" class="layouts">
         <div class="wrapper">
             <h2 class="title title-without-line">ИНТЕРЬЕРЫ И ЭКСТЕРЬЕРЫ</h2>
         </div>
@@ -1271,7 +1280,7 @@
     <!-- КОНЕЦ СЕКЦИИ ПРОЗРАЧНОСТЬ СДЕЛКИ И ПОДЛИННОСТЬ ДОКУМЕНТОВ -->
 
     <!-- НАЧАЛО СЕКЦИИ ВОПРОС - ОТВЕТ -->
-    <section class="faq">
+    <section id="faq" class="faq">
         <div class="wrapper">
             <h2 class="title title-without-line">вопрос - ответ</h2>
         </div>
@@ -1324,7 +1333,7 @@
     <!-- КОНЕЦ СЕКЦИИ ВОПРОС - ОТВЕТ -->
 
     <!-- НАЧАЛО СЕКЦИИ СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА УЖЕ СЕГОДНЯ -->
-    <section class="consultation">
+    <section id="consultation" class="consultation">
         <div class="wrapper">
             <h2 class="title">СТАНЬТЕ ВЛАДЕЛЬЦЕМ ГОСТИНИЧНОГО БИЗНЕСА <span>УЖЕ СЕГОДНЯ</span></h2>
             <div class="text">Мы готовы ответить на все ваши вопросы</div>
