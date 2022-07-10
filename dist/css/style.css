@@ -251,21 +251,23 @@ h1 span {
   background-color: #FCF8F7;
 }
 
-.dropdown {
+.dropdown__wrapper {
   margin-bottom: 0.8rem;
-  display: inline-block;
-  width: 100%;
-  padding: 1.6rem;
-  height: auto;
-  background-color: #ffffff;
 }
-.dropdown:nth-last-of-type(1) {
+.dropdown__wrapper:nth-last-of-type(1) {
   margin-bottom: 0;
 }
 
+.dropdown {
+  height: auto;
+}
+
 .dropdown__link {
+  background-color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  padding: 1.6rem 5.4rem;
   position: relative;
-  padding-left: 3.8rem;
   font-size: 1.2rem;
   line-height: 2rem;
 }
@@ -273,7 +275,7 @@ h1 span {
   content: "";
   position: absolute;
   display: block;
-  left: 0;
+  left: 1.6rem;
   top: calc(50% - 0.7rem);
   width: 1.4rem;
   height: 1.4rem;
@@ -286,7 +288,7 @@ h1 span {
   content: "";
   position: absolute;
   display: block;
-  right: 0;
+  right: 1.6rem;
   top: calc(50% - 0.45rem);
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
@@ -295,7 +297,7 @@ h1 span {
 }
 .dropdown__link span {
   display: inline-block;
-  max-width: 83%;
+  max-width: 96%;
 }
 
 .dropdown__link.active::after {
@@ -304,7 +306,8 @@ h1 span {
 
 .dropdown__content {
   display: none;
-  padding-top: 2.4rem;
+  padding: 0.8rem 1.6rem 1.6rem;
+  background-color: #ffffff;
 }
 
 .left {
@@ -516,22 +519,8 @@ h1 span {
   filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
   display: inline-block;
 }
-
-.header.fixed {
-  width: 100%;
-  z-index: 100;
-  background-color: #FCF8F7;
-}
-.header.fixed .header__burger-icon span {
-  background-color: #947D66;
-}
-.header.fixed .header__phone-icon svg path {
-  fill: #947D66;
-}
-.header.fixed .header__logo {
-  position: relative;
-  filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
-  display: inline-block;
+.header-fix .btn__wrapper {
+  display: none;
 }
 
 .header__container {
@@ -870,6 +859,7 @@ h1 span {
 }
 
 .profitability__chart {
+  margin-bottom: 3.2rem;
   display: flex;
   flex-direction: column-reverse;
 }

@@ -78,13 +78,18 @@
     }
 
     .dropdown__link {
-        padding-left: 5.9rem;
+        padding: 1.6rem 7.8rem 1.6rem 8.3rem;
 
         &::before {
             top: calc(50% - 0.95rem);
             width: 1.9rem;
             height: 1.9rem;
             background-size: 1.9rem 1.9rem;
+            left: 2.4rem;
+        }
+
+        &::after {
+            right: 2.4rem;
         }
 
         span {
@@ -92,6 +97,10 @@
             line-height: 2.2rem;
             max-width: 44.9rem;
         }
+    }
+
+    .dropdown__content {
+        padding: 0.8rem 2.4rem 1.6rem;
     }
 
     .scroll-swiper {
@@ -318,6 +327,10 @@
 
     .reporting-name {
         max-width: 21.6rem;
+    }
+
+    .profitability__chart {
+        margin-bottom: 2.4rem;
     }
 
     .profitability__chart-image {
@@ -979,13 +992,23 @@
     }
 
     .dropdown__link {
+        padding: 3.2rem 7.6rem 3.2rem 9.1rem;
+
+        &::before {
+            left: 3.2rem;
+        }
+
+        &::after {
+            right: 3.2rem;
+        }
+
         span {
             max-width: 76rem;
         }
     }
 
     .dropdown__content {
-        padding-top: 3.2rem;
+        padding: 0.8rem 3.2rem 3.2rem;
     }
 
     .scroll-swiper {
@@ -1172,7 +1195,10 @@
         height: 3.5rem;
         transition: 0.3s ease;
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
             bottom: -6.2rem;
         }
     }
@@ -1327,6 +1353,7 @@
     }
 
     .profitability__chart {
+        margin-bottom: 4rem;
         flex-direction: row;
         padding: 0 4.8rem;
         justify-content: space-between;
@@ -1890,14 +1917,18 @@
         padding: 0 8rem;
     }
 
-    // .switch {
-    // }
-
     .dropdown {
         margin-bottom: 1.6rem;
     }
 
+    .dropdown__wrapper {
+        margin-bottom: 1.6rem;
+        padding: 0 8rem;
+    }
+
     .dropdown__link {
+        padding: 3.2rem 9.1rem;
+
         span {
             font-size: 1.6rem;
             line-height: 2.6rem;
@@ -2032,7 +2063,10 @@
     .main__buttons-logo {
         bottom: -10.4rem;
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
             bottom: -10.8rem;
         }
     }
@@ -2142,6 +2176,7 @@
     }
 
     .profitability__chart {
+        margin-bottom: 6rem;
         padding: 0 8rem;
         align-items: center;
     }
@@ -2175,10 +2210,6 @@
     .profitability__table p {
         font-size: 1.6rem;
         line-height: 2.6rem;
-    }
-
-    .dropdown__wrapper {
-        padding: 0 8rem;
     }
 
 

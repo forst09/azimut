@@ -297,23 +297,27 @@ h1 {
     }
 }
 
+.dropdown__wrapper {
 
-.dropdown {
     margin-bottom: 0.8rem;
-    display: inline-block;
-    width: 100%;
-    padding: 1.6rem;
-    height: auto;
-    background-color: $white;
+
 
     &:nth-last-of-type(1) {
         margin-bottom: 0;
     }
 }
 
+.dropdown {
+
+    height: auto;
+}
+
 .dropdown__link {
+    background-color: $white;
+    display: inline-block;
+    width: 100%;
+    padding: 1.6rem 5.4rem;
     position: relative;
-    padding-left: 3.8rem;
     font-size: 1.2rem;
     line-height: 2rem;
 
@@ -321,7 +325,7 @@ h1 {
         content: '';
         position: absolute;
         display: block;
-        left: 0;
+        left: 1.6rem;
         top: calc(50% - 0.7rem);
         width: 1.4rem;
         height: 1.4rem;
@@ -335,7 +339,7 @@ h1 {
         content: '';
         position: absolute;
         display: block;
-        right: 0;
+        right: 1.6rem;
         top: calc(50% - 0.45rem);
         border-left: 0.5rem solid transparent;
         border-right: 0.5rem solid transparent;
@@ -345,7 +349,7 @@ h1 {
 
     span {
         display: inline-block;
-        max-width: 83%;
+        max-width: 96%;
     }
 }
 
@@ -357,7 +361,8 @@ h1 {
 
 .dropdown__content {
     display: none;
-    padding-top: 2.4rem;
+    padding: 0.8rem 1.6rem 1.6rem;
+    background-color: $white;
 }
 
 .left {
@@ -613,33 +618,9 @@ h1 {
         filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
         display: inline-block;
     }
-}
 
-.header.fixed {
-    // position: fixed;
-    // left: 0;
-    // top: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #FCF8F7;
-    // animation: headerF 0.5s ease-in-out;
-
-    .header__burger-icon {
-        span {
-            background-color: #947D66;
-        }
-    }
-
-    .header__phone-icon {
-        svg path {
-            fill: #947D66;
-        }
-    }
-
-    .header__logo {
-        position: relative;
-        filter: invert(49%) sepia(5%) saturate(2164%) hue-rotate(349deg) brightness(103%) contrast(80%);
-        display: inline-block;
+    .btn__wrapper {
+        display: none;
     }
 }
 
@@ -1019,6 +1000,7 @@ h1 {
 }
 
 .profitability__chart {
+    margin-bottom: 3.2rem;
     display: flex;
     flex-direction: column-reverse;
 }
