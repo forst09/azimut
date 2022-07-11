@@ -43,12 +43,14 @@ $(document).ready(function () {
     //ОТКРЫТИЕ МОБИЛЬНОГО МЕНЮ
     $(document).on('click', ".header__burger", function () {
         $('.mobile-menu__wrapper').addClass('active');
+        $('.mobile-menu__bg').addClass('active');
         $('body').addClass('scroll-hide');
     });
 
     //ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ
     $(document).on('click', ".mobile-menu .close", function () {
         $('.mobile-menu__wrapper').removeClass('active');
+        $('.mobile-menu__bg').removeClass('active');
         $('body').removeClass('scroll-hide');
     });
 
@@ -58,6 +60,7 @@ $(document).ready(function () {
     $(document).click(function (e) {
         if ($(e.target).is('.mobile-menu__wrapper')) {
             $('.mobile-menu__wrapper').removeClass('active');
+            $('.mobile-menu__bg').removeClass('active');
             $('body').removeClass('scroll-hide');
         }
     });
