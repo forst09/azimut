@@ -13,14 +13,15 @@
         line-height: 3.8rem;
     }
 
+    //МЕНЯЮ РАЗМЕР ШРИФТА И ЛАЙНХЕЙТ
     .text {
-        font-size: 1.4rem;
-        line-height: 2.2rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
 
         p,
         &>* {
-            font-size: 1.4rem;
-            line-height: 2.2rem;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
         }
 
         ul {
@@ -92,9 +93,10 @@
             right: 2.4rem;
         }
 
+        //МЕНЯЮ УБРАЛА РАЗМЕР ШРИФТА И ЛАЙНХЕЙТ
         span {
-            font-size: 1.4rem;
-            line-height: 2.2rem;
+            // font-size: 1.4rem;
+            // line-height: 2.2rem;
             max-width: 44.9rem;
         }
     }
@@ -540,11 +542,12 @@
         margin-right: 2rem;
     }
 
+    //МЕНЯЮ УБРАЛА РАЗМЕР ШРИФТОВ И ЛАЙНХЕЙТ
     .benefits__card-text {
         display: block;
         font-weight: 300;
-        font-size: 1.1rem;
-        line-height: 2.1rem;
+        // font-size: 1.1rem;
+        // line-height: 2.1rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 668*/
@@ -938,8 +941,8 @@
             margin-bottom: 2rem;
         }
 
-        font-size: 1.2rem;
-        line-height: 2rem;
+        // font-size: 1.2rem;
+        // line-height: 2rem;
 
         p {
             margin-bottom: 1.6rem;

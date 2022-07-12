@@ -12,12 +12,12 @@
   }
 
   .text {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
   .text p, .text > * {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
   .text ul {
     margin-top: 2.4rem;
@@ -82,8 +82,6 @@
     right: 2.4rem;
   }
   .dropdown__link span {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
     max-width: 44.9rem;
   }
 
@@ -484,8 +482,6 @@
   .benefits__card-text {
     display: block;
     font-weight: 300;
-    font-size: 1.1rem;
-    line-height: 2.1rem;
   }
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ ПРЕИМУЩЕСТВА 668*/
@@ -817,10 +813,6 @@
     margin-bottom: 2.4rem;
   }
 
-  .text__desc {
-    font-size: 1.2rem;
-    line-height: 2rem;
-  }
   .text__desc h2,
 .text__desc h3,
 .text__desc h4,

@@ -49,14 +49,15 @@ h1 {
     margin-bottom: 3.2rem;
 }
 
+//МЕНЯЮ РАЗМЕР ШРИФТА И ЛАЙНХЕЙТ
 .text {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 
     p,
     &>* {
-        font-size: 1.2rem;
-        line-height: 2rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
     }
 
     p {
@@ -120,12 +121,13 @@ h1 {
         }
     }
 
+    //МЕНЯЮ РАЗМЕР И ЛАЙНХЕЙТ ШРИФТА
     li {
         margin-bottom: 0.8rem;
         padding-left: 4.3rem;
         position: relative;
-        font-size: 1.1rem;
-        line-height: 2.1rem;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
 
         &:nth-last-of-type(1) {
             margin-bottom: 0;
@@ -146,15 +148,16 @@ h1 {
     }
 }
 
+//МЕНЯЮ РАЗМЕР ШРИФТА И ЛАЙНХЕЙТ
 .text__desc {
     font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 2.1rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
 
     p,
     &>* {
-        font-size: 1.1rem;
-        line-height: 2.1rem;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
     }
 
     p {
@@ -199,11 +202,12 @@ h1 {
     ul li {
         padding-left: 2.8rem;
 
+        //МЕНЯЮ ТОП
         &::before {
             content: '';
             position: absolute;
             left: 0;
-            top: 1rem;
+            top: 1.4rem;
             width: 1.8rem;
             height: 1px;
             background-color: $border;
@@ -227,8 +231,8 @@ h1 {
     li {
         margin-bottom: 0.2rem;
         position: relative;
-        font-size: 1.1rem;
-        line-height: 2.1rem;
+        // font-size: 1.1rem;
+        // line-height: 2.1rem;
 
         &:nth-last-of-type(1) {
             margin-bottom: 0;
@@ -726,8 +730,8 @@ h1 {
     margin: 0.8rem 0 3.2rem;
     font-weight: 300;
     color: $white;
-    font-size: 1.2rem;
-    line-height: 2rem;
+    // font-size: 1.6rem;
+    // line-height: 2.4rem;
 }
 
 .main__numbers {
@@ -738,7 +742,7 @@ h1 {
 .main__numbers-item {
     display: flex;
     align-items: center;
-    margin-right: 4.7rem;
+    margin-right: 1.5rem;
 
     &:nth-last-of-type(1) {
         margin-right: 0;
@@ -763,8 +767,8 @@ h1 {
 .main__numbers-item-text {
     font-weight: 300;
     color: $white;
-    font-size: 1.1rem;
-    line-height: 2.1rem;
+    // font-size: 1.1rem;
+    // line-height: 2.1rem;
 }
 
 .main__buttons {
@@ -1654,8 +1658,10 @@ h1 {
     justify-content: flex-end;
 }
 
+//МЕНЯЮ РАЗМЕР ШРИФТА И ЛАЙНХЕЙТ
 .footer__list-item {
-    line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
     color: $white;
     margin-bottom: 0.8rem;
     flex: 0 41%;
@@ -1663,11 +1669,13 @@ h1 {
     justify-content: flex-start;
 }
 
+//МЕНЯЮ ДОБАВИЛА ФЛЕКС ШРИНК
 .footer__contacts {
     display: flex;
     flex-direction: column-reverse;
     margin-top: 2.4rem;
     align-items: flex-start;
+    flex-shrink: 0;
 }
 
 .footer__contacts-socials {
@@ -1881,9 +1889,10 @@ h1 {
         margin-bottom: 0;
     }
 
+    //МЕНЯЮ РАЗМЕР ШРИФТА И ЛАЙНХЕЙТ
     a {
-        font-size: 1.1rem;
-        line-height: 2.4rem;
+        font-size: 1.2rem;
+        line-height: 2.2rem;
     }
 }
 

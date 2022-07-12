@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-
-
-
     // отключение zoom через скролл (в том числе трекападами в macOS)
     document.addEventListener('mousewheel', function (e) {
         if (!e.ctrlKey && !e.metaKey) return;
@@ -26,17 +22,6 @@ $(document).ready(function () {
         e.preventDefault();
         e.stopImmediatePropagation();
     }, { passive: false });
-
-
-
-
-
-
-
-
-
-
-
 
 
     // ПЕРЕКЛЮЧЕНИЕ ТАБОВ
