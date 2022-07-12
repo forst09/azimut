@@ -813,6 +813,14 @@
     margin-bottom: 2.4rem;
   }
 
+  .text__desc {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  .text__desc p, .text__desc > * {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
   .text__desc h2,
 .text__desc h3,
 .text__desc h4,
@@ -843,6 +851,9 @@
   }
   .text__desc ul li {
     padding-left: 3rem;
+  }
+  .text__desc ul li::before {
+    top: 1rem;
   }
 
   .text__line {
@@ -1102,13 +1113,17 @@
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР 1024*/
   .operator__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
   .operator__item {
     max-width: 28.8rem;
     margin-bottom: 0;
+  }
+
+  .operator__item-photo {
+    align-self: center;
   }
 
   .operator__item-award {
@@ -1406,6 +1421,8 @@
 
   .footer__list-item {
     flex: unset;
+    font-size: 1rem;
+    line-height: 2rem;
     margin-right: 4rem;
     margin-bottom: 0;
     position: relative;
@@ -1414,6 +1431,9 @@
   }
   .footer__list-item:hover {
     top: 0.4rem;
+  }
+  .footer__list-item:nth-last-of-type(1) {
+    margin-right: 0;
   }
 
   .footer__contacts-socials-link {
@@ -1652,10 +1672,6 @@
     max-width: none;
   }
 
-  .dropdown__content {
-    padding-top: 4rem;
-  }
-
   .scroll-swiper {
     margin-bottom: 5.6rem;
     padding: 0 8rem;
@@ -1805,10 +1821,6 @@
 
   /*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* 1500*/
   /*НАЧАЛО СТИЛЕЙ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР 1500*/
-  .operator__container {
-    align-items: flex-start;
-  }
-
   .operator__item {
     max-width: none;
   }
@@ -1890,6 +1902,9 @@
 
   .table-text__desc {
     margin-top: 4rem;
+  }
+  .table-text__desc p {
+    margin-bottom: 0;
   }
 
   .profitability__table-text-big,

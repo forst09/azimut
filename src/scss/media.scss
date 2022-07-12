@@ -932,6 +932,14 @@
     }
 
     .text__desc {
+        font-size: 1.2rem;
+        line-height: 2rem;
+
+        p,
+        &>* {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
 
         h2,
         h3,
@@ -940,9 +948,6 @@
         h6 {
             margin-bottom: 2rem;
         }
-
-        // font-size: 1.2rem;
-        // line-height: 2rem;
 
         p {
             margin-bottom: 1.6rem;
@@ -973,6 +978,10 @@
 
         ul li {
             padding-left: 3rem;
+
+            &::before {
+                top: 1rem;
+            }
         }
     }
 
@@ -1276,15 +1285,21 @@
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* 1024*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР 1024*/
+    //МЕНЯЮ align-items
     .operator__container {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
     .operator__item {
         max-width: 28.8rem;
         margin-bottom: 0;
+    }
+
+    //МЕНЯЮ ДОБАВИЛА СТИЛЬ
+    .operator__item-photo {
+        align-self: center;
     }
 
     .operator__item-award {
@@ -1630,8 +1645,11 @@
         height: fit-content;
     }
 
+    //МЕНЯЮ ДОБАВЛЯЮ РАЗМЕР И ЛАЙНХЕЙТ ШРИФТА
     .footer__list-item {
         flex: unset;
+        font-size: 1rem;
+        line-height: 2rem;
         margin-right: 4rem;
         margin-bottom: 0;
         position: relative;
@@ -1640,6 +1658,10 @@
 
         &:hover {
             top: 0.4rem;
+        }
+
+        &:nth-last-of-type(1) {
+            margin-right: 0;
         }
     }
 
@@ -1939,9 +1961,10 @@
         }
     }
 
-    .dropdown__content {
-        padding-top: 4rem;
-    }
+    //МЕНЯЮ УДАЛЯЮ СТИЛЬ
+    // .dropdown__content {
+    //     padding-top: 4rem;
+    // }
 
     .scroll-swiper {
         margin-bottom: 5.6rem;
@@ -2114,10 +2137,10 @@
     /*КОНЕЦ СТИЛЕЙ СЕКЦИИ AZIMUT ПАРК ОТЕЛЬ ПЛАС РЕЗИДЕНС СОЧИ 4* 1500*/
 
     /*НАЧАЛО СТИЛЕЙ СЕКЦИИ МЕЖДУНАРОДНЫЙ ОТЕЛЬНЫЙ ОПЕРАТОР 1500*/
-
-    .operator__container {
-        align-items: flex-start;
-    }
+    //МЕНЯЮ УДАЛЯЮ СТИЛЬ ОПЕРАТОРКОНТЕЙНЕР
+    // .operator__container {
+    //     align-items: flex-start;
+    // }
 
     .operator__item {
         max-width: none;
@@ -2202,8 +2225,13 @@
         margin-top: 4rem;
     }
 
+    //МЕНЯЛА УБРАЛА МАРДЖИН У АБЗАЦА
     .table-text__desc {
         margin-top: 4rem;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     .profitability__table-text-big,
